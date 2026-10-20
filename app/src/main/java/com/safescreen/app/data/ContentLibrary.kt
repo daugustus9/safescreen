@@ -3,6 +3,8 @@ package com.safescreen.app.data
 import android.content.Context
 import com.safescreen.app.core.Card
 import com.safescreen.app.core.CardKind
+import com.safescreen.app.core.DailyHint
+import com.safescreen.app.core.Hint
 import com.safescreen.app.core.Question
 import com.safescreen.app.core.QuestionBank
 import com.safescreen.app.core.RiskClassifier
@@ -51,6 +53,16 @@ class ContentLibrary(private val context: Context) {
     } else {
         Card("study-invite", CardKind.STUDY, "Daily Challenge", "3 real ENEM questions from different areas, the same for everyone today. Tap Answer when you can.")
     }
+
+    private val hintData by lazy { DailyHint.parse(readAsset("content/hints.json"), language) }
+
+    /** Dica do Dia library, adapted from the Human Upgrade app. */
+    val hints: List<Hint> get() = hintData.first
+
+    /** Category code to its name in the device language. */
+    val hintCategories: Map<String, String> get() = hintData.second
+
+    val hintTitlePrefix: String get() = if (language == "pt") "Dica do Dia: " else "Hint of the Day: "
 
     fun card(id: String): Card? = cards.firstOrNull { it.id == id }
 

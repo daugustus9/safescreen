@@ -51,6 +51,13 @@ fun MessagesScreen(onBack: () -> Unit) {
                 }
             }
         }
+        SectionCard(stringResource(R.string.kind_hints)) {
+            Text(stringResource(R.string.messages_hints_note), style = MaterialTheme.typography.bodySmall)
+            graph.content.hints.forEach { hint ->
+                HorizontalDivider()
+                HintBody(hint, graph.content.hintCategories[hint.category], graph.content.hintTitlePrefix)
+            }
+        }
         SectionCard(stringResource(R.string.kind_study)) {
             val invite = graph.content.studyInviteCard()
             MessageItem(invite)

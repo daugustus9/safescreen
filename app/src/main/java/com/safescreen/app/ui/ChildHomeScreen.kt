@@ -102,6 +102,8 @@ fun ChildHomeScreen(
             colors = ButtonDefaults.buttonColors(containerColor = MaterialTheme.colorScheme.error),
         ) { Text(stringResource(R.string.home_help_button), style = MaterialTheme.typography.titleLarge) }
 
+        HintOfTheDay(age = policy.ageTier.representativeAge)
+
         SectionCard(stringResource(R.string.home_focus_title)) {
             val endsAt = focus.endsAtMillis
             if (endsAt != null && focus.isActive(nowMillis)) {

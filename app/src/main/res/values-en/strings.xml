@@ -281,4 +281,10 @@
     <string name="share_intro_advice">💡 A tip for life:</string>
     <string name="share_intro_encouragement">✨ For you:</string>
     <string name="share_footer">Sent from SafeScreen, a free safety and study app for children and teens.</string>
+
+    <!-- Hint of the Day -->
+    <string name="hint_today">Hint of the Day #%1$d</string>
+    <string name="hint_perspective">This is a perspective, a way of thinking, not a proven fact.</string>
+    <string name="kind_hints">Hints of the Day</string>
+    <string name="messages_hints_note">One hint a day, the same for children of the same age. Adapted from the Human Upgrade app\'s library.</string>
 </resources>

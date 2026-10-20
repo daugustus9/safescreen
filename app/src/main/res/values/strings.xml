@@ -283,4 +283,10 @@
     <string name="share_intro_advice">💡 Uma dica para a vida:</string>
     <string name="share_intro_encouragement">✨ Pra você:</string>
     <string name="share_footer">Enviado pelo SafeScreen, app gratuito de segurança e estudos para crianças e adolescentes.</string>
+
+    <!-- Dica do Dia -->
+    <string name="hint_today">Dica do Dia #%1$d</string>
+    <string name="hint_perspective">Esta é uma perspectiva, um jeito de pensar, e não um fato comprovado.</string>
+    <string name="kind_hints">Dicas do Dia</string>
+    <string name="messages_hints_note">Uma dica por dia, a mesma para crianças da mesma idade. Adaptadas da biblioteca do app Human Upgrade.</string>
 </resources>

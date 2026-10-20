@@ -16,6 +16,7 @@ The prototype has **no INTERNET permission**: nothing it sees can leave the phon
 | S5 | "I need help" button: trusted adult and helplines (CVV 188, Disque 100…), opens the dialer only | `ui/HelpScreen.kt`, `assets/content/helplines.json` |
 | S7, W1 | Safety and life-advice cards, by age | `assets/content/cards.json`, `core/CardScheduler.kt` |
 | — | Encouragement cards: self-view, habits, kindness, citizenship; families can add their own | `assets/content/cards.json`, `ui/ParentScreen.kt` |
+| — | Hint of the Day: 50 important facts and tips (emergencies, prevention, digital life, money, health, values, the planet), adapted for children and for Brazil from the Human Upgrade app's library; one a day, the same for children of the same age, on a card and on the home screen, with a share button; opinions are labeled "perspective" | `assets/content/hints.json`, `core/Hints.kt` |
 | W3 | Bedtime cards inside the agreed window | `core/CardScheduler.kt` |
 | P3 | Focus timer; chosen apps are sent to the home screen while it runs | `ui/ChildHomeScreen.kt`, `service/GuardAccessibilityService.kt` |
 | C1 | School reminders: the evening before (from 17:00) and the morning of | `core/CardScheduler.kt` |

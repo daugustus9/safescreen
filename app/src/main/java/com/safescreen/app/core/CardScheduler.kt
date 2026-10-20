@@ -22,6 +22,8 @@ data class SchedulerState(
     val familyCards: List<Card> = emptyList(),
     /** Invitation to today's question, when the child has one waiting; shown once a day. */
     val studyInvite: Card? = null,
+    /** Today's Dica do Dia; shown once a day. */
+    val dailyHint: Card? = null,
 )
 
 /** Everyday cards take turns in this order, so warnings never come three in a row. */
@@ -32,7 +34,7 @@ data class ScheduledCard(val card: Card, val reminderKey: String? = null)
 /**
  * Picks the next card for the message engine shared with the subliminal-message and
  * human-upgrade apps. Priority: school reminders, then bedtime, then today's study
- * invitation (once a day), then a rotation of
+ * invitation and today's Dica do Dia (each once a day), then a rotation of
  * safety, advice and encouragement cards fitting the child's age. Every card is visible
  * and readable.
  */
@@ -52,6 +54,10 @@ class CardScheduler(
         state.studyInvite?.let { invite ->
             val key = "study:${state.now.toLocalDate()}"
             if (key !in state.shownReminderKeys) return ScheduledCard(invite, key)
+        }
+        state.dailyHint?.let { hint ->
+            val key = "hint:${state.now.toLocalDate()}"
+            if (key !in state.shownReminderKeys) return ScheduledCard(hint, key)
         }
         val age = state.tier.representativeAge
         val all = cards + state.familyCards

@@ -30,6 +30,7 @@ import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.isActive
 import kotlinx.coroutines.launch
 import com.safescreen.app.core.DailyChallenge
+import com.safescreen.app.core.DailyHint
 import java.time.LocalDate
 import java.time.LocalDateTime
 
@@ -88,6 +89,8 @@ class CardOverlayService : Service() {
             rotationKinds = if (policy.encouragementEnabled) ROTATION_ORDER.toSet() else ROTATION_ORDER.toSet() - CardKind.ENCOURAGEMENT,
             familyCards = if (policy.encouragementEnabled) graph.content.familyCards(policy.familyMessages) else emptyList(),
             studyInvite = if (policy.studyEnabled && challengeWaiting) graph.content.studyInviteCard() else null,
+            dailyHint = DailyHint.forDate(today, graph.content.hints, policy.ageTier.representativeAge)
+                ?.toCard(graph.content.hintTitlePrefix),
         )
         graph.scheduler.next(state)?.let(::present)
     }
