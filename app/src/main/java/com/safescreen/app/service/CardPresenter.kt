@@ -97,7 +97,7 @@ object CardPresenter {
                 addView(textButton(context, R.string.card_get_help) { open(context, MainActivity.EXTRA_OPEN_HELP) })
             }
             if (card.kind == CardKind.STUDY) {
-                addView(textButton(context, R.string.card_answer) { open(context, MainActivity.EXTRA_OPEN_QUESTION) })
+                addView(textButton(context, R.string.card_answer) { open(context, MainActivity.EXTRA_OPEN_DAILY) })
             }
             addView(textButton(context, R.string.card_ok) { hide() })
         }

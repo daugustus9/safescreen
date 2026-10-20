@@ -1,5 +1,7 @@
 package com.safescreen.app.ui
 
+import android.content.Context
+import android.content.Intent
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.ColumnScope
@@ -80,6 +82,12 @@ fun Bullet(text: String) {
         Spacer(Modifier.width(8.dp))
         Text(text, style = MaterialTheme.typography.bodyMedium)
     }
+}
+
+/** Opens Android's share sheet with plain text; the child picks where it goes, if anywhere. */
+fun shareText(context: Context, text: String, chooserTitle: String) {
+    val send = Intent(Intent.ACTION_SEND).setType("text/plain").putExtra(Intent.EXTRA_TEXT, text)
+    context.startActivity(Intent.createChooser(send, chooserTitle))
 }
 
 /** Increments each time the screen resumes, e.g. after returning from Android settings. */

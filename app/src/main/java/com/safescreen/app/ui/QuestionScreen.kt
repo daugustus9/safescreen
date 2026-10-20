@@ -24,6 +24,8 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import com.safescreen.app.R
+import com.safescreen.app.AppGraph
+import com.safescreen.app.core.Album
 import com.safescreen.app.core.Answer
 import com.safescreen.app.core.Difficulty
 import com.safescreen.app.core.EventType
@@ -36,17 +38,21 @@ import com.safescreen.app.graph
 /**
  * One real exam question at a time, opened by the child (never forced). After answering,
  * the child sees the right answer, how to solve it, the skill it tests and its source.
+ * With [skill] set (from the album), it practices that one skill.
  */
 @Composable
-fun QuestionScreen(onBack: () -> Unit) {
+fun QuestionScreen(skill: String? = null, onBack: () -> Unit) {
     val graph = LocalContext.current.graph
     val policy by graph.policy.policy.collectAsState()
     val answers by graph.answers.answers.collectAsState()
     val age = policy.ageTier.representativeAge
     val questions = graph.content.questions
 
+    fun pick(all: List<Answer>) =
+        if (skill != null) Album.practiceQuestion(skill, questions, all, age) else QuestionPicker.next(questions, all, age)
+
     // Picked once per question, so recording an answer doesn't swap the question away.
-    var current by remember { mutableStateOf(QuestionPicker.next(questions, answers, age)) }
+    var current by remember { mutableStateOf(pick(answers)) }
     var selected by remember { mutableStateOf<String?>(null) }
     var result by remember { mutableStateOf<Answer?>(null) }
 
@@ -66,21 +72,14 @@ fun QuestionScreen(onBack: () -> Unit) {
                         modifier = Modifier.fillMaxWidth(),
                         onClick = {
                             val chosen = selected ?: return@Button
-                            val answer = Answer(question.id, chosen, chosen == question.answer, System.currentTimeMillis())
-                            graph.answers.add(answer)
-                            graph.events.add(
-                                EventType.QUESTION_ANSWERED,
-                                category = skillKey(question.area, question.skill),
-                                value = if (answer.correct) 1 else 0,
-                            )
-                            result = answer
+                            result = recordAnswer(graph, question, chosen)
                         },
                     ) { Text(stringResource(R.string.card_answer)) }
                 } else {
                     Feedback(question, answered)
                     Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
                         Button(onClick = {
-                            current = QuestionPicker.next(questions, graph.answers.answers.value, age)
+                            current = pick(graph.answers.answers.value)
                             selected = null
                             result = null
                         }) { Text(stringResource(R.string.study_next)) }
@@ -92,8 +91,20 @@ fun QuestionScreen(onBack: () -> Unit) {
     }
 }
 
+/** Saves an answer on the phone and logs its skill for the parent summary. */
+internal fun recordAnswer(graph: AppGraph, question: Question, chosen: String): Answer {
+    val answer = Answer(question.id, chosen, chosen == question.answer, System.currentTimeMillis())
+    graph.answers.add(answer)
+    graph.events.add(
+        EventType.QUESTION_ANSWERED,
+        category = skillKey(question.area, question.skill),
+        value = if (answer.correct) 1 else 0,
+    )
+    return answer
+}
+
 @Composable
-private fun QuestionBody(question: Question, selected: String?, result: Answer?, onSelect: (String) -> Unit) {
+internal fun QuestionBody(question: Question, selected: String?, result: Answer?, onSelect: (String) -> Unit) {
     val difficulty = stringResource(
         when (QuestionBank.difficultyOf(question)) {
             Difficulty.EASIER -> R.string.difficulty_easier
@@ -134,7 +145,7 @@ private fun QuestionBody(question: Question, selected: String?, result: Answer?,
 }
 
 @Composable
-private fun Feedback(question: Question, answer: Answer) {
+internal fun Feedback(question: Question, answer: Answer) {
     val graph = LocalContext.current.graph
     val skill = graph.content.skills[skillKey(question.area, question.skill)]
     SectionCard {

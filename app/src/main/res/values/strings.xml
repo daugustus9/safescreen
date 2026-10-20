@@ -41,6 +41,7 @@
     <string name="transparency_never_title">Seus pais nunca veem:</string>
     <string name="transparency_never_1">O que você digita, suas mensagens ou suas fotos.</string>
     <string name="transparency_never_2">Os sites ou vídeos que você abre.</string>
+    <string name="transparency_share">Você só compartilha algo se quiser: o resultado do Desafio do Dia mostra só quadradinhos coloridos, sem respostas e sem dados pessoais.</string>
     <string name="transparency_offline">O SafeScreen não tem acesso à internet. Tudo fica neste celular.</string>
     <string name="transparency_continue">Entendi</string>
 
@@ -196,8 +197,8 @@
 
     <!-- Study (ENEM questions) -->
     <string name="card_answer">Responder</string>
-    <string name="kind_study">Questão do dia</string>
-    <string name="messages_study_note">Convite diário para responder uma questão real do ENEM, para quem tem 13 anos ou mais. Cada questão, com a explicação, aparece na tela de questões.</string>
+    <string name="kind_study">Desafio do Dia</string>
+    <string name="messages_study_note">Convite uma vez por dia para o Desafio do Dia: 3 questões reais do ENEM, iguais para todos, para quem tem 13 anos ou mais. Nunca na hora de dormir.</string>
     <string name="study_title">Questão do ENEM</string>
     <string name="study_header">%1$s · Questão %2$d · %3$s</string>
     <string name="study_difficulty">Dificuldade: %1$s</string>
@@ -216,9 +217,7 @@
     <string name="study_not_for_age">As questões do ENEM são para quem tem 13 anos ou mais. Questões para a sua idade chegam em breve.</string>
     <string name="home_study_title">Questões do ENEM</string>
     <string name="home_study_progress">%1$d de %2$d respondidas · %3$d certas</string>
-    <string name="home_study_start">Responder a questão de hoje</string>
     <string name="home_study_more">Praticar mais</string>
-    <string name="home_study_done_today">Questão de hoje feita!</string>
     <string name="summary_study">Estudos: questões do ENEM</string>
     <string name="summary_study_answered">Questões respondidas: %1$d (certas: %2$d)</string>
     <string name="summary_study_week">Nesta semana: %1$d</string>
@@ -229,4 +228,46 @@
     <string name="summary_study_all_good">Nenhum ponto fraco claro até agora. Continue praticando!</string>
     <string name="summary_study_note">A dificuldade de cada questão vem dos parâmetros oficiais do INEP. Isto é uma sugestão de estudo, não uma previsão de nota.</string>
     <string name="agreement_study">Questões de estudo (ENEM, a partir de 13 anos)</string>
+
+    <!-- Daily challenge and album -->
+    <string name="daily_title">Desafio do Dia</string>
+    <string name="daily_header">Desafio do Dia #%1$d · questão %2$d de %3$d</string>
+    <string name="daily_next">Próxima</string>
+    <string name="daily_see_result">Ver resultado</string>
+    <string name="daily_score">%1$d de %2$d certas</string>
+    <string name="daily_streak_note">Um dia de folga por semana não quebra a sequência.</string>
+    <string name="daily_share">Compartilhar resultado</string>
+    <string name="daily_share_note">O cartão mostra só os quadradinhos: nenhuma resposta e nenhum dado pessoal. Você escolhe se e com quem compartilhar.</string>
+    <string name="daily_come_back">Volte amanhã para o desafio #%1$d!</string>
+    <string name="daily_share_header">SafeScreen · Desafio do Dia #%1$d</string>
+    <string name="daily_share_score">%1$d/%2$d</string>
+    <string name="daily_share_streak">sequência de %1$d dias 🔥</string>
+    <string name="daily_open_album">Ver meu álbum</string>
+    <string name="share_chooser">Compartilhar com…</string>
+    <string name="album_title">Álbum de Habilidades</string>
+    <string name="album_intro">Cada habilidade do ENEM é uma figurinha. Acerte uma questão dela para colar; acerte uma questão difícil e ela fica brilhante.</string>
+    <string name="album_count">%1$d de %2$d figurinhas</string>
+    <string name="album_shiny">%1$d brilhantes ✨</string>
+    <string name="album_legend">✓ colada · ✨ brilhante · ○ disponível · – em breve</string>
+    <string name="album_coming_soon">Ainda não há questões desta habilidade. Em breve!</string>
+    <string name="album_state_earned">Colada!</string>
+    <string name="album_state_shiny">Brilhante! ✨</string>
+    <string name="album_state_available">Ainda falta esta figurinha.</string>
+    <string name="album_practice">Praticar</string>
+    <string name="album_ask_friend">Pedir a um amigo</string>
+    <string name="album_ask_text">Me falta a figurinha %1$s de %2$s (%3$s) no meu Álbum de Habilidades do ENEM! Bora praticar juntos? #SafeScreen</string>
+    <string name="home_daily_button">Desafio do Dia #%1$d</string>
+    <string name="home_daily_done">Desafio de hoje feito! ✓</string>
+    <string name="home_album_button">Álbum (%1$d/%2$d)</string>
+    <string name="summary_study_album">Figurinhas no álbum: %1$d de %2$d</string>
+    <string name="common_close">Fechar</string>
+
+    <plurals name="daily_streak">
+        <item quantity="one">Sequência: %1$d dia 🔥</item>
+        <item quantity="other">Sequência: %1$d dias 🔥</item>
+    </plurals>
+    <plurals name="summary_study_streak">
+        <item quantity="one">Sequência do Desafio do Dia: %1$d dia</item>
+        <item quantity="other">Sequência do Desafio do Dia: %1$d dias</item>
+    </plurals>
 </resources>

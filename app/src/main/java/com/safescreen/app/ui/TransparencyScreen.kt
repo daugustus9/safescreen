@@ -35,6 +35,7 @@ fun TransparencyScreen(firstRun: Boolean, onContinue: () -> Unit) {
             Bullet(stringResource(R.string.transparency_never_1))
             Bullet(stringResource(R.string.transparency_never_2))
         }
+        Text(stringResource(R.string.transparency_share), style = MaterialTheme.typography.bodyMedium)
         Text(stringResource(R.string.transparency_offline), style = MaterialTheme.typography.titleSmall)
         if (firstRun) {
             Button(onClick = onContinue, modifier = Modifier.fillMaxWidth()) {

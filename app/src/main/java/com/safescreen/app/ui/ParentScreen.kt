@@ -34,12 +34,16 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.res.pluralStringResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.unit.dp
 import com.safescreen.app.R
 import com.safescreen.app.core.AgeTier
+import com.safescreen.app.core.Album
 import com.safescreen.app.core.FocusAnalysis
+import com.safescreen.app.core.StickerState
+import com.safescreen.app.core.Streak
 import com.safescreen.app.core.WeeklySummary
 import com.safescreen.app.data.PolicyStore
 import com.safescreen.app.graph
@@ -136,6 +140,16 @@ private fun StudySummary() {
     SectionCard(stringResource(R.string.summary_study)) {
         Text(stringResource(R.string.summary_study_answered, report.answered, report.correct))
         Text(stringResource(R.string.summary_study_week, answers.count { it.timestampMillis >= weekAgo }))
+        val stickers = remember(answers) { Album.stickers(graph.content.skills.values.toList(), questions, answers) }
+        Text(
+            stringResource(
+                R.string.summary_study_album,
+                stickers.count { it.state == StickerState.EARNED || it.state == StickerState.SHINY },
+                stickers.size,
+            ),
+        )
+        val streak = Streak.current(graph.daily.doneDays(), LocalDate.now())
+        Text(pluralStringResource(R.plurals.summary_study_streak, streak, streak))
         when {
             !report.enough -> Text(
                 stringResource(R.string.summary_study_not_enough, FocusAnalysis.MIN_ANSWERS),

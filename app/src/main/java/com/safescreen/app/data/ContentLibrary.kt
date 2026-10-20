@@ -47,9 +47,9 @@ class ContentLibrary(private val context: Context) {
             .sorted()
 
     fun studyInviteCard(): Card = if (language == "pt") {
-        Card("study-invite", CardKind.STUDY, "Questão do ENEM de hoje", "Uma questão real do ENEM, cerca de 2 minutos. Toque em Responder quando puder.")
+        Card("study-invite", CardKind.STUDY, "Desafio do Dia", "3 questões reais do ENEM, de áreas diferentes, iguais para todo mundo hoje. Toque em Responder quando puder.")
     } else {
-        Card("study-invite", CardKind.STUDY, "Today's ENEM question", "A real ENEM question, about 2 minutes. Tap Answer when you can.")
+        Card("study-invite", CardKind.STUDY, "Daily Challenge", "3 real ENEM questions from different areas, the same for everyone today. Tap Answer when you can.")
     }
 
     fun card(id: String): Card? = cards.firstOrNull { it.id == id }

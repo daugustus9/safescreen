@@ -6,6 +6,7 @@ import com.safescreen.app.core.CardScheduler
 import com.safescreen.app.data.AnswerStore
 import com.safescreen.app.data.CardHistoryStore
 import com.safescreen.app.data.ContentLibrary
+import com.safescreen.app.data.DailyStore
 import com.safescreen.app.data.EventLog
 import com.safescreen.app.data.FocusStore
 import com.safescreen.app.data.ParentPin
@@ -22,6 +23,7 @@ class AppGraph(context: Context) {
     val cardHistory = CardHistoryStore(context)
     val parentPin = ParentPin(context)
     val answers = AnswerStore(context)
+    val daily = DailyStore(context)
     val scheduler by lazy { CardScheduler(content.cards, content::reminderCard) }
 }
 

@@ -24,11 +24,16 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.res.pluralStringResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import com.safescreen.app.R
 import com.safescreen.app.core.EventType
+import com.safescreen.app.core.Album
+import com.safescreen.app.core.DailyChallenge
 import com.safescreen.app.core.QuestionPicker
+import com.safescreen.app.core.StickerState
+import com.safescreen.app.core.Streak
 import com.safescreen.app.core.SchoolTask
 import com.safescreen.app.graph
 import com.safescreen.app.service.CardOverlayService
@@ -36,9 +41,7 @@ import com.safescreen.app.system.Access
 import com.safescreen.app.system.InstalledApps
 import com.safescreen.app.system.Permissions
 import kotlinx.coroutines.delay
-import java.time.Instant
 import java.time.LocalDate
-import java.time.ZoneId
 import java.time.format.DateTimeFormatter
 import java.util.Locale
 
@@ -51,6 +54,8 @@ fun ChildHomeScreen(
     onTransparency: () -> Unit,
     onMessages: () -> Unit,
     onQuestion: () -> Unit,
+    onDaily: () -> Unit,
+    onAlbum: () -> Unit,
     onParent: () -> Unit,
 ) {
     val context = LocalContext.current
@@ -60,6 +65,7 @@ fun ChildHomeScreen(
     val focus by graph.focus.state.collectAsState()
     val tasks by graph.tasks.tasks.collectAsState()
     val answers by graph.answers.answers.collectAsState()
+    val dailyResults by graph.daily.results.collectAsState()
     val resumes = rememberResumeCount()
     val allGranted = remember(resumes) { Access.entries.all { Permissions.isGranted(context, it) } }
 
@@ -138,9 +144,17 @@ fun ChildHomeScreen(
             SectionCard(stringResource(R.string.home_study_title)) {
                 val latest = QuestionPicker.latestAnswers(answers)
                 val today = LocalDate.now()
-                val doneToday = answers.any {
-                    Instant.ofEpochMilli(it.timestampMillis).atZone(ZoneId.systemDefault()).toLocalDate() == today
+                val dailyDone = dailyResults[today].orEmpty().size >= DailyChallenge.SIZE
+                val streak = Streak.current(graph.daily.doneDays(), today)
+                val stickers = remember(answers) {
+                    Album.stickers(graph.content.skills.values.toList(), graph.content.questions, answers)
                 }
+                val stuck = stickers.count { it.state == StickerState.EARNED || it.state == StickerState.SHINY }
+
+                if (dailyDone) {
+                    Text(stringResource(R.string.home_daily_done), color = MaterialTheme.colorScheme.secondary)
+                }
+                if (streak >= 1) Text(pluralStringResource(R.plurals.daily_streak, streak, streak), style = MaterialTheme.typography.titleMedium)
                 Text(
                     stringResource(
                         R.string.home_study_progress,
@@ -150,11 +164,14 @@ fun ChildHomeScreen(
                     ),
                     style = MaterialTheme.typography.bodyMedium,
                 )
-                if (doneToday) {
-                    Text(stringResource(R.string.home_study_done_today), color = MaterialTheme.colorScheme.secondary)
-                }
-                Button(onClick = onQuestion) {
-                    Text(stringResource(if (doneToday) R.string.home_study_more else R.string.home_study_start))
+                FlowRow(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
+                    Button(onClick = onDaily) {
+                        Text(stringResource(R.string.home_daily_button, DailyChallenge.number(today)))
+                    }
+                    OutlinedButton(onClick = onAlbum) {
+                        Text(stringResource(R.string.home_album_button, stuck, stickers.size))
+                    }
+                    OutlinedButton(onClick = onQuestion) { Text(stringResource(R.string.home_study_more)) }
                 }
             }
         }

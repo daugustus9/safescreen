@@ -15,7 +15,9 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.platform.LocalContext
 import com.safescreen.app.core.EventType
 import com.safescreen.app.system.AlertNotifier
+import com.safescreen.app.ui.AlbumScreen
 import com.safescreen.app.ui.ChildHomeScreen
+import com.safescreen.app.ui.DailyChallengeScreen
 import com.safescreen.app.ui.HelpScreen
 import com.safescreen.app.ui.MessagesScreen
 import com.safescreen.app.ui.ParentGateScreen
@@ -48,18 +50,18 @@ class MainActivity : ComponentActivity() {
         when {
             intent?.getBooleanExtra(EXTRA_OPEN_HELP, false) == true -> externalRequest.value = Screen.HELP
             intent?.getBooleanExtra(EXTRA_OPEN_TRANSPARENCY, false) == true -> externalRequest.value = Screen.TRANSPARENCY
-            intent?.getBooleanExtra(EXTRA_OPEN_QUESTION, false) == true -> externalRequest.value = Screen.QUESTION
+            intent?.getBooleanExtra(EXTRA_OPEN_DAILY, false) == true -> externalRequest.value = Screen.DAILY
         }
     }
 
     companion object {
         const val EXTRA_OPEN_HELP = "open_help"
         const val EXTRA_OPEN_TRANSPARENCY = "open_transparency"
-        const val EXTRA_OPEN_QUESTION = "open_question"
+        const val EXTRA_OPEN_DAILY = "open_daily"
     }
 }
 
-enum class Screen { TRANSPARENCY, SETUP, HOME, HELP, TASKS, MESSAGES, QUESTION, PARENT_GATE, PARENT }
+enum class Screen { TRANSPARENCY, SETUP, HOME, HELP, TASKS, MESSAGES, QUESTION, DAILY, ALBUM, PARENT_GATE, PARENT }
 
 @Composable
 private fun AppRoot(externalRequest: MutableState<Screen?>) {
@@ -67,13 +69,15 @@ private fun AppRoot(externalRequest: MutableState<Screen?>) {
     val graph = context.graph
     val firstRun = !graph.policy.current.transparencySeen
     var screen by rememberSaveable { mutableStateOf(if (firstRun) Screen.TRANSPARENCY else Screen.HOME) }
+    // The skill being practiced from the album (e.g. "MT:H16"), or null for regular practice.
+    var practiceSkill by rememberSaveable { mutableStateOf<String?>(null) }
 
     LaunchedEffect(externalRequest.value) {
         externalRequest.value?.let { screen = it }
         externalRequest.value = null
     }
     BackHandler(enabled = screen != Screen.HOME && !(screen == Screen.TRANSPARENCY && firstRun)) {
-        screen = Screen.HOME
+        screen = if (screen == Screen.QUESTION && practiceSkill != null) Screen.ALBUM else Screen.HOME
     }
     val home = { screen = Screen.HOME }
 
@@ -98,13 +102,22 @@ private fun AppRoot(externalRequest: MutableState<Screen?>) {
             onTasks = { screen = Screen.TASKS },
             onTransparency = { screen = Screen.TRANSPARENCY },
             onMessages = { screen = Screen.MESSAGES },
-            onQuestion = { screen = Screen.QUESTION },
+            onQuestion = { practiceSkill = null; screen = Screen.QUESTION },
+            onDaily = { screen = Screen.DAILY },
+            onAlbum = { screen = Screen.ALBUM },
             onParent = { screen = Screen.PARENT_GATE },
         )
         Screen.HELP -> HelpScreen(onBack = home)
         Screen.TASKS -> TasksScreen(onBack = home)
         Screen.MESSAGES -> MessagesScreen(onBack = home)
-        Screen.QUESTION -> QuestionScreen(onBack = home)
+        Screen.QUESTION -> QuestionScreen(skill = practiceSkill, onBack = {
+            screen = if (practiceSkill != null) Screen.ALBUM else Screen.HOME
+        })
+        Screen.DAILY -> DailyChallengeScreen(onBack = home, onAlbum = { screen = Screen.ALBUM })
+        Screen.ALBUM -> AlbumScreen(onBack = home, onPractice = { skill ->
+            practiceSkill = skill
+            screen = Screen.QUESTION
+        })
         Screen.PARENT_GATE -> ParentGateScreen(onUnlocked = { screen = Screen.PARENT }, onBack = home)
         Screen.PARENT -> ParentScreen(onLock = home)
     }

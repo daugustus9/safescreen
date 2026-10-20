@@ -27,6 +27,8 @@ O protótipo **não tem permissão de INTERNET**: nada do que ele vê pode sair 
 | — | Tela "O que o SafeScreen vê", mostrada antes de qualquer coisa ser ligada e acessível pela notificação de status | `ui/TransparencyScreen.kt` |
 | — | Tela "Todas as mensagens": a criança e os pais podem ler todas as mensagens que o app pode mostrar, inclusive as da família | `ui/MessagesScreen.kt` |
 | P4 | Questões reais do ENEM (13+): convite uma vez por dia, explicação depois da resposta, da mais fácil para a mais difícil, e erros que voltam depois | `core/Study.kt`, `ui/QuestionScreen.kt`, `assets/questions/` |
+| P4 | Desafio do Dia: as mesmas 3 questões para todos no dia, escolhidas só pela data; o resultado é compartilhado como quadradinhos 🟩🟥, sem respostas nem dados pessoais; sequência com um dia de folga por semana | `core/Game.kt`, `ui/DailyChallengeScreen.kt` |
+| P4 | Álbum de Habilidades: uma figurinha por habilidade do ENEM (120); acertar cola, acertar questão difícil deixa brilhante; figurinhas faltando podem ser praticadas ou pedidas a um amigo | `core/Game.kt`, `ui/AlbumScreen.kt` |
 | P4 | "Onde focar" no resumo dos pais: habilidades do ENEM a revisar, pesando mais os erros em questões fáceis (dificuldade oficial do INEP) | `core/Study.kt`, `ui/ParentScreen.kt` |
 
 O motor de mensagens (`CardOverlayService` + `CardPresenter`) foi adaptado do serviço de sobreposição do app de mensagens subliminares, com uma mudança proposital: toda mensagem é visível e fica na tela até a criança ler. Nada é subliminar. Segurança, conselhos e incentivo se revezam, para que nunca apareçam três avisos seguidos.

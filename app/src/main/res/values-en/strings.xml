@@ -41,6 +41,7 @@
     <string name="transparency_never_title">Your parents never see:</string>
     <string name="transparency_never_1">What you type, your messages or your photos.</string>
     <string name="transparency_never_2">The websites or videos you open.</string>
+    <string name="transparency_share">You share something only if you want to: the Daily Challenge result shows only colored squares, no answers and nothing personal.</string>
     <string name="transparency_offline">SafeScreen has no internet access. Everything stays on this phone.</string>
     <string name="transparency_continue">I understand</string>
 
@@ -196,8 +197,8 @@
 
     <!-- Study (ENEM questions) -->
     <string name="card_answer">Answer</string>
-    <string name="kind_study">Question of the day</string>
-    <string name="messages_study_note">A daily invitation to answer a real ENEM question, for ages 13 and up. Each question, with its explanation, appears on the questions screen.</string>
+    <string name="kind_study">Daily Challenge</string>
+    <string name="messages_study_note">An invitation once a day to the Daily Challenge: 3 real ENEM questions, the same for everyone, for ages 13 and up. Never at bedtime.</string>
     <string name="study_title">ENEM question</string>
     <string name="study_header">%1$s · Question %2$d · %3$s</string>
     <string name="study_difficulty">Difficulty: %1$s</string>
@@ -216,9 +217,7 @@
     <string name="study_not_for_age">ENEM questions are for ages 13 and up. Questions for your age are coming soon.</string>
     <string name="home_study_title">ENEM questions</string>
     <string name="home_study_progress">%1$d of %2$d answered · %3$d correct</string>
-    <string name="home_study_start">Answer today\'s question</string>
     <string name="home_study_more">Practice more</string>
-    <string name="home_study_done_today">Today\'s question: done!</string>
     <string name="summary_study">Study: ENEM questions</string>
     <string name="summary_study_answered">Questions answered: %1$d (correct: %2$d)</string>
     <string name="summary_study_week">This week: %1$d</string>
@@ -229,4 +228,46 @@
     <string name="summary_study_all_good">No clear weak spot so far. Keep practicing!</string>
     <string name="summary_study_note">Each question\'s difficulty comes from INEP\'s official parameters. This is a study suggestion, not a score prediction.</string>
     <string name="agreement_study">Study questions (ENEM, ages 13 and up)</string>
+
+    <!-- Daily challenge and album -->
+    <string name="daily_title">Daily Challenge</string>
+    <string name="daily_header">Daily Challenge #%1$d · question %2$d of %3$d</string>
+    <string name="daily_next">Next</string>
+    <string name="daily_see_result">See result</string>
+    <string name="daily_score">%1$d of %2$d correct</string>
+    <string name="daily_streak_note">One day off per week doesn\'t break the streak.</string>
+    <string name="daily_share">Share result</string>
+    <string name="daily_share_note">The card shows only the squares: no answers and nothing personal. You choose whether and with whom to share it.</string>
+    <string name="daily_come_back">Come back tomorrow for challenge #%1$d!</string>
+    <string name="daily_share_header">SafeScreen · Daily Challenge #%1$d</string>
+    <string name="daily_share_score">%1$d/%2$d</string>
+    <string name="daily_share_streak">%1$d-day streak 🔥</string>
+    <string name="daily_open_album">See my album</string>
+    <string name="share_chooser">Share with…</string>
+    <string name="album_title">Skills Album</string>
+    <string name="album_intro">Each ENEM skill is a sticker. Answer one of its questions right to stick it; get a hard one right and it turns shiny.</string>
+    <string name="album_count">%1$d of %2$d stickers</string>
+    <string name="album_shiny">%1$d shiny ✨</string>
+    <string name="album_legend">✓ stuck · ✨ shiny · ○ available · – coming soon</string>
+    <string name="album_coming_soon">No questions for this skill yet. Coming soon!</string>
+    <string name="album_state_earned">Stuck!</string>
+    <string name="album_state_shiny">Shiny! ✨</string>
+    <string name="album_state_available">This sticker is still missing.</string>
+    <string name="album_practice">Practice</string>
+    <string name="album_ask_friend">Ask a friend</string>
+    <string name="album_ask_text">I\'m missing sticker %1$s in %2$s (%3$s) in my ENEM Skills Album! Want to practice together? #SafeScreen</string>
+    <string name="home_daily_button">Daily Challenge #%1$d</string>
+    <string name="home_daily_done">Today\'s challenge: done! ✓</string>
+    <string name="home_album_button">Album (%1$d/%2$d)</string>
+    <string name="summary_study_album">Stickers in the album: %1$d of %2$d</string>
+    <string name="common_close">Close</string>
+
+    <plurals name="daily_streak">
+        <item quantity="one">Streak: %1$d day 🔥</item>
+        <item quantity="other">Streak: %1$d days 🔥</item>
+    </plurals>
+    <plurals name="summary_study_streak">
+        <item quantity="one">Daily Challenge streak: %1$d day</item>
+        <item quantity="other">Daily Challenge streak: %1$d days</item>
+    </plurals>
 </resources>
