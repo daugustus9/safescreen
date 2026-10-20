@@ -36,6 +36,55 @@ class StudyTest {
         assertEquals("ENEM 2023, 2º dia, caderno 5 amarelo, questão 136", byNumber.getValue(136).source)
     }
 
+    private val allAreas = listOf("ch", "cn", "lc", "mt")
+    private val allQuestions = allAreas.flatMap {
+        QuestionBank.parseQuestions(File("src/main/assets/questions/enem_2023_$it.json").readText())
+    }
+    private val allSkills = allAreas.flatMap {
+        QuestionBank.parseSkills(File("src/main/assets/questions/enem_matriz_$it.json").readText())
+    }
+
+    @Test
+    fun allFourAreasAreCompleteAndConsistent() {
+        assertEquals(mapOf("CH" to 21, "CN" to 25, "LC" to 18, "MT" to 16), allQuestions.groupingBy { it.area }.eachCount())
+        assertEquals(120, allSkills.size)
+        val skillKeys = allSkills.map { it.key }.toSet()
+        assertEquals(allQuestions.size, allQuestions.map { it.id }.toSet().size)
+        allQuestions.forEach { q ->
+            assertEquals("${q.id} options", listOf("A", "B", "C", "D", "E"), q.options.map { it.first })
+            assertTrue("${q.id} skill", skillKey(q.area, q.skill) in skillKeys)
+            assertTrue("${q.id} explanation", q.explanation.length > 40)
+        }
+        // Sensitive texts are only for older teens.
+        assertEquals(setOf("enem-2023-ch-90", "enem-2023-lc-16", "enem-2023-lc-31"), allQuestions.filter { it.minAge > 13 }.map { it.id }.toSet())
+    }
+
+    @Test
+    fun difficultyIsRelativeToEachArea() {
+        val ch83 = allQuestions.first { it.id == "enem-2023-ch-83" } // b = 0.39, easy third of Humanas
+        val ch75 = allQuestions.first { it.id == "enem-2023-ch-75" } // b = 2.64, hard
+        val mt141 = allQuestions.first { it.id == "enem-2023-mt-141" } // b = 1.54: medium in math...
+        val ch72 = allQuestions.first { it.id == "enem-2023-ch-72" } // b = 1.30: ...but hard in Humanas
+        assertEquals(Difficulty.EASIER, QuestionBank.difficultyOf(ch83))
+        assertEquals(Difficulty.HARDER, QuestionBank.difficultyOf(ch75))
+        assertEquals(Difficulty.MEDIUM, QuestionBank.difficultyOf(mt141))
+        assertEquals(Difficulty.HARDER, QuestionBank.difficultyOf(ch72))
+    }
+
+    @Test
+    fun areasTakeTurns() {
+        val answers = mutableListOf<Answer>()
+        val areas = (0 until 8).map { i ->
+            val q = QuestionPicker.next(allQuestions, answers, age = 14)!!
+            answers += Answer(q.id, q.answer, true, i.toLong())
+            q.area
+        }
+        // Each of the four areas once, then each again.
+        assertEquals(listOf("CH", "CN", "LC", "MT", "CH", "CN", "LC", "MT"), areas)
+        // Within an area, the easiest first: CN 124 has b = -1.15.
+        assertEquals("enem-2023-cn-124", answers[1].questionId)
+    }
+
     @Test
     fun startsWithTheEasiestUnansweredQuestion() {
         // Question 173 has the lowest INEP difficulty (b = 0.14), then 169 (0.74).

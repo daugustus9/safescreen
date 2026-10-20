@@ -1,0 +1,157 @@
+{
+  "about": "ENEM reference matrix for area CH. Skill descriptions are INEP's official text (Matriz de Referência do ENEM). Study tips are SafeScreen's own (CC BY-SA 4.0).",
+  "source": "INEP, Matriz de Referência do ENEM: https://download.inep.gov.br/download/enem/matriz_referencia.pdf",
+  "area": "CH",
+  "skills": [
+    {
+      "code": "H1",
+      "description": "Interpretar historicamente e/ou geograficamente fontes documentais acerca de aspectos da cultura.",
+      "tip": "interpretar fontes históricas e geográficas"
+    },
+    {
+      "code": "H2",
+      "description": "Analisar a produção da memória pelas sociedades humanas.",
+      "tip": "memória e história"
+    },
+    {
+      "code": "H3",
+      "description": "Associar as manifestações culturais do presente aos seus processos históricos.",
+      "tip": "cultura do presente e seus processos históricos"
+    },
+    {
+      "code": "H4",
+      "description": "Comparar pontos de vista expressos em diferentes fontes sobre determinado aspecto da cultura.",
+      "tip": "comparar pontos de vista sobre cultura"
+    },
+    {
+      "code": "H5",
+      "description": "Identificar as manifestações ou representações da diversidade do patrimônio cultural e artístico em diferentes sociedades.",
+      "tip": "patrimônio cultural e diversidade"
+    },
+    {
+      "code": "H6",
+      "description": "Interpretar diferentes representações gráficas e cartográficas dos espaços geográficos.",
+      "tip": "mapas, gráficos e representações do espaço"
+    },
+    {
+      "code": "H7",
+      "description": "Identificar os significados histórico-geográficos das relações de poder entre as nações",
+      "tip": "relações de poder entre nações"
+    },
+    {
+      "code": "H8",
+      "description": "Analisar a ação dos estados nacionais no que se refere à dinâmica dos fluxos populacionais e no enfrentamento de problemas de ordem econômico-social.",
+      "tip": "Estado, migrações e problemas sociais"
+    },
+    {
+      "code": "H9",
+      "description": "Comparar o significado histórico-geográfico das organizações políticas e socioeconômicas em escala local, regional ou mundial.",
+      "tip": "organizações políticas e econômicas"
+    },
+    {
+      "code": "H10",
+      "description": "Reconhecer a dinâmica da organização dos movimentos sociais e a importância da participação da coletividade na transformação da realidade histórico-geográfica.",
+      "tip": "movimentos sociais e participação coletiva"
+    },
+    {
+      "code": "H11",
+      "description": "Identificar registros de práticas de grupos sociais no tempo e no espaço.",
+      "tip": "práticas de grupos sociais no tempo e no espaço"
+    },
+    {
+      "code": "H12",
+      "description": "Analisar o papel da justiça como instituição na organização das sociedades.",
+      "tip": "justiça e instituições"
+    },
+    {
+      "code": "H13",
+      "description": "Analisar a atuação dos movimentos sociais que contribuíram para mudanças ou rupturas em processos de disputa pelo poder.",
+      "tip": "movimentos sociais e disputas de poder"
+    },
+    {
+      "code": "H14",
+      "description": "Comparar diferentes pontos de vista, presentes em textos analíticos e interpretativos, sobre situação ou fatos de natureza histórico-geográfica acerca das instituições sociais, políticas e econômicas.",
+      "tip": "comparar interpretações de fatos históricos e geográficos"
+    },
+    {
+      "code": "H15",
+      "description": "Avaliar criticamente conflitos culturais, sociais, políticos, econômicos ou ambientais ao longo da história.",
+      "tip": "conflitos culturais, sociais, políticos e ambientais"
+    },
+    {
+      "code": "H16",
+      "description": "Identificar registros sobre o papel das técnicas e tecnologias na organização do trabalho e/ou da vida social.",
+      "tip": "técnica, tecnologia e trabalho"
+    },
+    {
+      "code": "H17",
+      "description": "Analisar fatores que explicam o impacto das novas tecnologias no processo de territorialização da produção.",
+      "tip": "novas tecnologias e territórios produtivos"
+    },
+    {
+      "code": "H18",
+      "description": "Analisar diferentes processos de produção ou circulação de riquezas e suas implicações sócio-espaciais.",
+      "tip": "produção e circulação de riquezas"
+    },
+    {
+      "code": "H19",
+      "description": "Reconhecer as transformações técnicas e tecnológicas que determinam as várias formas de uso e apropriação dos espaços rural e urbano.",
+      "tip": "transformações no campo e na cidade"
+    },
+    {
+      "code": "H20",
+      "description": "Selecionar argumentos favoráveis ou contrários às modificações impostas pelas novas tecnologias à vida social e ao mundo do trabalho.",
+      "tip": "tecnologia, trabalho e vida social"
+    },
+    {
+      "code": "H21",
+      "description": "Identificar o papel dos meios de comunicação na construção da vida social.",
+      "tip": "meios de comunicação e sociedade"
+    },
+    {
+      "code": "H22",
+      "description": "Analisar as lutas sociais e conquistas obtidas no que se refere às mudanças nas legislações ou nas políticas públicas.",
+      "tip": "lutas sociais, direitos e leis"
+    },
+    {
+      "code": "H23",
+      "description": "Analisar a importância dos valores éticos na estruturação política das sociedades.",
+      "tip": "ética e política"
+    },
+    {
+      "code": "H24",
+      "description": "Relacionar cidadania e democracia na organização das sociedades.",
+      "tip": "cidadania e democracia"
+    },
+    {
+      "code": "H25",
+      "description": "Identificar estratégias que promovam formas de inclusão social.",
+      "tip": "inclusão social"
+    },
+    {
+      "code": "H26",
+      "description": "Identificar em fontes diversas o processo de ocupação dos meios físicos e as relações da vida humana com a paisagem.",
+      "tip": "ocupação do espaço e paisagem"
+    },
+    {
+      "code": "H27",
+      "description": "Analisar de maneira crítica as interações da sociedade com o meio físico, levando em consideração aspectos históricos e(ou) geográficos.",
+      "tip": "sociedade e meio ambiente"
+    },
+    {
+      "code": "H28",
+      "description": "Relacionar o uso das tecnologias com os impactos sócio-ambientais em diferentes contextos histórico-geográficos.",
+      "tip": "tecnologia e impactos socioambientais"
+    },
+    {
+      "code": "H29",
+      "description": "Reconhecer a função dos recursos naturais na produção do espaço geográfico, relacionando-os com as mudanças provocadas pelas ações humanas.",
+      "tip": "recursos naturais e ação humana"
+    },
+    {
+      "code": "H30",
+      "description": "Avaliar as relações entre preservação e degradação da vida no planeta nas diferentes escalas.",
+      "tip": "preservação e degradação ambiental"
+    }
+  ]
+}

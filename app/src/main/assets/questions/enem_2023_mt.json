@@ -6,6 +6,7 @@
   "booklet": "2º dia, caderno 5 amarelo",
   "sourceUrl": "https://download.inep.gov.br/enem/provas_e_gabaritos/2023_PV_impresso_D2_CD5.pdf",
   "minAge": 13,
+  "difficultyCuts": [1.42, 2.19],
   "questions": [
     {
       "number": 136, "skill": "H16", "difficulty": 1.99, "item": 16795, "answer": "D",

@@ -1,0 +1,157 @@
+{
+  "about": "ENEM reference matrix for area CN. Skill descriptions are INEP's official text (Matriz de Referência do ENEM). Study tips are SafeScreen's own (CC BY-SA 4.0).",
+  "source": "INEP, Matriz de Referência do ENEM: https://download.inep.gov.br/download/enem/matriz_referencia.pdf",
+  "area": "CN",
+  "skills": [
+    {
+      "code": "H1",
+      "description": "Reconhecer características ou propriedades de fenômenos ondulatórios ou oscilatórios, relacionando-os a seus usos em diferentes contextos.",
+      "tip": "ondas: som, luz e suas aplicações"
+    },
+    {
+      "code": "H2",
+      "description": "Associar a solução de problemas de comunicação, transporte, saúde ou outro, com o correspondente desenvolvimento científico e tecnológico.",
+      "tip": "ciência e tecnologia na solução de problemas"
+    },
+    {
+      "code": "H3",
+      "description": "Confrontar interpretações científicas com interpretações baseadas no senso comum, ao longo do tempo ou em diferentes culturas.",
+      "tip": "ciência e senso comum"
+    },
+    {
+      "code": "H4",
+      "description": "Avaliar propostas de intervenção no ambiente, considerando a qualidade da vida humana ou medidas de conservação, recuperação ou utilização sustentável da biodiversidade.",
+      "tip": "conservação ambiental e qualidade de vida"
+    },
+    {
+      "code": "H5",
+      "description": "Dimensionar circuitos ou dispositivos elétricos de uso cotidiano.",
+      "tip": "circuitos e aparelhos elétricos"
+    },
+    {
+      "code": "H6",
+      "description": "Relacionar informações para compreender manuais de instalação ou utilização de aparelhos, ou sistemas tecnológicos de uso comum.",
+      "tip": "funcionamento de aparelhos e sistemas tecnológicos"
+    },
+    {
+      "code": "H7",
+      "description": "Selecionar testes de controle, parâmetros ou critérios para a comparação de materiais e produtos, tendo em vista a defesa do consumidor, a saúde do trabalhador ou a qualidade de vida.",
+      "tip": "testes e critérios de qualidade de materiais e produtos"
+    },
+    {
+      "code": "H8",
+      "description": "Identificar etapas em processos de obtenção, transformação, utilização ou reciclagem de recursos naturais, energéticos ou matérias-primas, considerando processos biológicos, químicos ou físicos neles envolvidos.",
+      "tip": "obtenção e transformação de recursos naturais"
+    },
+    {
+      "code": "H9",
+      "description": "Compreender a importância dos ciclos biogeoquímicos ou do fluxo energia para a vida, ou da ação de agentes ou fenômenos que podem causar alterações nesses processos.",
+      "tip": "ciclos biogeoquímicos e fluxo de energia"
+    },
+    {
+      "code": "H10",
+      "description": "Analisar perturbações ambientais, identificando fontes, transporte e(ou) destino dos poluentes ou prevendo efeitos em sistemas naturais, produtivos ou sociais.",
+      "tip": "poluição: fontes, transporte e efeitos"
+    },
+    {
+      "code": "H11",
+      "description": "Reconhecer benefícios, limitações e aspectos éticos da biotecnologia, considerando estruturas e processos biológicos envolvidos em produtos biotecnológicos.",
+      "tip": "biotecnologia: benefícios, limites e ética"
+    },
+    {
+      "code": "H12",
+      "description": "Avaliar impactos em ambientes naturais decorrentes de atividades sociais ou econômicas, considerando interesses contraditórios.",
+      "tip": "impactos ambientais de atividades humanas"
+    },
+    {
+      "code": "H13",
+      "description": "Reconhecer mecanismos de transmissão da vida, prevendo ou explicando a manifestação de características dos seres vivos.",
+      "tip": "genética e hereditariedade"
+    },
+    {
+      "code": "H14",
+      "description": "Identificar padrões em fenômenos e processos vitais dos organismos, como manutenção do equilíbrio interno, defesa, relações com o ambiente, sexualidade, entre outros.",
+      "tip": "fisiologia: equilíbrio interno, defesa e reprodução"
+    },
+    {
+      "code": "H15",
+      "description": "Interpretar modelos e experimentos para explicar fenômenos ou processos biológicos em qualquer nível de organização dos sistemas biológicos.",
+      "tip": "modelos e experimentos em biologia"
+    },
+    {
+      "code": "H16",
+      "description": "Compreender o papel da evolução na produção de padrões, processos biológicos ou na organização taxonômica dos seres vivos.",
+      "tip": "evolução e classificação dos seres vivos"
+    },
+    {
+      "code": "H17",
+      "description": "Relacionar informações apresentadas em diferentes formas de linguagem e representação usadas nas ciências físicas, químicas ou biológicas, como texto discursivo, gráficos, tabelas, relações matemáticas ou linguagem simbólica.",
+      "tip": "leitura de linguagens científicas (gráficos, fórmulas, símbolos)"
+    },
+    {
+      "code": "H18",
+      "description": "Relacionar propriedades físicas, químicas ou biológicas de produtos, sistemas ou procedimentos tecnológicos às finalidades a que se destinam.",
+      "tip": "propriedades de materiais e suas finalidades"
+    },
+    {
+      "code": "H19",
+      "description": "Avaliar métodos, processos ou procedimentos das ciências naturais que contribuam para diagnosticar ou solucionar problemas de ordem social, econômica ou ambiental.",
+      "tip": "métodos científicos para resolver problemas"
+    },
+    {
+      "code": "H20",
+      "description": "Caracterizar causas ou efeitos dos movimentos de partículas, substâncias, objetos ou corpos celestes.",
+      "tip": "movimento, forças e corpos celestes"
+    },
+    {
+      "code": "H21",
+      "description": "Utilizar leis físicas e (ou) químicas para interpretar processos naturais ou tecnológicos inseridos no contexto da termodinâmica e(ou) do eletromagnetismo.",
+      "tip": "termodinâmica e eletromagnetismo"
+    },
+    {
+      "code": "H22",
+      "description": "Compreender fenômenos decorrentes da interação entre a radiação e a matéria em suas manifestações em processos naturais ou tecnológicos, ou em suas implicações biológicas, sociais, econômicas ou ambientais.",
+      "tip": "radiação e matéria"
+    },
+    {
+      "code": "H23",
+      "description": "Avaliar possibilidades de geração, uso ou transformação de energia em ambientes específicos, considerando implicações éticas, ambientais, sociais e/ou econômicas.",
+      "tip": "energia: geração, uso e transformação"
+    },
+    {
+      "code": "H24",
+      "description": "Utilizar códigos e nomenclatura da química para caracterizar materiais, substâncias ou transformações químicas.",
+      "tip": "nomenclatura e fórmulas químicas"
+    },
+    {
+      "code": "H25",
+      "description": "Caracterizar materiais ou substâncias, identificando etapas, rendimentos ou implicações biológicas, sociais, econômicas ou ambientais de sua obtenção ou produção.",
+      "tip": "obtenção e produção de substâncias"
+    },
+    {
+      "code": "H26",
+      "description": "Avaliar implicações sociais, ambientais e/ou econômicas na produção ou no consumo de recursos energéticos ou minerais, identificando transformações químicas ou de energia envolvidas nesses processos.",
+      "tip": "recursos energéticos e minerais"
+    },
+    {
+      "code": "H27",
+      "description": "Avaliar propostas de intervenção no meio ambiente aplicando conhecimentos químicos, observando riscos ou benefícios.",
+      "tip": "química e meio ambiente"
+    },
+    {
+      "code": "H28",
+      "description": "Associar características adaptativas dos organismos com seu modo de vida ou com seus limites de distribuição em diferentes ambientes, em especial em ambientes brasileiros.",
+      "tip": "adaptações dos seres vivos aos ambientes brasileiros"
+    },
+    {
+      "code": "H29",
+      "description": "Interpretar experimentos ou técnicas que utilizam seres vivos, analisando implicações para o ambiente, a saúde, a produção de alimentos, matérias primas ou produtos industriais.",
+      "tip": "técnicas que usam seres vivos"
+    },
+    {
+      "code": "H30",
+      "description": "Avaliar propostas de alcance individual ou coletivo, identificando aquelas que visam à preservação e a implementação da saúde individual, coletiva ou do ambiente.",
+      "tip": "saúde individual, coletiva e ambiental"
+    }
+  ]
+}

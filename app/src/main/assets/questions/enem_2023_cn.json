@@ -1,0 +1,167 @@
+{
+  "about": "Questões do ENEM 2023 (2º dia, caderno 5 amarelo, Ciências da Natureza) que podem ser lidas só como texto. Enunciados e alternativas: INEP, reproduzidos para fins de estudo com indicação da fonte; adaptações marcadas em 'adaptation'. Habilidade, gabarito e dificuldade (parâmetro b da TRI): microdados do ENEM 2023 (ITENS_PROVA_2023, prova 1222). Explicações: SafeScreen, CC BY-SA 4.0, pendentes de revisão por professores.",
+  "exam": "ENEM 2023",
+  "area": "CN",
+  "areaName": "Ciências da Natureza",
+  "booklet": "2º dia, caderno 5 amarelo",
+  "sourceUrl": "https://download.inep.gov.br/enem/provas_e_gabaritos/2023_PV_impresso_D2_CD5.pdf",
+  "minAge": 13,
+  "difficultyCuts": [1.30, 1.80],
+  "questions": [
+    {
+      "number": 92, "skill": "H1", "difficulty": 2.02, "item": 111466, "answer": "A",
+      "stem": "Informações digitais — dados — são gravadas em discos ópticos, como CD e DVD, na forma de cavidades microscópicas. A gravação e a leitura óptica dessas informações são realizadas por um laser (fonte de luz monocromática). Quanto menores as dimensões dessas cavidades, mais dados são armazenados na mesma área do disco. O fator limitante para a leitura de dados é o espalhamento da luz pelo efeito de difração, fenômeno que ocorre quando a luz atravessa um obstáculo com dimensões da ordem de seu comprimento de onda. Essa limitação motivou o desenvolvimento de lasers com emissão em menores comprimentos de onda, possibilitando armazenar e ler dados em cavidades cada vez menores.\n\nEm qual região espectral se situa o comprimento de onda do laser que otimiza o armazenamento e a leitura de dados em discos de uma mesma área?",
+      "options": { "A": "Violeta.", "B": "Azul.", "C": "Verde.", "D": "Vermelho.", "E": "Infravermelho." },
+      "explanation": "O texto diz que comprimentos de onda menores permitem cavidades menores e mais dados. Entre as opções, a luz violeta é a de menor comprimento de onda (cerca de 400 nm); o vermelho e o infravermelho são os maiores."
+    },
+    {
+      "number": 93, "skill": "H23", "difficulty": 2.36, "item": 82446, "answer": "A",
+      "adaptation": "Unidades e notação científica reescritas para leitura no celular.",
+      "stem": "O bluetooth é uma tecnologia de comunicação sem fio, de curto alcance, presente em diferentes dispositivos eletrônicos de consumo. Ela permite que aparelhos eletrônicos diferentes se conectem e troquem dados entre si. No padrão bluetooth, denominado de Classe 2, as antenas transmitem sinais de potência igual a 2,4 mW e possibilitam conectar dois dispositivos distanciados até 10 m. Considere que essas antenas se comportam como fontes puntiformes que emitem ondas eletromagnéticas esféricas e que a intensidade do sinal é calculada pela potência por unidade de área. Considere 3 como valor aproximado para π.\n\nPara que o sinal de bluetooth seja detectado pelas antenas, o valor mínimo de sua intensidade, em W/m², é mais próximo de",
+      "options": { "A": "2,0 × 10⁻⁶.", "B": "2,0 × 10⁻⁵.", "C": "2,4 × 10⁻⁵.", "D": "2,4 × 10⁻³.", "E": "2,4 × 10⁻¹." },
+      "explanation": "A onda se espalha numa esfera de raio 10 m, de área 4πr² = 4 × 3 × 10² = 1 200 m². Intensidade = potência ÷ área = 2,4 × 10⁻³ W ÷ 1 200 m² = 2,0 × 10⁻⁶ W/m². Atenção: 2,4 mW = 2,4 × 10⁻³ W."
+    },
+    {
+      "number": 95, "skill": "H6", "difficulty": 1.99, "item": 97767, "answer": "D",
+      "stem": "Em uma indústria alimentícia, para produção de doce de leite, utiliza-se um tacho de parede oca com uma entrada para vapor de água a 120 °C e uma saída para água líquida em equilíbrio com o vapor a 100 °C. Ao passar pela parte oca do tacho, o vapor de água transforma-se em líquido, liberando energia. A parede transfere essa energia para o interior do tacho, resultando na evaporação de água e consequente concentração do produto.\n\nNo processo de concentração do produto, é utilizada energia proveniente",
+      "options": { "A": "somente do calor latente de vaporização.", "B": "somente do calor latente de condensação.", "C": "do calor sensível e do calor latente de vaporização.", "D": "do calor sensível e do calor latente de condensação.", "E": "do calor latente de condensação e do calor latente de vaporização." },
+      "explanation": "O vapor entra a 120 °C e esfria até 100 °C: isso libera calor sensível (há mudança de temperatura). Depois ele vira líquido: isso libera calor latente de condensação. As duas energias passam para o doce. A vaporização acontece no doce, que recebe essa energia."
+    },
+    {
+      "number": 97, "skill": "H21", "difficulty": 1.59, "item": 88557, "answer": "C",
+      "adaptation": "Unidade da constante R escrita em uma linha.",
+      "stem": "De acordo com a Constituição Federal, é competência dos municípios o gerenciamento dos serviços de limpeza e coleta dos resíduos urbanos (lixo). No entanto, há relatos de que parte desse lixo acaba sendo incinerado, liberando substâncias tóxicas para o ambiente e causando acidentes por explosões, principalmente quando ocorre a incineração de frascos de aerossóis (por exemplo: desodorantes, inseticidas e repelentes). A temperatura elevada provoca a vaporização de todo o conteúdo dentro desse tipo de frasco, aumentando a pressão em seu interior até culminar na explosão da embalagem.\n\nZVEIBIL, V. Z. et al. Cartilha de limpeza urbana. Disponível em: www.ibam.org.br. Acesso em: 6 jul. 2015 (adaptado).\n\nSuponha um frasco metálico de um aerossol de capacidade igual a 100 mL, contendo 0,1 mol de produtos gasosos à temperatura de 650 °C, no momento da explosão.\n\nConsidere: R = 0,082 L·atm/(mol·K)\n\nA pressão, em atm, dentro do frasco, no momento da explosão, é mais próxima de",
+      "options": { "A": "756.", "B": "533.", "C": "76.", "D": "53.", "E": "13." },
+      "explanation": "Use a equação dos gases, PV = nRT, com a temperatura em kelvin: 650 + 273 = 923 K, e o volume em litros: 100 mL = 0,1 L. P = 0,1 × 0,082 × 923 ÷ 0,1 ≈ 75,7 atm, ou seja, cerca de 76 atm. Quem esquece de converter para kelvin chega a 53 atm."
+    },
+    {
+      "number": 99, "skill": "H11", "difficulty": 0.69, "item": 141723, "answer": "C",
+      "stem": "A tecnologia de vacinas de RNA mensageiro (RNAm) é investigada há anos. Avanços científicos em genética molecular permitiram desenvolver uma vacina para controle da pandemia da covid-19 causada pelo vírus de RNA SARS-CoV-2. A vacina de RNAm tem sequências de genes do vírus. Entretanto, por ser muito instável, o RNAm deve ser recoberto por uma capa de lipídios que evita sua degradação e favorece sua ação. Dessa forma, o RNAm desempenhará sua função específica atuando no mesmo compartimento celular de sempre.\n\nDisponível em: https://sbim.org.br. Acesso em: 29 nov. 2021 (adaptado).\n\nA imunização produzida por esse tipo de vacina é alcançada por meio da",
+      "options": { "A": "estimulação de leucócitos induzida pela capa lipídica contendo RNAm.", "B": "atuação do RNAm como sequestrador do vírus para o meio extracelular.", "C": "tradução do RNAm em proteína viral, desencadeando a resposta antigênica.", "D": "competição entre o RNAm vacinal e o RNA viral pelos sítios dos ribossomos.", "E": "incorporação do RNAm viral ao genoma do hospedeiro, gerando novo fenótipo." },
+      "explanation": "A função do RNA mensageiro é ser traduzido em proteína pelos ribossomos, no citoplasma. A célula produz uma proteína do vírus, que funciona como antígeno: o sistema imune aprende a reconhecê-la. O RNAm não entra no núcleo nem altera o DNA da pessoa."
+    },
+    {
+      "number": 100, "skill": "H29", "difficulty": 1.82, "item": 12018, "answer": "D",
+      "stem": "Na fertilização in vitro, espermatozoides são adicionados aos gametas femininos retirados de uma mulher. Após o período de incubação, a fecundação é favorecida pela ação de enzimas. Em um procedimento realizado, observou-se que nenhum dos gametas femininos foi fertilizado e, posteriormente, verificou-se que havia sido adicionado, equivocadamente, um coquetel de inibidores das enzimas do acrossomo, no lugar de um dos nutrientes constituintes do meio de cultura.\n\nO coquetel de inibidores impediu o(a)",
+      "options": { "A": "formação do pronúcleo masculino.", "B": "início da divisão mitótica do zigoto.", "C": "término da segunda divisão meiótica do ovócito.", "D": "passagem do espermatozoide pela corona radiata e zona pelúcida.", "E": "fusão das membranas plasmáticas do ovócito e do espermatozoide." },
+      "explanation": "O acrossomo, na cabeça do espermatozoide, guarda enzimas que digerem as camadas que envolvem o ovócito: a corona radiata e a zona pelúcida. Com essas enzimas inibidas, o espermatozoide não atravessa essas camadas, e as etapas seguintes nem chegam a acontecer."
+    },
+    {
+      "number": 101, "skill": "H6", "difficulty": 1.78, "item": 117823, "answer": "D",
+      "stem": "O fogão por indução funciona a partir do surgimento de uma corrente elétrica induzida no fundo da panela, com consequente transformação de energia elétrica em calor por efeito Joule. A principal vantagem desses fogões é a eficiência energética, que é substancialmente maior que a dos fogões convencionais.\n\nA corrente elétrica mencionada é induzida por",
+      "options": { "A": "radiação.", "B": "condução.", "C": "campo elétrico variável.", "D": "campo magnético variável.", "E": "ressonância eletromagnética." },
+      "explanation": "Pela lei de Faraday, uma corrente é induzida num condutor quando o campo magnético que o atravessa varia. A bobina sob o vidro do fogão recebe corrente alternada e cria um campo magnético variável, que induz corrente no fundo metálico da panela."
+    },
+    {
+      "number": 103, "skill": "H3", "difficulty": 1.27, "item": 84041, "answer": "A",
+      "stem": "Um garoto comprou vários abacates na feira, mas descobriu que eles não estavam maduros o suficiente para serem consumidos. Sua mãe recomendou que ele colocasse os abacates em um recipiente fechado, pois isso aceleraria seu amadurecimento. Com certa dúvida, o garoto realizou esta experiência: colocou alguns abacates no recipiente e deixou os demais em uma fruteira aberta. Surpreendendo-se, ele percebeu que os frutos que estavam no recipiente fechado amadureceram mais rapidamente.\n\nA aceleração desse processo é causada por",
+      "options": { "A": "acúmulo de gás etileno.", "B": "redução da umidade do ar.", "C": "aumento da concentração de CO2.", "D": "diminuição da intensidade luminosa.", "E": "isolamento do contato com O2 atmosférico." },
+      "explanation": "Frutos liberam etileno, um hormônio vegetal em forma de gás que acelera o amadurecimento. No recipiente fechado o gás se acumula e age mais. É o mesmo motivo de embrulhar frutas em jornal."
+    },
+    {
+      "number": 104, "skill": "H28", "difficulty": 1.19, "item": 86347, "answer": "B",
+      "stem": "Há muito tempo são conhecidas espécies de lesmas-do-mar com uma capacidade ímpar: guardar parte da maquinaria das células das algas que consomem — os cloroplastos — e mantê-los funcionais dentro das suas próprias células, obtendo assim parte do seu alimento. Investigadores portugueses descobriram que essas lesmas-do-mar podem ser mais eficientes nesse processo do que as próprias algas que consomem.\n\nDisponível em: www.cienciahoje.pt. Acesso em: 10 fev. 2015 (adaptado).\n\nEssa adaptação confere a esse organismo a capacidade de obter primariamente",
+      "options": { "A": "ácidos nucleicos.", "B": "carboidratos.", "C": "proteínas.", "D": "vitaminas.", "E": "lipídios." },
+      "explanation": "Cloroplastos fazem fotossíntese, que usa luz, água e CO2 para produzir glicose, um carboidrato. Com cloroplastos funcionando, a lesma passa a produzir parte do próprio açúcar."
+    },
+    {
+      "number": 107, "skill": "H14", "difficulty": 2.21, "item": 117711, "answer": "A",
+      "stem": "Muitas mulheres sofrem com desconfortos nos dias que antecedem a menstruação, a chamada tensão pré-menstrual. Entre outros sintomas, podem ocorrer alterações de humor. Atualmente, acredita-se que os sintomas são resultado da queda na concentração do neurotransmissor serotonina, que, por sua vez, está relacionado com a diminuição na produção dos hormônios ovarianos estrógeno e progesterona, observada nessa fase do ciclo feminino.\n\nDIMMOCK, P. W. et al. Efficacy of Selective Serotonin-Reuptake Inhibitors in Premenstrual Syndrome: a Systematic Review. The Lancet, n. 9 236, 2000 (adaptado).\n\nA redução da produção desses hormônios nessa fase está relacionada com o(a)",
+      "options": { "A": "regressão do corpo lúteo ovariano.", "B": "diminuição na produção de ocitocina.", "C": "liberação do gameta feminino na ovulação.", "D": "aumento nos níveis dos hormônios LH e FSH.", "E": "elevação nos níveis sorológicos de adrenalina." },
+      "explanation": "Depois da ovulação, o folículo vira o corpo lúteo, que produz progesterona e estrógeno. Se não há gravidez, o corpo lúteo regride no fim do ciclo, a produção desses hormônios cai e a menstruação começa."
+    },
+    {
+      "number": 108, "skill": "H24", "difficulty": 1.56, "item": 48641, "answer": "C",
+      "stem": "As cetonas fazem parte de famílias olfativas encontradas em muitos alimentos. A molécula de hexan-3-ona é um exemplo desses compostos voláteis responsáveis pelo aroma, podendo ser obtida por processos energéticos realizados em meio ácido, na presença de oxidantes como o permanganato de potássio.\n\nPara se produzir esse composto volátil em laboratório, deve-se oxidar a molécula de",
+      "options": { "A": "hexanal.", "B": "hexan-1-ol.", "C": "hexan-3-ol.", "D": "hex-1-en-1-ol.", "E": "ácido hexanoico." },
+      "explanation": "Oxidar um álcool secundário (OH num carbono do meio da cadeia) produz uma cetona no mesmo carbono. Para ter a carbonila no carbono 3 (hexan-3-ona), o álcool precisa ter o OH no carbono 3: hexan-3-ol. Já o hexan-1-ol, um álcool primário, daria aldeído e depois ácido."
+    },
+    {
+      "number": 109, "skill": "H16", "difficulty": 1.97, "item": 82754, "answer": "D",
+      "stem": "Durante a evolução das plantas, ocorreu uma transição do ambiente aquático para o ambiente terrestre graças ao surgimento de algumas estruturas que as tornaram independentes da água. Esse fato permitiu maior dispersão desse grupo de seres vivos, sendo possível observá-los em diferentes ambientes na atualidade. Qual estrutura possibilitou a independência da água para a fecundação dos seres vivos citados acima?",
+      "options": { "A": "Fruto.", "B": "Esporo.", "C": "Semente.", "D": "Tubo polínico.", "E": "Vaso condutor." },
+      "explanation": "Em musgos e samambaias, o gameta masculino precisa nadar na água até o feminino. Nas gimnospermas e angiospermas, o grão de pólen forma o tubo polínico, que leva o gameta masculino até o óvulo sem precisar de água. A semente e o fruto protegem e espalham o embrião, mas não resolvem a fecundação."
+    },
+    {
+      "number": 110, "skill": "H25", "difficulty": 1.52, "item": 60978, "answer": "B",
+      "stem": "O vidro contendo alumínio em sua composição é um excelente material para acondicionar medicamentos e suplementos, porque pode ser esterilizado por aquecimento. No entanto, quando o medicamento ou suplemento contém substâncias que se ligam fortemente ao íon desse metal, a dissolução do alumínio é promovida em função do deslocamento do equilíbrio químico estabelecido entre a espécie imobilizada no vidro e a espécie em solução. Por essa razão, recomenda-se que suplementos de nutrição de recém-nascidos contendo gluconato de cálcio sejam acondicionados em embalagens plásticas, e não nesse tipo de vidro.\n\nAtualização da recomendação da Sociedade Portuguesa de Neonatologia. Disponível em: www.spneonatologia.pt. Acesso em: 22 out. 2021 (adaptado).\n\nCaso esse suplemento seja acondicionado em embalagem desse tipo de vidro, o risco de contaminação por alumínio será maior se o(a)",
+      "options": { "A": "vidro do frasco for translúcido.", "B": "concentração de gluconato de cálcio for alta.", "C": "frasco de vidro apresentar uma maior espessura.", "D": "vidro for previamente esterilizado em altas temperaturas.", "E": "reação do alumínio com gluconato de cálcio for endotérmica." },
+      "explanation": "O gluconato se liga ao íon alumínio e o retira da solução, o que desloca o equilíbrio para dissolver mais alumínio do vidro (princípio de Le Chatelier). Quanto mais gluconato, maior esse efeito e maior a contaminação."
+    },
+    {
+      "number": 113, "skill": "H29", "difficulty": 1.75, "item": 85436, "answer": "E",
+      "stem": "Avaliação de substâncias genotóxicas\n\nO ensaio de micronúcleos é um teste de avaliação de genotoxicidade que associa a presença de micronúcleos (pequenos núcleos que aparecem próximo aos núcleos das células) com lesões genéticas. Os micronúcleos são fragmentos de DNA encapsulados, provenientes do fuso mitótico durante a divisão celular.\n\nDIAS, V. M. Micronúcleos em células tumorais: biologia e implicações para a tumorigênese. Dissertação de Mestrado. USP, 2006 (adaptado).\n\nOs micronúcleos se originam dos(as)",
+      "options": { "A": "nucléolos.", "B": "lisossomos.", "C": "ribossomos.", "D": "mitocôndrias.", "E": "cromossomos." },
+      "explanation": "Durante a divisão celular, o DNA está organizado em cromossomos, que o fuso mitótico separa. Pedaços de cromossomos, ou cromossomos inteiros, que ficam para trás acabam envoltos numa membrana própria: são os micronúcleos. Por isso eles indicam lesão genética."
+    },
+    {
+      "number": 115, "skill": "H2", "difficulty": -0.46, "item": 40724, "answer": "C",
+      "stem": "É comum em viagens de avião sermos solicitados a desligar aparelhos cujo funcionamento envolva a emissão ou a recepção de ondas eletromagnéticas, como celulares. A justificativa dada para esse procedimento é, entre outras coisas, a necessidade de eliminar fontes de sinais eletromagnéticos que possam interferir nas comunicações, via rádio, dos pilotos com a torre de controle.\n\nEssa interferência poderá ocorrer somente se as ondas emitidas pelo celular e as recebidas pelo rádio do avião",
+      "options": { "A": "forem ambas audíveis.", "B": "tiverem a mesma potência.", "C": "tiverem a mesma frequência.", "D": "tiverem a mesma intensidade.", "E": "propagarem-se com velocidades diferentes." },
+      "explanation": "Um rádio é sintonizado numa frequência. Só uma onda de frequência igual (ou muito próxima) atrapalha a recepção. Ondas eletromagnéticas não são audíveis e, no ar, todas viajam praticamente à mesma velocidade, a da luz."
+    },
+    {
+      "number": 117, "skill": "H12", "difficulty": 0.33, "item": 126604, "answer": "D",
+      "stem": "Uma cafeteria adotou copos fabricados a partir de uma composição de 50% de plástico reciclado não biodegradável e 50% de casca de café. O copo é reutilizável e retornável, pois o material, semelhante a uma cerâmica, suporta a lavagem. Embora ele seja comercializado por um preço considerado alto quando comparado ao de um copo de plástico descartável, essa cafeteria possibilita aos clientes retornarem o copo sujo e levarem o café quente servido em outro copo já limpo e higienizado. O material desse copo oferece também o conforto de não esquentar na parte externa.\n\nCafeteria adota copo reutilizável feito com casca de café. Disponível em: www.gazetadopovo.com.br. Acesso em: 5 dez. 2019 (adaptado).\n\nQuais duas vantagens esse copo apresenta em comparação ao copo descartável?",
+      "options": { "A": "Ter a durabilidade de uma cerâmica e ser totalmente biodegradável.", "B": "Ser tão durável quanto uma cerâmica e ter alta condutividade térmica.", "C": "Ser um mau condutor térmico e aumentar o resíduo biodegradável na natureza.", "D": "Ter baixa condutividade térmica e reduzir o resíduo não biodegradável na natureza.", "E": "Ter alta condutividade térmica e possibilitar a degradação do material no meio ambiente." },
+      "explanation": "Não esquentar por fora significa conduzir mal o calor: baixa condutividade térmica. Por ser reutilizado muitas vezes, ele evita o descarte de vários copos plásticos, reduzindo o lixo não biodegradável. Ele não é totalmente biodegradável, porque metade é plástico."
+    },
+    {
+      "number": 118, "skill": "H18", "difficulty": 0.49, "item": 117631, "answer": "A",
+      "stem": "O consumo exagerado de refrigerantes é preocupante, pois contribui para o aumento de casos de obesidade e diabetes. Considere dois refrigerantes enlatados, um comum e um diet, e que ambos possuam a mesma quantidade de aditivos, exceto pela presença de açúcar. O refrigerante comum contém basicamente água carbonatada e grande quantidade de açúcar; já o refrigerante diet tem água carbonatada e adoçantes, cujas massas são muito pequenas.\n\nCAVAGIS, A. D. M.; PEREIRA, E. A.; OLIVEIRA, L. C. Um método simples para avaliar o teor de sacarose e CO2 em refrigerantes. Química Nova na Escola, n. 3, ago. 2014 (adaptado).\n\nEntre as duas versões apresentadas, o refrigerante comum possui",
+      "options": { "A": "maior densidade.", "B": "menor viscosidade.", "C": "maior volume de gás dissolvido.", "D": "menor massa de solutos dissolvidos.", "E": "maior temperatura de congelamento." },
+      "explanation": "Com o mesmo volume, o refrigerante comum tem muito mais massa dissolvida (o açúcar), então sua densidade é maior. Por isso, numa experiência clássica, a lata comum afunda na água e a diet boia. Mais soluto também abaixa a temperatura de congelamento, não aumenta."
+    },
+    {
+      "number": 120, "skill": "H13", "difficulty": 1.42, "item": 64023, "answer": "E",
+      "stem": "Pais com síndrome de Down\n\nA síndrome de Down é uma alteração genética associada à trissomia do cromossomo 21, ou seja, o indivíduo possui três cromossomos 21 e não um par, como é normal. Isso ocorre pela união de um gameta contendo um cromossomo 21 com um gameta possuidor de dois cromossomos 21. Embora, normalmente, as mulheres com a síndrome sejam estéreis, em 2008, no interior de São Paulo, uma delas deu à luz uma menina sem a síndrome de Down.\n\nMORENO, T. Três anos após dar à luz, mãe portadora de síndrome de Down revela detalhes de seu dia a dia. Disponível em: www.band.uol.com.br. Acesso em: 31 out. 2013 (adaptado).\n\nSabendo disso, um jovem casal, ambos com essa síndrome, procura um médico especialista para aconselhamento genético porque querem ter um bebê.\n\nO médico informa ao casal que, com relação ao cromossomo 21, os zigotos formados serão",
+      "options": { "A": "todos normais.", "B": "todos tetrassômicos.", "C": "apenas normais ou tetrassômicos.", "D": "apenas trissômicos ou tetrassômicos.", "E": "normais, trissômicos ou tetrassômicos." },
+      "explanation": "Quem tem três cromossomos 21 forma gametas com um ou com dois cromossomos 21. Juntando os gametas do casal: 1 + 1 = 2 (normal), 1 + 2 = 3 (trissômico) ou 2 + 2 = 4 (tetrassômico). As três possibilidades existem."
+    },
+    {
+      "number": 122, "skill": "H15", "difficulty": 2.24, "item": 97813, "answer": "C",
+      "adaptation": "O esquema da cadeia respiratória não é mostrado; o texto basta para responder.",
+      "stem": "Toxicidade do cianeto\n\nA produção de ATP depende do gradiente de prótons gerado pela cadeia respiratória. Nessas reações, os elétrons provenientes da oxidação do NADH em NAD+ percorrem a cadeia até chegarem à citocromo c oxidase reduzindo o Fe3+ a Fe2+. O oxigênio atua como aceptor final desses elétrons formando água. O cianeto é uma espécie química altamente tóxica que tem grande afinidade pelo Fe3+. Quando células são expostas ao cianeto, ele se liga ao sítio de Fe3+ da citocromo c oxidase, impedindo a sua conversão em Fe2+ e bloqueando a cadeia respiratória.\n\nEsse bloqueio aumenta a concentração celular de",
+      "options": { "A": "ATP.", "B": "água.", "C": "NADH.", "D": "dióxido de carbono.", "E": "citocromo c oxidase." },
+      "explanation": "Com a cadeia bloqueada, os elétrons param de andar, e o NADH deixa de ser oxidado a NAD+. O NADH se acumula. Ao mesmo tempo caem a produção de ATP e a de água, que dependem da cadeia funcionando."
+    },
+    {
+      "number": 123, "skill": "H4", "difficulty": 0.15, "item": 84422, "answer": "D",
+      "stem": "O número de abelhas encontra-se em declínio em várias regiões do mundo, inclusive no Brasil, sendo que vários fatores contribuem para o colapso de suas colmeias. Nos Estados Unidos, bombas de sementes de espécies vegetais nativas têm sido utilizadas para combater o desaparecimento desses insetos. Elas são pequenas bolinhas recheadas com sementes, adubo e argila. Quando são arremessadas e ficam expostas ao sol e à chuva, germinam até mesmo em solo pouco fértil.\n\nDARAYA, V. Disponível em: http://planetasustentavel.abril.com.br. Acesso em: 2 fev. 2015 (adaptado).\n\nEsse método contribui para a preservação das abelhas porque",
+      "options": { "A": "reduz sua predação.", "B": "reduz o uso de pesticidas.", "C": "reduz a competição por abrigo.", "D": "aumenta a oferta de alimento.", "E": "aumenta os locais de reprodução." },
+      "explanation": "As sementes viram plantas nativas que florescem, e as flores oferecem néctar e pólen, o alimento das abelhas. O texto não fala de pesticidas, predadores nem abrigo."
+    },
+    {
+      "number": 124, "skill": "H3", "difficulty": -1.15, "item": 83378, "answer": "B",
+      "stem": "Os mais antigos cozinhavam o feijão na panela de ferro a fim de acabar com a palidez de seus filhos. Alguns chegavam até a colocar um prego enferrujado nesse cozimento para liberar o ferro contido nele. Sabe-se que esse elemento pode ser encontrado na sua forma metálica ou iônica, sendo essencial para a manutenção da vida humana.\n\nAs estratégias citadas eram utilizadas com o objetivo de",
+      "options": { "A": "tratar a diarreia.", "B": "prevenir a anemia.", "C": "evitar as verminoses.", "D": "remediar o raquitismo.", "E": "combater a febre amarela." },
+      "explanation": "O ferro é necessário para formar a hemoglobina, que leva oxigênio no sangue. Falta de ferro causa anemia, e um dos sinais é a palidez. O raquitismo, por exemplo, vem da falta de vitamina D e cálcio."
+    },
+    {
+      "number": 126, "skill": "H7", "difficulty": 2.67, "item": 66330, "answer": "A",
+      "adaptation": "Quadro dos testes convertido em lista para leitura no celular.",
+      "stem": "Em uma indústria, o controle da dureza da água é importante quando ela é utilizada em caldeiras, uma vez que sais pouco solúveis, formados a partir de sulfatos e carbonatos, podem acumular-se no interior das tubulações, causando obstruções. Para avaliar a água utilizada nessa indústria, foram realizados testes de qualidade que consideraram os seguintes parâmetros:\n\n• Teste 1: Cálcio\n• Teste 2: Cloreto\n• Teste 3: Turbidez\n• Teste 4: Coliformes totais\n• Teste 5: Sólidos sedimentáveis\n\nQual teste deve ser considerado para controlar a formação desse tipo de obstrução de tubulações?",
+      "options": { "A": "1", "B": "2", "C": "3", "D": "4", "E": "5" },
+      "explanation": "Água dura é a que tem muitos íons cálcio (e magnésio). São eles que se juntam aos carbonatos e sulfatos formando sais pouco solúveis, o \"calcário\" que entope canos. Por isso o teste que importa é o do cálcio."
+    },
+    {
+      "number": 128, "skill": "H26", "difficulty": 1.35, "item": 63155, "answer": "D",
+      "adaptation": "Unidade da massa molar escrita como g/mol.",
+      "stem": "Existe no comércio um produto antimofo constituído por uma embalagem com tampa perfurada contendo cloreto de cálcio anidro, CaCl2. Uma vez aberto o lacre, essa substância absorve a umidade ambiente, transformando-se em cloreto de cálcio di-hidratado, CaCl2⋅ 2H2O.\n\nConsidere a massa molar da água igual a 18 g/mol, e a massa molar do cloreto de cálcio anidro igual a 111 g/mol.\n\nNa hidratação da substância presente no antimofo, o ganho percentual, em massa, é mais próximo de",
+      "options": { "A": "14%", "B": "16%", "C": "24%", "D": "32%", "E": "75%" },
+      "explanation": "Cada 111 g de CaCl2 recebe 2 moléculas de água, ou 2 × 18 = 36 g. O ganho percentual é sobre a massa inicial: 36 ÷ 111 ≈ 0,32, ou seja, 32%. Quem divide por 147 (massa final) chega a 24%, que é outra coisa."
+    },
+    {
+      "number": 131, "skill": "H10", "difficulty": 1.77, "item": 117866, "answer": "B",
+      "stem": "A biorremediação designa tratamentos que usam organismos para reduzir a quantidade de substâncias tóxicas no ambiente ou degradá-las em substâncias não tóxicas ou de menor toxicidade. Uma planta aquática, o aguapé, tem sido utilizada para a biorremediação de ambientes contaminados por metais tóxicos. Sabe-se que esses poluentes serão captados para dentro do corpo do vegetal. Dentro do corpo do vegetal, esses contaminantes serão",
+      "options": { "A": "digeridos por enzimas.", "B": "acumulados nos tecidos.", "C": "eliminados pelos estômatos.", "D": "metabolizados por glândulas.", "E": "utilizados como fonte energética." },
+      "explanation": "Metais são elementos químicos: não podem ser digeridos nem quebrados em algo mais simples. A planta absorve e acumula os metais nos tecidos. Depois, os aguapés são retirados da água, levando os metais junto."
+    },
+    {
+      "number": 133, "skill": "H22", "difficulty": 1.98, "item": 82333, "answer": "A",
+      "stem": "Os raios cósmicos são fontes de radiação ionizante potencialmente perigosas para o organismo humano. Para quantificar a dose de radiação recebida, utiliza-se o sievert (Sv), definido como a unidade de energia recebida por unidade de massa. A exposição à radiação proveniente de raios cósmicos aumenta com a altitude, o que pode representar um problema para as tripulações de aeronaves. Recentemente, foram realizadas medições acuradas das doses de radiação ionizante para voos entre Rio de Janeiro e Roma. Os resultados têm indicado que a dose média de radiação recebida na fase de cruzeiro (que geralmente representa 80% do tempo total de voo) desse trecho intercontinental é 2 μSv/h. As normas internacionais da aviação civil limitam em 1 000 horas por ano o tempo de trabalho para as tripulações que atuem em voos intercontinentais. Considere que a dose de radiação ionizante para uma radiografia torácica é estimada em 0,2 mSv.\n\nRUAS, A. C. O tripulante de aeronaves e a radiação ionizante. São Paulo: Edição do Autor, 2019 (adaptado).\n\nA quantas radiografias torácicas corresponde a dose de radiação ionizante à qual um tripulante que atue no trecho Rio de Janeiro−Roma é exposto ao longo de um ano?",
+      "options": { "A": "8", "B": "10", "C": "80", "D": "100", "E": "1 000" },
+      "explanation": "A fase de cruzeiro é 80% das 1 000 horas: 800 h. Dose no ano: 800 × 2 μSv = 1 600 μSv = 1,6 mSv. Cada radiografia equivale a 0,2 mSv: 1,6 ÷ 0,2 = 8 radiografias. Cuidado com as unidades: 1 mSv = 1 000 μSv."
+    }
+  ]
+}

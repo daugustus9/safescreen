@@ -13,6 +13,11 @@ data class Question(
     val skill: String,
     /** Official difficulty (TRI parameter b); higher is harder. */
     val difficulty: Double,
+    /**
+     * Upper bounds of the easier and medium thirds of this area's exam. TRI scales differ by
+     * area (b = 0.9 is hard in Humanas, easy in Matemática), so labels are per area.
+     */
+    val difficultyCuts: Pair<Double, Double>,
     val minAge: Int,
     val stem: String,
     /** Letter to text, in order. */
@@ -37,10 +42,10 @@ enum class Difficulty { EASIER, MEDIUM, HARDER }
 
 object QuestionBank {
 
-    /** Relative to ENEM math in 2023, where b ran from about −0.3 to 3.0 (median 1.8). */
+    /** Which third of its own area's exam the question falls in. */
     fun difficultyOf(question: Question): Difficulty = when {
-        question.difficulty < 1.2 -> Difficulty.EASIER
-        question.difficulty <= 2.2 -> Difficulty.MEDIUM
+        question.difficulty < question.difficultyCuts.first -> Difficulty.EASIER
+        question.difficulty <= question.difficultyCuts.second -> Difficulty.MEDIUM
         else -> Difficulty.HARDER
     }
 
@@ -51,6 +56,7 @@ object QuestionBank {
         val areaName = root.getString("areaName")
         val booklet = root.optString("booklet")
         val minAge = root.optInt("minAge", 13)
+        val cuts = root.getJSONArray("difficultyCuts").let { it.getDouble(0) to it.getDouble(1) }
         val array = root.getJSONArray("questions")
         return (0 until array.length()).map { i ->
             val q = array.getJSONObject(i)
@@ -64,6 +70,7 @@ object QuestionBank {
                 areaName = areaName,
                 skill = q.getString("skill"),
                 difficulty = q.getDouble("difficulty"),
+                difficultyCuts = cuts,
                 minAge = q.optInt("minAge", minAge),
                 stem = q.getString("stem"),
                 options = options.keys().asSequence().sorted().map { it to options.getString(it) }.toList(),
@@ -87,16 +94,24 @@ object QuestionBank {
 }
 
 /**
- * Chooses the next question: unanswered ones first, easiest first, so a child builds
- * confidence before the hard ones; then questions last answered wrong, oldest first,
- * so mistakes come back after a while (spaced practice).
+ * Chooses the next question. Unanswered ones come first, from the area the child has
+ * practiced least (so all subjects get turns), easiest first within that area so the
+ * child builds confidence before the hard ones. After that, questions last answered
+ * wrong come back, oldest mistake first (spaced practice).
  */
 object QuestionPicker {
 
     fun next(questions: List<Question>, answers: List<Answer>, age: Int): Question? {
         val eligible = questions.filter { age >= it.minAge }
         val latest = latestAnswers(answers)
-        eligible.filter { it.id !in latest }.minByOrNull { it.difficulty }?.let { return it }
+        val unanswered = eligible.filter { it.id !in latest }
+        if (unanswered.isNotEmpty()) {
+            val answeredPerArea = eligible.filter { it.id in latest }.groupingBy { it.area }.eachCount()
+            val areaOrder = eligible.map { it.area }.distinct()
+            val area = unanswered.map { it.area }.distinct()
+                .minWith(compareBy<String> { answeredPerArea[it] ?: 0 }.thenBy { areaOrder.indexOf(it) })
+            return unanswered.filter { it.area == area }.minBy { it.difficulty }
+        }
         return eligible
             .filter { latest[it.id]?.correct == false }
             .minByOrNull { latest.getValue(it.id).timestampMillis }

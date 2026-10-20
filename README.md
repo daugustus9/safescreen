@@ -60,7 +60,7 @@ O APK é gerado em `app/build/outputs/apk/debug/app-debug.apk`. Os testes de uni
 
 ## Banco de questões
 
-As 16 primeiras questões são de Matemática do ENEM 2023 (2º dia, caderno 5 amarelo), escolhidas porque se entendem sem figura. Gabarito, habilidade (H1 a H30) e dificuldade vêm dos microdados oficiais do INEP, e o texto foi conferido com a prova. As explicações foram escritas pelo SafeScreen e **ainda precisam de revisão por professores**. Para adicionar questões, veja [tools/enem](tools/enem/README.md).
+São 80 questões do ENEM 2023 (cadernos amarelos), escolhidas porque se entendem sem figura: 18 de Linguagens, 21 de Ciências Humanas, 25 de Ciências da Natureza e 16 de Matemática. Ficaram de fora as baseadas em imagens, letras de música ou poemas inteiros, e três textos sensíveis são só para 15 anos ou mais. Gabarito, habilidade (H1 a H30 de cada área) e dificuldade vêm dos microdados oficiais do INEP, e o texto foi conferido com a prova. As áreas se revezam, e a dificuldade (mais fácil, média, difícil) é relativa a cada área. As explicações foram escritas pelo SafeScreen e **ainda precisam de revisão por professores**. Para adicionar questões, veja [tools/enem](tools/enem/README.md).
 
 ## Fora do protótipo
 

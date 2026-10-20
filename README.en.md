@@ -62,7 +62,7 @@ Button names below are the English ones; on a Portuguese phone they appear in Po
 
 ## Question bank
 
-The first 16 questions are ENEM 2023 math questions (day 2, booklet 5 yellow), chosen because they work without a figure. Answer key, skill (H1 to H30) and difficulty come from INEP's official microdata, and the text was checked against the exam. The explanations were written by SafeScreen and **still need teacher review**. To add questions, see [tools/enem](tools/enem/README.md).
+There are 80 ENEM 2023 questions (yellow booklets), chosen because they work without a figure: 18 Linguagens, 21 Ciências Humanas, 25 Ciências da Natureza and 16 Matemática. Questions built on images, song lyrics or whole poems were left out, and three sensitive texts are for ages 15 and up. Areas take turns, and difficulty labels are relative to each area. Answer key, skill (H1 to H30) and difficulty come from INEP's official microdata, and the text was checked against the exam. The explanations were written by SafeScreen and **still need teacher review**. To add questions, see [tools/enem](tools/enem/README.md).
 
 ## Not in the prototype
 
