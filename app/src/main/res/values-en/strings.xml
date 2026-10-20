@@ -270,4 +270,15 @@
         <item quantity="one">Daily Challenge streak: %1$d day</item>
         <item quantity="other">Daily Challenge streak: %1$d days</item>
     </plurals>
+
+    <!-- Sharing -->
+    <string name="share_question_button">Challenge a friend</string>
+    <string name="share_question_intro">Can you get this ENEM question right? 🤔</string>
+    <string name="share_question_outro">Reply with the letter! The explanation is in SafeScreen.</string>
+    <string name="share_question_source">Source: %s (INEP).</string>
+    <string name="share_card_button">Share</string>
+    <string name="share_intro_safety">⚠️ This is important:</string>
+    <string name="share_intro_advice">💡 A tip for life:</string>
+    <string name="share_intro_encouragement">✨ For you:</string>
+    <string name="share_footer">Sent from SafeScreen, a free safety and study app for children and teens.</string>
 </resources>

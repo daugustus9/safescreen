@@ -35,6 +35,7 @@ import com.safescreen.app.core.Album
 import com.safescreen.app.core.Sticker
 import com.safescreen.app.core.StickerState
 import com.safescreen.app.graph
+import com.safescreen.app.system.Share
 
 private val Gold = Color(0xFFE0A800)
 
@@ -114,7 +115,6 @@ private fun StickerDialog(sticker: Sticker, areaName: String, onPractice: () -> 
     val context = LocalContext.current
     val skill = sticker.skill
     val askText = stringResource(R.string.album_ask_text, skill.code, areaName, skill.tip)
-    val chooser = stringResource(R.string.share_chooser)
     AlertDialog(
         onDismissRequest = onClose,
         title = { Text("$areaName · ${skill.code}") },
@@ -143,7 +143,7 @@ private fun StickerDialog(sticker: Sticker, areaName: String, onPractice: () -> 
         dismissButton = {
             Row {
                 if (sticker.state == StickerState.AVAILABLE) {
-                    TextButton(onClick = { shareText(context, askText, chooser) }) { Text(stringResource(R.string.album_ask_friend)) }
+                    TextButton(onClick = { Share.send(context, askText) }) { Text(stringResource(R.string.album_ask_friend)) }
                 }
                 TextButton(onClick = onClose) { Text(stringResource(R.string.common_close)) }
             }

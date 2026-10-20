@@ -264,10 +264,23 @@
 
     <plurals name="daily_streak">
         <item quantity="one">Sequência: %1$d dia 🔥</item>
+        <item quantity="many">Sequência: %1$d dias 🔥</item>
         <item quantity="other">Sequência: %1$d dias 🔥</item>
     </plurals>
     <plurals name="summary_study_streak">
         <item quantity="one">Sequência do Desafio do Dia: %1$d dia</item>
+        <item quantity="many">Sequência do Desafio do Dia: %1$d dias</item>
         <item quantity="other">Sequência do Desafio do Dia: %1$d dias</item>
     </plurals>
+
+    <!-- Sharing -->
+    <string name="share_question_button">Desafiar um amigo</string>
+    <string name="share_question_intro">Você acerta esta questão do ENEM? 🤔</string>
+    <string name="share_question_outro">Me responde com a letra! A explicação está no SafeScreen.</string>
+    <string name="share_question_source">Fonte: %s (INEP).</string>
+    <string name="share_card_button">Compartilhar</string>
+    <string name="share_intro_safety">⚠️ Olha que importante:</string>
+    <string name="share_intro_advice">💡 Uma dica para a vida:</string>
+    <string name="share_intro_encouragement">✨ Pra você:</string>
+    <string name="share_footer">Enviado pelo SafeScreen, app gratuito de segurança e estudos para crianças e adolescentes.</string>
 </resources>

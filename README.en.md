@@ -29,6 +29,7 @@ The prototype has **no INTERNET permission**: nothing it sees can leave the phon
 | P4 | Real ENEM questions (13+): an invitation once a day, an explanation after answering, easiest first, and mistakes that come back later | `core/Study.kt`, `ui/QuestionScreen.kt`, `assets/questions/` |
 | P4 | Daily Challenge: the same 3 questions for everyone each day, chosen from the date alone; results are shared as 🟩🟥 squares, with no answers or personal data; a streak with one day off per week | `core/Game.kt`, `ui/DailyChallengeScreen.kt` |
 | P4 | Skills Album: one sticker per ENEM skill (120); a right answer sticks it, a hard one makes it shiny; missing stickers can be practiced or asked for from a friend | `core/Game.kt`, `ui/AlbumScreen.kt` |
+| — | Sharing: "Challenge a friend" sends a question without its answer, with its source (INEP); safety, advice and encouragement cards have a "Share" button. Family messages, school reminders and help cards are never shared | `core/Sharing.kt`, `system/Share.kt` |
 | P4 | "Where to focus" in the parent summary: ENEM skills to review, weighing mistakes on easy questions more (INEP's official difficulty) | `core/Study.kt`, `ui/ParentScreen.kt` |
 
 The message engine (`CardOverlayService` + `CardPresenter`) is adapted from the subliminal-message app's overlay service, with one deliberate change: every message is visible and stays until the child reads it. Nothing is subliminal. Safety, life advice and encouragement take turns, so warnings never come three in a row.

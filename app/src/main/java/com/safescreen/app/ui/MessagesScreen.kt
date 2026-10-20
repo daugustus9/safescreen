@@ -4,6 +4,7 @@ import androidx.compose.foundation.layout.Column
 import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
+import androidx.compose.material3.TextButton
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
@@ -12,7 +13,9 @@ import androidx.compose.ui.res.stringResource
 import com.safescreen.app.R
 import com.safescreen.app.core.Card
 import com.safescreen.app.core.CardKind
+import com.safescreen.app.core.Sharing
 import com.safescreen.app.graph
+import com.safescreen.app.system.Share
 
 /**
  * Every message the app can ever put on screen, readable by the child and the parent:
@@ -61,8 +64,14 @@ fun MessagesScreen(onBack: () -> Unit) {
 
 @Composable
 private fun MessageItem(card: Card) {
+    val context = LocalContext.current
     Column {
         Text(card.title, style = MaterialTheme.typography.titleSmall)
         Text(card.body, style = MaterialTheme.typography.bodyMedium)
+        if (Sharing.isShareable(card)) {
+            TextButton(onClick = { Share.send(context, Sharing.card(card, Share.texts(context))) }) {
+                Text(stringResource(R.string.share_card_button))
+            }
+        }
     }
 }

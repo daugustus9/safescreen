@@ -12,6 +12,7 @@ import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.OutlinedButton
 import androidx.compose.material3.Text
+import androidx.compose.material3.TextButton
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
@@ -33,7 +34,9 @@ import com.safescreen.app.core.Question
 import com.safescreen.app.core.QuestionBank
 import com.safescreen.app.core.QuestionPicker
 import com.safescreen.app.core.skillKey
+import com.safescreen.app.core.Sharing
 import com.safescreen.app.graph
+import com.safescreen.app.system.Share
 
 /**
  * One real exam question at a time, opened by the child (never forced). After answering,
@@ -65,6 +68,10 @@ fun QuestionScreen(skill: String? = null, onBack: () -> Unit) {
                 Text(stringResource(R.string.study_done), style = MaterialTheme.typography.bodyLarge)
             else -> {
                 QuestionBody(question, selected, result) { if (result == null) selected = it }
+                val context = LocalContext.current
+                TextButton(onClick = { Share.send(context, Sharing.question(question, Share.texts(context))) }) {
+                    Text(stringResource(R.string.share_question_button))
+                }
                 val answered = result
                 if (answered == null) {
                     Button(

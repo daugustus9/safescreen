@@ -21,6 +21,8 @@ import com.safescreen.app.MainActivity
 import com.safescreen.app.R
 import com.safescreen.app.core.Card
 import com.safescreen.app.core.CardKind
+import com.safescreen.app.core.Sharing
+import com.safescreen.app.system.Share
 
 /**
  * Draws one card at the top of the screen, over whatever app is open. Unlike the
@@ -95,6 +97,12 @@ object CardPresenter {
             gravity = Gravity.END
             if (card.kind == CardKind.HELP) {
                 addView(textButton(context, R.string.card_get_help) { open(context, MainActivity.EXTRA_OPEN_HELP) })
+            }
+            if (Sharing.isShareable(card)) {
+                addView(textButton(context, R.string.share_card_button) {
+                    hide()
+                    Share.send(context, Sharing.card(card, Share.texts(context)))
+                })
             }
             if (card.kind == CardKind.STUDY) {
                 addView(textButton(context, R.string.card_answer) { open(context, MainActivity.EXTRA_OPEN_DAILY) })

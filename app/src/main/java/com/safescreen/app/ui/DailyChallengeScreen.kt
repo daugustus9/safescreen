@@ -24,6 +24,7 @@ import com.safescreen.app.core.DailyChallenge
 import com.safescreen.app.core.Question
 import com.safescreen.app.core.Streak
 import com.safescreen.app.graph
+import com.safescreen.app.system.Share
 import java.time.LocalDate
 
 /**
@@ -104,7 +105,6 @@ private fun DailyResult(
     val scoreLine = stringResource(R.string.daily_share_score, score, questions.size) +
         if (streak >= 2) " · " + stringResource(R.string.daily_share_streak, streak) else ""
     val shareText = (listOf(header) + lines + scoreLine + "#DesafioDoDia").joinToString("\n")
-    val chooser = stringResource(R.string.share_chooser)
 
     SectionCard(stringResource(R.string.daily_share_header, number)) {
         lines.forEach { Text(it, style = MaterialTheme.typography.titleMedium) }
@@ -115,7 +115,7 @@ private fun DailyResult(
         }
     }
     Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
-        Button(onClick = { shareText(context, shareText, chooser) }) { Text(stringResource(R.string.daily_share)) }
+        Button(onClick = { Share.send(context, shareText) }) { Text(stringResource(R.string.daily_share)) }
         OutlinedButton(onClick = onAlbum) { Text(stringResource(R.string.daily_open_album)) }
     }
     Text(stringResource(R.string.daily_share_note), style = MaterialTheme.typography.bodySmall)
