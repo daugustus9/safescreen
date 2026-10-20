@@ -51,6 +51,7 @@ class ContentLibraryTest {
         for (age in listOf(9, 11, 14)) {
             assertTrue(cards.any { it.kind == CardKind.SAFETY && age in it.minAge..it.maxAge })
             assertTrue(cards.any { it.kind == CardKind.ADVICE && age in it.minAge..it.maxAge })
+            assertTrue(cards.count { it.kind == CardKind.ENCOURAGEMENT && age in it.minAge..it.maxAge } >= 10)
         }
     }
 }

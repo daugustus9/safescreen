@@ -44,6 +44,14 @@ class ContentLibrary(private val context: Context) {
         return Card(id = "reminder-${task.id}", kind = CardKind.SCHOOL, title = title, body = task.title)
     }
 
+    /** Family-written encouragement as cards. Ids follow the text, so edits rotate as new cards. */
+    fun familyCards(messages: List<String>): List<Card> {
+        val title = if (language == "pt") "Da sua família" else "From your family"
+        return messages.map { text ->
+            Card(id = "family-${text.hashCode().toUInt()}", kind = CardKind.ENCOURAGEMENT, title = title, body = text)
+        }
+    }
+
     fun helplines(): List<Helpline> {
         val root = JSONObject(readAsset("content/helplines.json"))
         val country = Locale.getDefault().country

@@ -32,7 +32,7 @@
     <string name="transparency_checks_title">On this phone, SafeScreen:</string>
     <string name="transparency_checks_1">Checks words you type for serious risks, like self-harm or dangerous challenges. The words are checked and forgotten right away.</string>
     <string name="transparency_checks_2">Reads notices only from the school apps your family picked, to remind you about tests and homework.</string>
-    <string name="transparency_checks_3">Shows safety, advice and school cards every so often.</string>
+    <string name="transparency_checks_3">Shows safety, advice, encouragement and school cards every so often, long enough to read. You can read every one of them in \"All messages\".</string>
     <string name="transparency_checks_4">Pauses the apps you agreed on while focus time is running.</string>
     <string name="transparency_parents_title">Your parents see:</string>
     <string name="transparency_parents_1">Alerts with a category only, like \"dangerous challenge\".</string>
@@ -170,4 +170,27 @@
     <string name="agreement_sign_child">Sign as child</string>
     <string name="agreement_signed_parent">Parent signed ✓</string>
     <string name="agreement_signed_child">Child signed ✓</string>
+
+    <!-- All messages (transparency) -->
+    <string name="home_all_messages">All messages</string>
+    <string name="messages_title">All messages</string>
+    <string name="messages_intro">These are all the messages SafeScreen can show. Each one stays on screen until it is read: nothing is hidden or flashed too fast to see.</string>
+    <string name="messages_family_empty">Your family hasn\'t written any messages yet.</string>
+    <string name="kind_safety">Safety</string>
+    <string name="kind_advice">Life advice</string>
+    <string name="kind_encouragement">Encouragement</string>
+    <string name="kind_family">From your family</string>
+    <string name="kind_bedtime">Bedtime</string>
+    <string name="kind_focus">Focus</string>
+    <string name="kind_help">Help</string>
+    <string name="kind_school">School reminders</string>
+    <string name="messages_school_note">Made from your school tasks, for example \"Tomorrow at school: Math test\".</string>
+
+    <!-- Encouragement in the agreement -->
+    <string name="agreement_encouragement">Encouragement messages</string>
+    <string name="agreement_family">Family messages</string>
+    <string name="agreement_family_hint">Write an encouraging message</string>
+    <string name="agreement_family_add">Add</string>
+    <string name="agreement_family_note">Your child can read every family message in \"All messages\". Keep them kind and true.</string>
+    <string name="common_delete">Delete</string>
 </resources>

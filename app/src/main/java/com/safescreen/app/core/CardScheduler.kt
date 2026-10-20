@@ -16,14 +16,22 @@ data class SchedulerState(
     val tasks: List<SchoolTask>,
     /** Reminder keys already shown, so each reminder appears once. */
     val shownReminderKeys: Set<String>,
+    /** Kinds in the everyday rotation; the family agreement can switch encouragement off. */
+    val rotationKinds: Set<CardKind> = ROTATION_ORDER.toSet(),
+    /** Encouragement messages the family wrote, already turned into cards. */
+    val familyCards: List<Card> = emptyList(),
 )
+
+/** Everyday cards take turns in this order, so warnings never come three in a row. */
+val ROTATION_ORDER = listOf(CardKind.SAFETY, CardKind.ADVICE, CardKind.ENCOURAGEMENT)
 
 data class ScheduledCard(val card: Card, val reminderKey: String? = null)
 
 /**
  * Picks the next card for the message engine shared with the subliminal-message and
  * human-upgrade apps. Priority: school reminders, then bedtime, then a rotation of
- * safety and advice cards fitting the child's age. Every card is visible and readable.
+ * safety, advice and encouragement cards fitting the child's age. Every card is visible
+ * and readable.
  */
 class CardScheduler(
     private val cards: List<Card>,
@@ -39,15 +47,19 @@ class CardScheduler(
                 ?.let { ScheduledCard(it) }
         }
         val age = state.tier.representativeAge
-        val eligible = cards.filter {
-            (it.kind == CardKind.SAFETY || it.kind == CardKind.ADVICE) && age in it.minAge..it.maxAge
+        val all = cards + state.familyCards
+        val eligible = all.filter { it.kind in state.rotationKinds && age in it.minAge..it.maxAge }
+        val order = ROTATION_ORDER.filter { it in state.rotationKinds }
+        if (order.isEmpty()) return null
+
+        // The kind after the last one shown goes first; kinds with no card are skipped.
+        val lastKind = state.recentCardIds.firstOrNull()?.let { id -> all.firstOrNull { it.id == id }?.kind }
+        val start = (order.indexOf(lastKind) + 1) % order.size
+        for (step in order.indices) {
+            val kind = order[(start + step) % order.size]
+            rotate(eligible.filter { it.kind == kind }, state.recentCardIds)?.let { return ScheduledCard(it) }
         }
-        // Alternate safety and advice so the child doesn't get three warnings in a row.
-        val lastKind = state.recentCardIds.firstOrNull()?.let { id -> cards.firstOrNull { it.id == id }?.kind }
-        val preferred = if (lastKind == CardKind.SAFETY) CardKind.ADVICE else CardKind.SAFETY
-        val pick = rotate(eligible.filter { it.kind == preferred }, state.recentCardIds)
-            ?: rotate(eligible, state.recentCardIds)
-        return pick?.let { ScheduledCard(it) }
+        return null
     }
 
     private fun isDue(state: SchedulerState): Boolean {

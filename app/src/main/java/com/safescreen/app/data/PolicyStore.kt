@@ -5,6 +5,7 @@ import com.safescreen.app.core.AgeTier
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
+import org.json.JSONArray
 import java.time.LocalTime
 
 /** The family agreement (T2) plus a few device flags. */
@@ -18,6 +19,9 @@ data class Policy(
     val focusBlockedPackages: Set<String> = emptySet(),
     val schoolAppPackages: Set<String> = emptySet(),
     val riskDetectionEnabled: Boolean = true,
+    val encouragementEnabled: Boolean = true,
+    /** Encouragement messages written by the family; the child can read them all. */
+    val familyMessages: List<String> = emptyList(),
     val trustedName: String = "",
     val trustedPhone: String = "",
     val parentSignedAtMillis: Long? = null,
@@ -58,6 +62,8 @@ class PolicyStore(context: Context) {
             .putStringSet(KEY_BLOCKED, policy.focusBlockedPackages)
             .putStringSet(KEY_SCHOOL, policy.schoolAppPackages)
             .putBoolean(KEY_RISK, policy.riskDetectionEnabled)
+            .putBoolean(KEY_ENCOURAGEMENT, policy.encouragementEnabled)
+            .putString(KEY_FAMILY, JSONArray(policy.familyMessages).toString())
             .putString(KEY_TRUSTED_NAME, policy.trustedName)
             .putString(KEY_TRUSTED_PHONE, policy.trustedPhone)
             .putLong(KEY_PARENT_SIGNED, policy.parentSignedAtMillis ?: 0L)
@@ -80,6 +86,10 @@ class PolicyStore(context: Context) {
             focusBlockedPackages = prefs.getStringSet(KEY_BLOCKED, null)?.toSet() ?: emptySet(),
             schoolAppPackages = prefs.getStringSet(KEY_SCHOOL, null)?.toSet() ?: emptySet(),
             riskDetectionEnabled = prefs.getBoolean(KEY_RISK, defaults.riskDetectionEnabled),
+            encouragementEnabled = prefs.getBoolean(KEY_ENCOURAGEMENT, defaults.encouragementEnabled),
+            familyMessages = prefs.getString(KEY_FAMILY, null)
+                ?.let { json -> JSONArray(json).let { array -> (0 until array.length()).map(array::getString) } }
+                ?: emptyList(),
             trustedName = prefs.getString(KEY_TRUSTED_NAME, "") ?: "",
             trustedPhone = prefs.getString(KEY_TRUSTED_PHONE, "") ?: "",
             parentSignedAtMillis = prefs.getLong(KEY_PARENT_SIGNED, 0L).takeIf { it > 0 },
@@ -98,6 +108,8 @@ class PolicyStore(context: Context) {
         const val KEY_BLOCKED = "focus_blocked"
         const val KEY_SCHOOL = "school_apps"
         const val KEY_RISK = "risk_detection"
+        const val KEY_ENCOURAGEMENT = "encouragement"
+        const val KEY_FAMILY = "family_messages"
         const val KEY_TRUSTED_NAME = "trusted_name"
         const val KEY_TRUSTED_PHONE = "trusted_phone"
         const val KEY_PARENT_SIGNED = "parent_signed"

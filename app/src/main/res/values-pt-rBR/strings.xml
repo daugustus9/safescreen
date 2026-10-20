@@ -32,7 +32,7 @@
     <string name="transparency_checks_title">Neste celular, o SafeScreen:</string>
     <string name="transparency_checks_1">Verifica as palavras que você digita em busca de riscos sérios, como automutilação ou desafios perigosos. As palavras são verificadas e esquecidas na hora.</string>
     <string name="transparency_checks_2">Lê avisos apenas dos apps da escola que sua família escolheu, para lembrar você de provas e tarefas.</string>
-    <string name="transparency_checks_3">Mostra, de tempos em tempos, cartões de segurança, conselhos e escola.</string>
+    <string name="transparency_checks_3">Mostra, de tempos em tempos, cartões de segurança, conselhos, incentivo e escola, pelo tempo necessário para ler. Você pode ler todos eles em \"Todas as mensagens\".</string>
     <string name="transparency_checks_4">Pausa os apps combinados enquanto o tempo de foco está rodando.</string>
     <string name="transparency_parents_title">Seus pais veem:</string>
     <string name="transparency_parents_1">Alertas só com a categoria, como \"desafio perigoso\".</string>
@@ -170,4 +170,27 @@
     <string name="agreement_sign_child">Assinar como criança</string>
     <string name="agreement_signed_parent">Responsável assinou ✓</string>
     <string name="agreement_signed_child">Criança assinou ✓</string>
+
+    <!-- All messages (transparency) -->
+    <string name="home_all_messages">Todas as mensagens</string>
+    <string name="messages_title">Todas as mensagens</string>
+    <string name="messages_intro">Estas são todas as mensagens que o SafeScreen pode mostrar. Cada uma fica na tela até ser lida: nada é escondido nem passa rápido demais para ver.</string>
+    <string name="messages_family_empty">Sua família ainda não escreveu nenhuma mensagem.</string>
+    <string name="kind_safety">Segurança</string>
+    <string name="kind_advice">Conselhos para a vida</string>
+    <string name="kind_encouragement">Incentivo</string>
+    <string name="kind_family">Da sua família</string>
+    <string name="kind_bedtime">Hora de dormir</string>
+    <string name="kind_focus">Foco</string>
+    <string name="kind_help">Ajuda</string>
+    <string name="kind_school">Lembretes da escola</string>
+    <string name="messages_school_note">Criados a partir das suas tarefas da escola, por exemplo \"Amanhã na escola: Prova de matemática\".</string>
+
+    <!-- Encouragement in the agreement -->
+    <string name="agreement_encouragement">Mensagens de incentivo</string>
+    <string name="agreement_family">Mensagens da família</string>
+    <string name="agreement_family_hint">Escreva uma mensagem de incentivo</string>
+    <string name="agreement_family_add">Adicionar</string>
+    <string name="agreement_family_note">Seu filho pode ler todas as mensagens da família em \"Todas as mensagens\". Escreva com carinho e verdade.</string>
+    <string name="common_delete">Excluir</string>
 </resources>

@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "about": "Public S1 risk rules. Patterns are regexes matched against normalized text: lowercase, no accents, single spaces. Text is checked on the device and never stored; only the category is recorded.",
+  "about": "Public S1 risk rules, licensed CC BY-SA 4.0. Patterns are regexes matched against normalized text: lowercase, no accents, single spaces. Text is checked on the device and never stored; only the category is recorded.",
   "rules": [
     {
       "category": "SELF_HARM",

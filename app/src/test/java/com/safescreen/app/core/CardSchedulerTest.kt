@@ -30,10 +30,13 @@ class CardSchedulerTest {
         tasks: List<SchoolTask> = emptyList(),
         reminders: Set<String> = emptySet(),
         tier: AgeTier = AgeTier.AGE_10_12,
+        kinds: Set<CardKind> = ROTATION_ORDER.toSet(),
+        familyCards: List<Card> = emptyList(),
     ) = SchedulerState(
         now = now, tier = tier, intervalMinutes = 30,
         bedtimeStart = LocalTime.of(21, 30), bedtimeEnd = LocalTime.of(7, 0),
         lastCardAt = lastCardAt, recentCardIds = recent, tasks = tasks, shownReminderKeys = reminders,
+        rotationKinds = kinds, familyCards = familyCards,
     )
 
     private fun task(due: LocalDate?, done: Boolean = false) =
@@ -80,6 +83,31 @@ class CardSchedulerTest {
         assertEquals("safety-a", tween.card.id)
         val teen = scheduler.next(state(recent = listOf("advice-b", "advice-a", "safety-a"), tier = AgeTier.TEEN_13_PLUS))!!
         assertEquals("safety-teen", teen.card.id)
+    }
+
+    @Test
+    fun rotatesSafetyAdviceEncouragementIncludingFamilyMessages() {
+        val withEncouragement = CardScheduler(cards + Card("enc-a", CardKind.ENCOURAGEMENT, "E", "e")) { task, _ ->
+            Card("reminder-${task.id}", CardKind.SCHOOL, "R", task.title)
+        }
+        assertEquals("enc-a", withEncouragement.next(state(recent = listOf("advice-a")))!!.card.id)
+        assertEquals("safety-a", withEncouragement.next(state(recent = listOf("enc-a")))!!.card.id)
+
+        // A family message is a fresh encouragement card, so it goes before repeating enc-a.
+        val family = Card("family-1", CardKind.ENCOURAGEMENT, "From your family", "We're proud of you")
+        val next = withEncouragement.next(state(recent = listOf("advice-a", "enc-a"), familyCards = listOf(family)))!!
+        assertEquals("family-1", next.card.id)
+        // After a family card, the rotation moves on to safety.
+        assertEquals("safety-a", withEncouragement.next(state(recent = listOf("family-1"), familyCards = listOf(family)))!!.card.id)
+    }
+
+    @Test
+    fun encouragementCanBeSwitchedOff() {
+        val withEncouragement = CardScheduler(cards + Card("enc-a", CardKind.ENCOURAGEMENT, "E", "e")) { task, _ ->
+            Card("reminder-${task.id}", CardKind.SCHOOL, "R", task.title)
+        }
+        val off = state(recent = listOf("advice-a"), kinds = setOf(CardKind.SAFETY, CardKind.ADVICE))
+        assertEquals(CardKind.SAFETY, withEncouragement.next(off)!!.card.kind)
     }
 
     @Test

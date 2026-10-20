@@ -14,7 +14,9 @@ import androidx.core.app.NotificationCompat
 import androidx.core.content.ContextCompat
 import com.safescreen.app.MainActivity
 import com.safescreen.app.R
+import com.safescreen.app.core.CardKind
 import com.safescreen.app.core.EventType
+import com.safescreen.app.core.ROTATION_ORDER
 import com.safescreen.app.core.ScheduledCard
 import com.safescreen.app.core.SchedulerState
 import com.safescreen.app.graph
@@ -77,6 +79,8 @@ class CardOverlayService : Service() {
             recentCardIds = graph.cardHistory.recentIds,
             tasks = graph.tasks.tasks.value,
             shownReminderKeys = graph.cardHistory.reminderKeys,
+            rotationKinds = if (policy.encouragementEnabled) ROTATION_ORDER.toSet() else ROTATION_ORDER.toSet() - CardKind.ENCOURAGEMENT,
+            familyCards = if (policy.encouragementEnabled) graph.content.familyCards(policy.familyMessages) else emptyList(),
         )
         graph.scheduler.next(state)?.let(::present)
     }

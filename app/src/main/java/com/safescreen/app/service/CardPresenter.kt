@@ -75,6 +75,7 @@ object CardPresenter {
             CardKind.SCHOOL -> Color.parseColor("#1E5BB8")
             CardKind.BEDTIME, CardKind.FOCUS -> Color.parseColor("#4A3F8C")
             CardKind.ADVICE -> Color.parseColor("#2E7D32")
+            CardKind.ENCOURAGEMENT -> Color.parseColor("#9C4F00")
         }
         val title = TextView(context).apply {
             text = card.title

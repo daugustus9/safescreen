@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "about": "Public message library. Every card the app can show is listed here, in plain text. Kinds: SAFETY (S7), ADVICE (W1), BEDTIME (W3), FOCUS (P3), HELP (S1 response).",
+  "about": "Public message library, licensed CC BY-SA 4.0. Every message the app can show is listed here in plain text and in the app's All messages screen. Kinds: SAFETY (S7), ADVICE (W1, life guidance), ENCOURAGEMENT (self-view, habits, kindness, citizenship), BEDTIME (W3), FOCUS (P3), HELP (S1 response). All are shown visibly; none are subliminal.",
   "cards": [
     {
       "id": "safety-blackout", "kind": "SAFETY", "minAge": 6, "maxAge": 17,
@@ -81,6 +81,96 @@
       "id": "advice-conflict", "kind": "ADVICE", "minAge": 8, "maxAge": 17,
       "en": { "title": "Breathe before you reply", "body": "Messages sent while angry are hard to take back. Wait a minute, then decide what to say." },
       "pt": { "title": "Respire antes de responder", "body": "Mensagem mandada com raiva é difícil de desfazer. Espere um minuto e depois decida o que dizer." }
+    },
+    {
+      "id": "enc-learn", "kind": "ENCOURAGEMENT", "minAge": 6, "maxAge": 17,
+      "en": { "title": "You can learn hard things", "body": "Every expert was once a beginner. Each time you practice, your brain gets stronger." },
+      "pt": { "title": "Você consegue aprender coisas difíceis", "body": "Todo especialista já foi iniciante. Cada vez que você pratica, seu cérebro fica mais forte." }
+    },
+    {
+      "id": "enc-you-matter", "kind": "ENCOURAGEMENT", "minAge": 6, "maxAge": 17,
+      "en": { "title": "You matter", "body": "There is only one you. Your ideas and your feelings are important." },
+      "pt": { "title": "Você é importante", "body": "Só existe um você. Suas ideias e seus sentimentos importam." }
+    },
+    {
+      "id": "enc-self-talk", "kind": "ENCOURAGEMENT", "minAge": 8, "maxAge": 17,
+      "en": { "title": "Talk to yourself like a friend", "body": "When something goes wrong, say to yourself what you would say to a friend: it's okay, you can try again." },
+      "pt": { "title": "Fale com você como fala com um amigo", "body": "Quando algo der errado, diga a você mesmo o que diria a um amigo: tudo bem, dá para tentar de novo." }
+    },
+    {
+      "id": "enc-effort", "kind": "ENCOURAGEMENT", "minAge": 6, "maxAge": 17,
+      "en": { "title": "Effort counts", "body": "Doing your best matters more than being the best." },
+      "pt": { "title": "O esforço conta", "body": "Fazer o seu melhor importa mais do que ser o melhor." }
+    },
+    {
+      "id": "enc-brave", "kind": "ENCOURAGEMENT", "minAge": 6, "maxAge": 17,
+      "en": { "title": "You're braver than you think", "body": "Feeling nervous before something new is normal. Doing it anyway is courage." },
+      "pt": { "title": "Você é mais corajoso do que imagina", "body": "Ficar nervoso antes de algo novo é normal. Fazer mesmo assim é coragem." }
+    },
+    {
+      "id": "enc-wins", "kind": "ENCOURAGEMENT", "minAge": 6, "maxAge": 17,
+      "en": { "title": "Notice your wins", "body": "Think of one thing you did well today. Be proud of it." },
+      "pt": { "title": "Repare nas suas conquistas", "body": "Pense em uma coisa que você fez bem hoje. Sinta orgulho disso." }
+    },
+    {
+      "id": "enc-habits", "kind": "ENCOURAGEMENT", "minAge": 6, "maxAge": 17,
+      "en": { "title": "Small habits, big results", "body": "Drinking water, moving your body and sleeping well give you energy for everything else." },
+      "pt": { "title": "Pequenos hábitos, grandes resultados", "body": "Beber água, mexer o corpo e dormir bem dão energia para todo o resto." }
+    },
+    {
+      "id": "enc-reading", "kind": "ENCOURAGEMENT", "minAge": 6, "maxAge": 17,
+      "en": { "title": "Readers go far", "body": "A few pages a day add up to many books in a year." },
+      "pt": { "title": "Quem lê vai longe", "body": "Algumas páginas por dia viram muitos livros em um ano." }
+    },
+    {
+      "id": "enc-ready", "kind": "ENCOURAGEMENT", "minAge": 6, "maxAge": 14,
+      "en": { "title": "Ready for tomorrow", "body": "Packing your backpack the night before makes the morning calmer." },
+      "pt": { "title": "Pronto para amanhã", "body": "Arrumar a mochila na noite anterior deixa a manhã mais tranquila." }
+    },
+    {
+      "id": "enc-stretch", "kind": "ENCOURAGEMENT", "minAge": 6, "maxAge": 17,
+      "en": { "title": "Time for a stretch", "body": "Stand up, stretch, and look at something far away for 20 seconds. Your eyes and back will thank you." },
+      "pt": { "title": "Hora de se alongar", "body": "Levante, se alongue e olhe para algo longe por 20 segundos. Seus olhos e suas costas agradecem." }
+    },
+    {
+      "id": "enc-kindness", "kind": "ENCOURAGEMENT", "minAge": 6, "maxAge": 17,
+      "en": { "title": "Kindness spreads", "body": "A kind word can change someone's whole day. Who could you encourage today?" },
+      "pt": { "title": "Gentileza contagia", "body": "Uma palavra gentil pode mudar o dia de alguém. Quem você pode animar hoje?" }
+    },
+    {
+      "id": "enc-thanks", "kind": "ENCOURAGEMENT", "minAge": 6, "maxAge": 17,
+      "en": { "title": "Say thank you", "body": "Thanking someone makes them feel valued, and it makes you happier too." },
+      "pt": { "title": "Diga obrigado", "body": "Agradecer faz a outra pessoa se sentir valorizada, e deixa você mais feliz também." }
+    },
+    {
+      "id": "enc-team", "kind": "ENCOURAGEMENT", "minAge": 6, "maxAge": 17,
+      "en": { "title": "Your family is a team", "body": "Helping at home, even with small things, makes your family a stronger team." },
+      "pt": { "title": "Sua família é um time", "body": "Ajudar em casa, mesmo nas pequenas coisas, deixa a sua família um time mais forte." }
+    },
+    {
+      "id": "enc-honesty", "kind": "ENCOURAGEMENT", "minAge": 6, "maxAge": 17,
+      "en": { "title": "Honesty builds trust", "body": "Telling the truth, even when it's hard, makes people trust you more." },
+      "pt": { "title": "Honestidade gera confiança", "body": "Falar a verdade, mesmo quando é difícil, faz as pessoas confiarem mais em você." }
+    },
+    {
+      "id": "enc-respect", "kind": "ENCOURAGEMENT", "minAge": 8, "maxAge": 17,
+      "en": { "title": "Respect makes room for everyone", "body": "People look, think and live in different ways. Treating everyone with respect makes the world better for all of us." },
+      "pt": { "title": "Respeito abre espaço para todos", "body": "As pessoas têm jeitos diferentes de ser, pensar e viver. Tratar todos com respeito deixa o mundo melhor para todo mundo." }
+    },
+    {
+      "id": "enc-planet", "kind": "ENCOURAGEMENT", "minAge": 6, "maxAge": 17,
+      "en": { "title": "Care for the place we share", "body": "Turning off lights and putting trash in the bin are small acts that protect our city and our planet." },
+      "pt": { "title": "Cuide do lugar que é de todos", "body": "Apagar a luz e jogar o lixo no lixo são atitudes pequenas que protegem a nossa cidade e o planeta." }
+    },
+    {
+      "id": "enc-citizen", "kind": "ENCOURAGEMENT", "minAge": 10, "maxAge": 17,
+      "en": { "title": "You can make a difference", "body": "Good citizens help others, follow fair rules and speak up when something is wrong. You can start at school." },
+      "pt": { "title": "Você pode fazer a diferença", "body": "Bons cidadãos ajudam os outros, seguem regras justas e falam quando algo está errado. Dá para começar na escola." }
+    },
+    {
+      "id": "enc-future", "kind": "ENCOURAGEMENT", "minAge": 13, "maxAge": 17,
+      "en": { "title": "Your future starts today", "body": "What you learn and practice now opens doors later. Keep going." },
+      "pt": { "title": "Seu futuro começa hoje", "body": "O que você aprende e pratica agora abre portas depois. Continue." }
     },
     {
       "id": "bedtime-1", "kind": "BEDTIME",

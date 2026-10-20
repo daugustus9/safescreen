@@ -45,6 +45,7 @@ fun ChildHomeScreen(
     onHelp: () -> Unit,
     onTasks: () -> Unit,
     onTransparency: () -> Unit,
+    onMessages: () -> Unit,
     onParent: () -> Unit,
 ) {
     val context = LocalContext.current
@@ -137,6 +138,7 @@ fun ChildHomeScreen(
 
         FlowRow(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
             OutlinedButton(onClick = onTransparency) { Text(stringResource(R.string.home_what_it_sees)) }
+            OutlinedButton(onClick = onMessages) { Text(stringResource(R.string.home_all_messages)) }
             OutlinedButton(onClick = onParent) { Text(stringResource(R.string.home_parent_area)) }
             OutlinedButton(onClick = { CardOverlayService.showNow(context) }) { Text(stringResource(R.string.home_show_card)) }
         }

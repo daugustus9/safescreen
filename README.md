@@ -10,7 +10,8 @@ The prototype has **no INTERNET permission**: nothing it sees can leave the phon
 |---|---|---|
 | S1 | On-device risk detection (self-harm, dangerous challenges, drugs, weapons) on typed text, Portuguese and English | `core/RiskClassifier.kt`, rules in `assets/rules/risk_rules.json`, run by `service/GuardAccessibilityService.kt` |
 | S5 | "I need help" button: trusted adult and helplines (CVV 188, Disque 100…), opens the dialer only | `ui/HelpScreen.kt`, `assets/content/helplines.json` |
-| S7, W1 | Safety and advice cards, by age, alternating | `assets/content/cards.json`, `core/CardScheduler.kt` |
+| S7, W1 | Safety and life-advice cards, by age | `assets/content/cards.json`, `core/CardScheduler.kt` |
+| — | Encouragement cards: self-view, habits, kindness, citizenship; families can add their own | `assets/content/cards.json`, `ui/ParentScreen.kt` |
 | W3 | Bedtime cards inside the agreed window | `core/CardScheduler.kt` |
 | P3 | Focus timer; chosen apps are sent to the home screen while it runs | `ui/ChildHomeScreen.kt`, `service/GuardAccessibilityService.kt` |
 | C1 | School reminders: the evening before (from 17:00) and the morning of | `core/CardScheduler.kt` |
@@ -20,8 +21,9 @@ The prototype has **no INTERNET permission**: nothing it sees can leave the phon
 | T5 | Real-time alert for S1 and S5 (a local notification in the prototype, visible to the child too) | `system/AlertNotifier.kt` |
 | T6 | Age tiers: under 10, 10–12, 13+ | `core/Models.kt` |
 | — | "What SafeScreen sees" screen, shown before anything is switched on and reachable from the status notification | `ui/TransparencyScreen.kt` |
+| — | "All messages" screen: the child and parents can read every message the app can show, family messages included | `ui/MessagesScreen.kt` |
 
-The message engine (`CardOverlayService` + `CardPresenter`) is adapted from the subliminal-message app's overlay service, with one deliberate change: cards are visible and stay until the child reads them.
+The message engine (`CardOverlayService` + `CardPresenter`) is adapted from the subliminal-message app's overlay service, with one deliberate change: every message is visible and stays until the child reads it. Nothing is subliminal. Safety, life advice and encouragement take turns, so warnings never come three in a row.
 
 ## Privacy by construction
 
@@ -58,3 +60,11 @@ The APK is written to `app/build/outputs/apk/debug/app-debug.apk`. Unit tests co
 - Google Classroom integration (P1) and the teacher view (C6–C8).
 - iOS.
 - A Play Store policy review: accessibility-service use must be declared and justified before publishing.
+
+## License
+
+- **Code:** [GNU General Public License v3.0](LICENSE). Anyone may use, study and change it; versions they distribute must stay open under the same license.
+- **Message library and detection rules** (`app/src/main/assets/content/` and `app/src/main/assets/rules/`): [Creative Commons Attribution-ShareAlike 4.0](LICENSES/CC-BY-SA-4.0.txt).
+- The name "SafeScreen" and its logo are not covered by these licenses.
+
+Copyright © 2026 Denis Augusto.

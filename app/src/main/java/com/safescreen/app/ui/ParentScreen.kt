@@ -175,7 +175,12 @@ private fun AgreementTab() {
         SwitchRow(stringResource(R.string.agreement_risk), policy.riskDetectionEnabled) { on ->
             store.updateRules { it.copy(riskDetectionEnabled = on) }
         }
+        SwitchRow(stringResource(R.string.agreement_encouragement), policy.encouragementEnabled) { on ->
+            store.updateRules { it.copy(encouragementEnabled = on) }
+        }
     }
+
+    FamilyMessagesCard(store)
 
     SectionCard(stringResource(R.string.agreement_bedtime)) {
         Stepper(stringResource(R.string.agreement_bed_start, policy.bedtimeStart.toString()),
@@ -255,6 +260,40 @@ private fun TrustedAdultCard(store: PolicyStore) {
         ) { Text(stringResource(R.string.agreement_save_contact)) }
     }
 }
+
+/** Visible encouragement the family writes, the open counterpart of the subliminal app's library. */
+@Composable
+private fun FamilyMessagesCard(store: PolicyStore) {
+    val policy by store.policy.collectAsState()
+    var draft by remember { mutableStateOf("") }
+    SectionCard(stringResource(R.string.agreement_family)) {
+        policy.familyMessages.forEachIndexed { index, message ->
+            Row(verticalAlignment = Alignment.CenterVertically) {
+                Text(message, modifier = Modifier.weight(1f))
+                TextButton(onClick = {
+                    store.updateRules { it.copy(familyMessages = it.familyMessages.filterIndexed { i, _ -> i != index }) }
+                }) { Text(stringResource(R.string.common_delete)) }
+            }
+        }
+        OutlinedTextField(
+            value = draft,
+            onValueChange = { draft = it.take(MAX_FAMILY_MESSAGE) },
+            label = { Text(stringResource(R.string.agreement_family_hint)) },
+            modifier = Modifier.fillMaxWidth(),
+        )
+        OutlinedButton(
+            enabled = draft.isNotBlank() && draft.trim() !in policy.familyMessages,
+            onClick = {
+                val message = draft.trim()
+                store.updateRules { it.copy(familyMessages = it.familyMessages + message) }
+                draft = ""
+            },
+        ) { Text(stringResource(R.string.agreement_family_add)) }
+        Text(stringResource(R.string.agreement_family_note), style = MaterialTheme.typography.bodySmall)
+    }
+}
+
+private const val MAX_FAMILY_MESSAGE = 140
 
 @Composable
 private fun SwitchRow(label: String, checked: Boolean, onChange: (Boolean) -> Unit) {

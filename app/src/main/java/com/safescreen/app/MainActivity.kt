@@ -17,6 +17,7 @@ import com.safescreen.app.core.EventType
 import com.safescreen.app.system.AlertNotifier
 import com.safescreen.app.ui.ChildHomeScreen
 import com.safescreen.app.ui.HelpScreen
+import com.safescreen.app.ui.MessagesScreen
 import com.safescreen.app.ui.ParentGateScreen
 import com.safescreen.app.ui.ParentScreen
 import com.safescreen.app.ui.SafeScreenTheme
@@ -55,7 +56,7 @@ class MainActivity : ComponentActivity() {
     }
 }
 
-enum class Screen { TRANSPARENCY, SETUP, HOME, HELP, TASKS, PARENT_GATE, PARENT }
+enum class Screen { TRANSPARENCY, SETUP, HOME, HELP, TASKS, MESSAGES, PARENT_GATE, PARENT }
 
 @Composable
 private fun AppRoot(externalRequest: MutableState<Screen?>) {
@@ -93,10 +94,12 @@ private fun AppRoot(externalRequest: MutableState<Screen?>) {
             },
             onTasks = { screen = Screen.TASKS },
             onTransparency = { screen = Screen.TRANSPARENCY },
+            onMessages = { screen = Screen.MESSAGES },
             onParent = { screen = Screen.PARENT_GATE },
         )
         Screen.HELP -> HelpScreen(onBack = home)
         Screen.TASKS -> TasksScreen(onBack = home)
+        Screen.MESSAGES -> MessagesScreen(onBack = home)
         Screen.PARENT_GATE -> ParentGateScreen(onUnlocked = { screen = Screen.PARENT }, onBack = home)
         Screen.PARENT -> ParentScreen(onLock = home)
     }

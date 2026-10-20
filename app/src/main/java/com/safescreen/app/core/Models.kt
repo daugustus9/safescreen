@@ -20,7 +20,12 @@ enum class AgeTier(
     TEEN_13_PLUS(representativeAge = 14, defaultCardIntervalMinutes = 45, showsAppDetails = false),
 }
 
-enum class CardKind { SAFETY, ADVICE, SCHOOL, HELP, BEDTIME, FOCUS }
+/**
+ * ADVICE gives life guidance (W1); ENCOURAGEMENT is short positive messages for
+ * self-view, habits, kindness and citizenship, including ones the family writes.
+ * Every kind is shown visibly, long enough to read; nothing is subliminal.
+ */
+enum class CardKind { SAFETY, ADVICE, ENCOURAGEMENT, SCHOOL, HELP, BEDTIME, FOCUS }
 
 /** One on-screen card. Text is already in the device language when it reaches here. */
 data class Card(
