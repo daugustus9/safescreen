@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">SafeScreen</string>
+
+    <!-- System components -->
+    <string name="accessibility_service_label">Verificação de segurança do SafeScreen</string>
+    <string name="accessibility_service_description">Verifica as palavras digitadas neste celular em busca de riscos sérios, como automutilação ou desafios perigosos, e pausa os apps combinados durante o tempo de foco. O texto é verificado no celular e nunca é guardado nem enviado.</string>
+    <string name="notification_listener_label">Avisos da escola no SafeScreen</string>
+    <string name="channel_status">Status do SafeScreen</string>
+    <string name="channel_alerts">Alertas de segurança</string>
+    <string name="status_notification_title">O SafeScreen está ligado</string>
+    <string name="status_notification_text">Cartões e verificações de segurança ativos. Toque para ver o que o SafeScreen vê.</string>
+    <string name="alert_risk_title">Alerta de segurança</string>
+    <string name="alert_risk_text">Foi detectada uma busca ou mensagem preocupante: %1$s. O que foi digitado não é guardado.</string>
+    <string name="alert_help_title">Pedido de ajuda</string>
+    <string name="alert_help_text">Seu filho tocou em \"Preciso de ajuda\" no SafeScreen.</string>
+    <string name="risk_self_harm">automutilação</string>
+    <string name="risk_challenge">desafio perigoso</string>
+    <string name="risk_drugs">drogas</string>
+    <string name="risk_weapons">armas ou violência</string>
+    <string name="risk_other">outro risco</string>
+    <string name="card_ok">OK</string>
+    <string name="card_get_help">Pedir ajuda</string>
+
+    <!-- Common -->
+    <string name="common_back">Voltar</string>
+    <string name="common_done">Pronto</string>
+
+    <!-- Transparency -->
+    <string name="transparency_title">O que o SafeScreen vê e compartilha</string>
+    <string name="transparency_intro">O SafeScreen ajuda você a ficar seguro e organizado. Isto é exatamente o que ele faz. Nada fica escondido.</string>
+    <string name="transparency_checks_title">Neste celular, o SafeScreen:</string>
+    <string name="transparency_checks_1">Verifica as palavras que você digita em busca de riscos sérios, como automutilação ou desafios perigosos. As palavras são verificadas e esquecidas na hora.</string>
+    <string name="transparency_checks_2">Lê avisos apenas dos apps da escola que sua família escolheu, para lembrar você de provas e tarefas.</string>
+    <string name="transparency_checks_3">Mostra, de tempos em tempos, cartões de segurança, conselhos e escola.</string>
+    <string name="transparency_checks_4">Pausa os apps combinados enquanto o tempo de foco está rodando.</string>
+    <string name="transparency_parents_title">Seus pais veem:</string>
+    <string name="transparency_parents_1">Alertas só com a categoria, como \"desafio perigoso\".</string>
+    <string name="transparency_parents_2">Quando você toca em \"Preciso de ajuda\".</string>
+    <string name="transparency_parents_3">Um resumo semanal: tempo de tela, tarefas da escola e minutos de foco.</string>
+    <string name="transparency_never_title">Seus pais nunca veem:</string>
+    <string name="transparency_never_1">O que você digita, suas mensagens ou suas fotos.</string>
+    <string name="transparency_never_2">Os sites ou vídeos que você abre.</string>
+    <string name="transparency_offline">O SafeScreen não tem acesso à internet. Tudo fica neste celular.</string>
+    <string name="transparency_continue">Entendi</string>
+
+    <!-- Setup -->
+    <string name="setup_title">Configurar o SafeScreen</string>
+    <string name="setup_intro">Cada acesso é ligado nas configurações do Android. Você pode desligar qualquer um a qualquer momento.</string>
+    <string name="access_overlay_title">Mostrar cartões sobre outros apps</string>
+    <string name="access_overlay_desc">Para cartões de segurança, conselhos e escola.</string>
+    <string name="access_accessibility_title">Verificação de segurança e modo foco</string>
+    <string name="access_accessibility_desc">Verifica palavras digitadas em busca de riscos sérios e pausa apps no tempo de foco.</string>
+    <string name="access_listener_title">Avisos dos apps da escola</string>
+    <string name="access_listener_desc">Lê avisos apenas dos apps da escola que sua família escolher.</string>
+    <string name="access_usage_title">Tempo de tela</string>
+    <string name="access_usage_desc">Minutos por app para o resumo semanal.</string>
+    <string name="access_notifications_title">Notificações</string>
+    <string name="access_notifications_desc">Mostra que o SafeScreen está ligado e os alertas de segurança.</string>
+    <string name="access_granted">Ligado</string>
+    <string name="access_grant">Ligar</string>
+    <string name="setup_restricted_note">Se o Android disser que a configuração é restrita: abra Configurações › Apps › SafeScreen, toque em ⋮ e escolha \"Permitir configurações restritas\". Isso acontece com apps instalados fora da Play Store.</string>
+
+    <!-- Child home -->
+    <string name="home_on">O SafeScreen está ligado</string>
+    <string name="home_off">O SafeScreen está desligado</string>
+    <string name="home_setup_needed">Falta ligar algum acesso</string>
+    <string name="home_open_setup">Configurar</string>
+    <string name="home_start">Ligar</string>
+    <string name="home_stop">Desligar</string>
+    <string name="home_help_button">Preciso de ajuda</string>
+    <string name="home_focus_title">Tempo de foco</string>
+    <string name="home_focus_start">Começar foco de %1$d minutos</string>
+    <string name="home_focus_left">Faltam %1$d min</string>
+    <string name="home_focus_stop">Parar</string>
+    <string name="home_tasks_title">Escola</string>
+    <string name="home_tasks_empty">Nenhuma tarefa da escola. Adicione uma ou escolha o app da escola na área dos pais.</string>
+    <string name="home_tasks_all">Todas as tarefas</string>
+    <string name="home_agreement">Hora de dormir %1$s · um cartão a cada %2$d min</string>
+    <string name="home_agreement_unsigned">O acordo da família precisa das duas assinaturas.</string>
+    <string name="home_what_it_sees">O que o SafeScreen vê</string>
+    <string name="home_parent_area">Área dos pais</string>
+    <string name="home_show_card">Mostrar um cartão agora</string>
+
+    <!-- Help -->
+    <string name="help_title">Você fez a coisa certa</string>
+    <string name="help_intro">Pedir ajuda exige coragem. Converse com alguém agora.</string>
+    <string name="help_trusted">Ligar para %1$s</string>
+    <string name="help_no_trusted">Peça a um responsável para cadastrar um adulto de confiança no acordo.</string>
+    <string name="help_lines">Linhas de ajuda gratuitas</string>
+    <string name="help_call">Ligar</string>
+
+    <!-- Tasks -->
+    <string name="tasks_title">Tarefas da escola</string>
+    <string name="tasks_add_hint">Adicione uma tarefa ou cole um aviso da escola</string>
+    <string name="tasks_add">Adicionar</string>
+    <string name="due_none">Sem data</string>
+    <string name="due_today">Hoje</string>
+    <string name="due_tomorrow">Amanhã</string>
+    <string name="due_2days">Em 2 dias</string>
+    <string name="due_week">Em uma semana</string>
+    <string name="tasks_due">Para %1$s</string>
+    <string name="tasks_from_app">De %1$s</string>
+    <string name="tasks_delete">Excluir</string>
+    <string name="tasks_empty">Nada aqui ainda.</string>
+    <string name="task_kind_test">Prova</string>
+    <string name="task_kind_homework">Tarefa</string>
+    <string name="task_kind_permission">Autorização</string>
+    <string name="task_kind_materials">Levar</string>
+    <string name="task_kind_event">Evento</string>
+
+    <!-- Parent PIN -->
+    <string name="pin_create_title">Crie um PIN dos pais</string>
+    <string name="pin_enter_title">PIN dos pais</string>
+    <string name="pin_hint">4 a 8 dígitos</string>
+    <string name="pin_confirm">Confirme o PIN</string>
+    <string name="pin_mismatch">Os PINs não são iguais.</string>
+    <string name="pin_wrong">PIN errado.</string>
+    <string name="pin_continue">Continuar</string>
+    <string name="pin_note">O PIN protege as regras. A área dos pais não mostra nada que a criança também não possa ver.</string>
+
+    <!-- Parent area -->
+    <string name="parent_title">Área dos pais</string>
+    <string name="tab_summary">Esta semana</string>
+    <string name="tab_agreement">Acordo</string>
+    <string name="parent_lock">Bloquear</string>
+    <string name="summary_alerts">Alertas de segurança</string>
+    <string name="summary_no_alerts">Nenhum alerta de segurança nesta semana.</string>
+    <string name="summary_alerts_note">Só as categorias são registradas, nunca o que foi digitado.</string>
+    <string name="summary_help">\"Preciso de ajuda\" tocado: %1$d</string>
+    <string name="summary_school">Escola</string>
+    <string name="summary_notices">Avisos da escola recebidos: %1$d</string>
+    <string name="summary_tasks_done">Tarefas concluídas: %1$d</string>
+    <string name="summary_upcoming">Próximos dias</string>
+    <string name="summary_focus">Foco e cartões</string>
+    <string name="summary_focus_minutes">Minutos de foco: %1$d</string>
+    <string name="summary_focus_blocks">Aberturas de apps pausados: %1$d</string>
+    <string name="summary_cards">Cartões mostrados: %1$d</string>
+    <string name="summary_screen">Tempo de tela (7 dias)</string>
+    <string name="summary_screen_total">Total: %1$s</string>
+    <string name="summary_screen_hidden">Os detalhes por app ficam ocultos nesta faixa etária.</string>
+    <string name="summary_usage_missing">Ligue o acesso ao tempo de tela na configuração para ver isto.</string>
+    <string name="summary_hours_minutes">%1$dh %2$02dmin</string>
+    <string name="summary_relay_note">Na versão completa, este resumo chega ao celular dos pais, com criptografia de ponta a ponta.</string>
+
+    <!-- Agreement -->
+    <string name="agreement_signatures_note">Mudar qualquer regra pede que pais e criança assinem de novo.</string>
+    <string name="agreement_tier">Faixa etária</string>
+    <string name="tier_under_10">Menos de 10</string>
+    <string name="tier_10_12">10 a 12</string>
+    <string name="tier_13_plus">13+</string>
+    <string name="tier_desc_under_10">Todos os tipos de alerta; tempo de tela por app no resumo.</string>
+    <string name="tier_desc_10_12">Todos os tipos de alerta; só os totais de tempo de tela.</string>
+    <string name="tier_desc_13_plus">Alertas de risco sério e de ajuda, mais os totais. Mais privacidade.</string>
+    <string name="agreement_cards">Mostrar cartões</string>
+    <string name="agreement_interval">Um cartão a cada %1$d minutos</string>
+    <string name="agreement_bedtime">Hora de dormir</string>
+    <string name="agreement_bed_start">Começa %1$s</string>
+    <string name="agreement_bed_end">Termina %1$s</string>
+    <string name="agreement_focus_length">Duração do foco: %1$d min</string>
+    <string name="agreement_risk">Verificação de segurança nas palavras digitadas</string>
+    <string name="agreement_focus_apps">Apps pausados durante o foco</string>
+    <string name="agreement_school_apps">Apps da escola (Agenda Edu, Escola Paraná…)</string>
+    <string name="agreement_choose">Escolher (%1$d)</string>
+    <string name="agreement_trusted">Adulto de confiança para \"Preciso de ajuda\"</string>
+    <string name="agreement_trusted_name">Nome</string>
+    <string name="agreement_trusted_phone">Telefone</string>
+    <string name="agreement_save_contact">Salvar</string>
+    <string name="agreement_sign_parent">Assinar como responsável</string>
+    <string name="agreement_sign_child">Assinar como criança</string>
+    <string name="agreement_signed_parent">Responsável assinou ✓</string>
+    <string name="agreement_signed_child">Criança assinou ✓</string>
+</resources>

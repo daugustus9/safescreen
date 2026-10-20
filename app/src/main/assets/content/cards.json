@@ -1,0 +1,121 @@
+{
+  "version": 1,
+  "about": "Public message library. Every card the app can show is listed here, in plain text. Kinds: SAFETY (S7), ADVICE (W1), BEDTIME (W3), FOCUS (P3), HELP (S1 response).",
+  "cards": [
+    {
+      "id": "safety-blackout", "kind": "SAFETY", "minAge": 6, "maxAge": 17,
+      "en": { "title": "No challenge is worth your life", "body": "Challenges that ask you to choke or hold your breath until you pass out have killed children. There is no safe way to do it. Scroll past and tell an adult." },
+      "pt": { "title": "Nenhum desafio vale a sua vida", "body": "Desafios de prender a respiração ou se sufocar até desmaiar já mataram crianças. Não existe jeito seguro de fazer. Passe direto e conte para um adulto." }
+    },
+    {
+      "id": "safety-medicine", "kind": "SAFETY", "minAge": 8, "maxAge": 17,
+      "en": { "title": "Medicine is not a game", "body": "Taking extra medicine for a video can stop your heart. Medicine is only safe in the dose a doctor or the box says." },
+      "pt": { "title": "Remédio não é brincadeira", "body": "Tomar remédio a mais por causa de um vídeo pode parar o seu coração. Remédio só é seguro na dose que o médico ou a bula indicam." }
+    },
+    {
+      "id": "safety-fire", "kind": "SAFETY", "minAge": 6, "maxAge": 17,
+      "en": { "title": "Fire spreads in seconds", "body": "Fire and spray-can challenges cause serious burns faster than you can react. If you see one, don't copy it." },
+      "pt": { "title": "O fogo se espalha em segundos", "body": "Desafios com fogo ou spray causam queimaduras graves mais rápido do que dá para reagir. Viu um? Não copie." }
+    },
+    {
+      "id": "safety-trip", "kind": "SAFETY", "minAge": 8, "maxAge": 17,
+      "en": { "title": "A trip can break a neck", "body": "Kicking someone's legs while they jump can cause head and spine injuries. It's not a prank, it's dangerous." },
+      "pt": { "title": "Uma rasteira pode quebrar o pescoço", "body": "Dar rasteira em alguém no meio do pulo pode causar lesões na cabeça e na coluna. Não é brincadeira, é perigoso." }
+    },
+    {
+      "id": "safety-strangers", "kind": "SAFETY", "minAge": 6, "maxAge": 17,
+      "en": { "title": "Red flags online", "body": "Someone asks for photos, secrets, or to move to another app? That's a red flag. Block, take a screenshot, and tell an adult you trust." },
+      "pt": { "title": "Sinais de alerta na internet", "body": "Alguém pediu fotos, segredos ou para conversar em outro app? Isso é um sinal de alerta. Bloqueie, tire um print e conte para um adulto de confiança." }
+    },
+    {
+      "id": "safety-location", "kind": "SAFETY", "minAge": 8, "maxAge": 17,
+      "en": { "title": "Check before you post", "body": "Does your photo show your school, street, or uniform? Strangers can use that to find you." },
+      "pt": { "title": "Confira antes de postar", "body": "Sua foto mostra a escola, a rua ou o uniforme? Estranhos podem usar isso para encontrar você." }
+    },
+    {
+      "id": "safety-scam", "kind": "SAFETY", "minAge": 6, "maxAge": 17,
+      "en": { "title": "Free skins are a trap", "body": "Free coins, skins or gems in exchange for your password are scams. Real games never ask for your password." },
+      "pt": { "title": "Skin grátis é armadilha", "body": "Moedas, skins ou gemas grátis em troca da sua senha são golpe. Jogos de verdade nunca pedem a sua senha." }
+    },
+    {
+      "id": "safety-brave", "kind": "SAFETY", "minAge": 6, "maxAge": 17,
+      "en": { "title": "Brave means saying no", "body": "If a dare could hurt you or someone else, the bravest move is to say no." },
+      "pt": { "title": "Coragem é saber dizer não", "body": "Se um desafio pode machucar você ou outra pessoa, o mais corajoso é dizer não." }
+    },
+    {
+      "id": "advice-friend", "kind": "ADVICE", "minAge": 6, "maxAge": 17,
+      "en": { "title": "Real friends respect your no", "body": "If someone only likes you when you do what they want, that's not friendship." },
+      "pt": { "title": "Amigo de verdade respeita o seu não", "body": "Se alguém só gosta de você quando você faz o que essa pessoa quer, isso não é amizade." }
+    },
+    {
+      "id": "advice-no", "kind": "ADVICE", "minAge": 6, "maxAge": 17,
+      "en": { "title": "No is a full sentence", "body": "You can say no without explaining. \"No, I don't want to\" is enough." },
+      "pt": { "title": "Não é uma resposta completa", "body": "Você pode dizer não sem explicar. \"Não, eu não quero\" já basta." }
+    },
+    {
+      "id": "advice-sleep-kids", "kind": "ADVICE", "minAge": 6, "maxAge": 12,
+      "en": { "title": "Sleep is your superpower", "body": "Kids your age need 9 to 12 hours of sleep. Screens off an hour before bed helps you fall asleep faster." },
+      "pt": { "title": "Dormir é o seu superpoder", "body": "Crianças da sua idade precisam de 9 a 12 horas de sono. Desligar as telas uma hora antes de deitar ajuda a dormir mais rápido." }
+    },
+    {
+      "id": "advice-sleep-teens", "kind": "ADVICE", "minAge": 13, "maxAge": 17,
+      "en": { "title": "Sleep is your superpower", "body": "Teens need 8 to 10 hours of sleep. Your memory sorts out what you studied while you sleep." },
+      "pt": { "title": "Dormir é o seu superpoder", "body": "Adolescentes precisam de 8 a 10 horas de sono. É dormindo que a memória organiza o que você estudou." }
+    },
+    {
+      "id": "advice-mistakes", "kind": "ADVICE", "minAge": 6, "maxAge": 17,
+      "en": { "title": "Mistakes help you learn", "body": "Getting something wrong is how your brain learns. Try again, a little differently." },
+      "pt": { "title": "Errar faz parte de aprender", "body": "Errar é o jeito que o cérebro aprende. Tente de novo, de um jeito um pouco diferente." }
+    },
+    {
+      "id": "advice-help", "kind": "ADVICE", "minAge": 6, "maxAge": 17,
+      "en": { "title": "Asking for help is strong", "body": "Pick one adult you trust. Tell them when something online feels wrong, even if it seems small." },
+      "pt": { "title": "Pedir ajuda é força", "body": "Escolha um adulto de confiança. Conte para ele quando algo na internet parecer errado, mesmo que pareça pequeno." }
+    },
+    {
+      "id": "advice-money", "kind": "ADVICE", "minAge": 8, "maxAge": 17,
+      "en": { "title": "Wait one day before buying", "body": "Want to buy something in a game or app? Wait a day. If you still want it tomorrow, it's probably worth it." },
+      "pt": { "title": "Espere um dia antes de comprar", "body": "Quer comprar algo num jogo ou app? Espere um dia. Se amanhã você ainda quiser, provavelmente vale a pena." }
+    },
+    {
+      "id": "advice-conflict", "kind": "ADVICE", "minAge": 8, "maxAge": 17,
+      "en": { "title": "Breathe before you reply", "body": "Messages sent while angry are hard to take back. Wait a minute, then decide what to say." },
+      "pt": { "title": "Respire antes de responder", "body": "Mensagem mandada com raiva é difícil de desfazer. Espere um minuto e depois decida o que dizer." }
+    },
+    {
+      "id": "bedtime-1", "kind": "BEDTIME",
+      "en": { "title": "Time to wind down", "body": "Your agreed bedtime has started. Put the phone to charge outside your room and rest well for tomorrow." },
+      "pt": { "title": "Hora de desacelerar", "body": "O horário de dormir combinado começou. Deixe o celular carregando fora do quarto e descanse bem para amanhã." }
+    },
+    {
+      "id": "bedtime-2", "kind": "BEDTIME",
+      "en": { "title": "Good night", "body": "Whatever is on the screen will still be there tomorrow. Your sleep won't wait." },
+      "pt": { "title": "Boa noite", "body": "O que está na tela vai continuar lá amanhã. O seu sono não espera." }
+    },
+    {
+      "id": "focus-blocked", "kind": "FOCUS",
+      "en": { "title": "Focus time", "body": "This app is paused until your focus session ends. You've got this!" },
+      "pt": { "title": "Hora do foco", "body": "Este app está pausado até a sua sessão de foco acabar. Você consegue!" }
+    },
+    {
+      "id": "help-self-harm", "kind": "HELP", "riskCategory": "SELF_HARM",
+      "en": { "title": "You're not alone", "body": "If you're thinking about hurting yourself, please talk to someone now. Open SafeScreen and tap \"I need help\" to see who you can call. It's free and confidential." },
+      "pt": { "title": "Você não está sozinho", "body": "Se você está pensando em se machucar, converse com alguém agora. Abra o SafeScreen e toque em \"Preciso de ajuda\" para ver para quem ligar. É gratuito e sigiloso." }
+    },
+    {
+      "id": "help-challenge", "kind": "HELP", "riskCategory": "DANGEROUS_CHALLENGE",
+      "en": { "title": "That challenge can kill", "body": "Dangerous challenges have caused deaths and serious injuries. Please don't try it, and if friends are, tell an adult." },
+      "pt": { "title": "Esse desafio pode matar", "body": "Desafios perigosos já causaram mortes e lesões graves. Por favor, não tente. Se seus amigos estiverem tentando, conte para um adulto." }
+    },
+    {
+      "id": "help-drugs", "kind": "HELP", "riskCategory": "DRUGS",
+      "en": { "title": "Let's talk about this", "body": "Drugs and vapes can harm a growing brain. If you're curious or being pressured, talk to an adult you trust." },
+      "pt": { "title": "Vamos conversar sobre isso", "body": "Drogas e vapes podem prejudicar um cérebro em crescimento. Se você está curioso ou sendo pressionado, converse com um adulto de confiança." }
+    },
+    {
+      "id": "help-weapons", "kind": "HELP", "riskCategory": "WEAPONS",
+      "en": { "title": "Is someone in danger?", "body": "If you or someone else might be in danger, tell an adult right away or call emergency services." },
+      "pt": { "title": "Alguém está em perigo?", "body": "Se você ou outra pessoa pode estar em perigo, conte para um adulto agora ou ligue para a emergência." }
+    }
+  ]
+}

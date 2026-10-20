@@ -1,0 +1,49 @@
+{
+  "about": "Helplines shown on the help screen, by country. Verify numbers before each release.",
+  "BR": [
+    {
+      "number": "188",
+      "en": { "name": "CVV", "description": "Emotional support and suicide prevention. Free, 24 hours." },
+      "pt": { "name": "CVV", "description": "Apoio emocional e prevenção do suicídio. Gratuito, 24 horas." }
+    },
+    {
+      "number": "100",
+      "en": { "name": "Disque 100", "description": "Report violence or abuse against children and teens." },
+      "pt": { "name": "Disque 100", "description": "Denúncia de violência ou abuso contra crianças e adolescentes." }
+    },
+    {
+      "number": "192",
+      "en": { "name": "SAMU", "description": "Medical emergency." },
+      "pt": { "name": "SAMU", "description": "Emergência médica." }
+    },
+    {
+      "number": "190",
+      "en": { "name": "Police", "description": "Someone is in danger right now." },
+      "pt": { "name": "Polícia", "description": "Alguém está em perigo agora." }
+    }
+  ],
+  "US": [
+    {
+      "number": "988",
+      "en": { "name": "988 Suicide & Crisis Lifeline", "description": "Call or text. Free, 24 hours." },
+      "pt": { "name": "988 Suicide & Crisis Lifeline", "description": "Ligue ou mande mensagem. Gratuito, 24 horas." }
+    },
+    {
+      "number": "18004224453",
+      "en": { "name": "Childhelp", "description": "National Child Abuse Hotline." },
+      "pt": { "name": "Childhelp", "description": "Linha nacional contra abuso infantil." }
+    },
+    {
+      "number": "911",
+      "en": { "name": "Emergency", "description": "Someone is in danger right now." },
+      "pt": { "name": "Emergência", "description": "Alguém está em perigo agora." }
+    }
+  ],
+  "default": [
+    {
+      "number": "112",
+      "en": { "name": "Emergency", "description": "Someone is in danger right now." },
+      "pt": { "name": "Emergência", "description": "Alguém está em perigo agora." }
+    }
+  ]
+}

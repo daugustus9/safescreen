@@ -1,0 +1,63 @@
+{
+  "version": 1,
+  "about": "Public S1 risk rules. Patterns are regexes matched against normalized text: lowercase, no accents, single spaces. Text is checked on the device and never stored; only the category is recorded.",
+  "rules": [
+    {
+      "category": "SELF_HARM",
+      "severity": 3,
+      "patterns": [
+        "\\b(kill|hurt|cut) myself\\b",
+        "\\bwant to die\\b",
+        "\\bend my life\\b",
+        "\\bsuicid",
+        "\\bself[- ]?harm",
+        "\\bme matar\\b",
+        "\\bquero morrer\\b",
+        "\\bme cortar\\b",
+        "\\bautomutila",
+        "\\bacabar com (a )?minha vida\\b",
+        "\\bnao quero mais viver\\b"
+      ]
+    },
+    {
+      "category": "DANGEROUS_CHALLENGE",
+      "severity": 2,
+      "patterns": [
+        "\\bblackout challenge\\b",
+        "\\bchoking (game|challenge)\\b",
+        "\\bpass ?out challenge\\b",
+        "\\bbenadryl challenge\\b",
+        "\\bfire challenge\\b",
+        "\\bskull ?breaker\\b",
+        "\\btide pod",
+        "\\bdesafio do (apagao|desmaio|blackout|benadryl|fogo)\\b",
+        "\\bbrincadeira do desmaio\\b",
+        "\\bquebra[- ]?cranio\\b",
+        "\\bdesafio da rasteira\\b"
+      ]
+    },
+    {
+      "category": "DRUGS",
+      "severity": 2,
+      "patterns": [
+        "\\bbuy (weed|drugs|vapes?|pills)\\b",
+        "\\bhow to get (high|drunk)\\b",
+        "\\bcomprar (maconha|drogas?|vapes?|pods?|lanca[- ]perfume)\\b",
+        "\\bcomo ficar (chapado|bebado|doidao)\\b",
+        "\\blanca[- ]perfume\\b"
+      ]
+    },
+    {
+      "category": "WEAPONS",
+      "severity": 3,
+      "patterns": [
+        "\\b(buy|make) a (gun|bomb)\\b",
+        "\\bhow to make a bomb\\b",
+        "\\bschool shoot",
+        "\\b(comprar|fazer) (uma )?(arma|bomba)\\b",
+        "\\bataque (a|na) escola\\b",
+        "\\bmassacre (na|em) escola\\b"
+      ]
+    }
+  ]
+}
