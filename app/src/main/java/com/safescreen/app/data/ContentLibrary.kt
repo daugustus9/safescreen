@@ -3,6 +3,8 @@ package com.safescreen.app.data
 import android.content.Context
 import com.safescreen.app.core.Card
 import com.safescreen.app.core.CardKind
+import com.safescreen.app.core.Claim
+import com.safescreen.app.core.MythOrFact
 import com.safescreen.app.core.DailyHint
 import com.safescreen.app.core.Hint
 import com.safescreen.app.core.Question
@@ -63,6 +65,9 @@ class ContentLibrary(private val context: Context) {
     val hintCategories: Map<String, String> get() = hintData.second
 
     val hintTitlePrefix: String get() = if (language == "pt") "Dica do Dia: " else "Hint of the Day: "
+
+    /** Mito ou Verdade? claims. */
+    val claims: List<Claim> by lazy { MythOrFact.parse(readAsset("content/myth_or_fact.json"), language) }
 
     fun card(id: String): Card? = cards.firstOrNull { it.id == id }
 

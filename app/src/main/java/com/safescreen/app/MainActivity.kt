@@ -20,6 +20,7 @@ import com.safescreen.app.ui.ChildHomeScreen
 import com.safescreen.app.ui.DailyChallengeScreen
 import com.safescreen.app.ui.HelpScreen
 import com.safescreen.app.ui.MessagesScreen
+import com.safescreen.app.ui.MythOrFactScreen
 import com.safescreen.app.ui.ParentGateScreen
 import com.safescreen.app.ui.ParentScreen
 import com.safescreen.app.ui.QuestionScreen
@@ -61,7 +62,7 @@ class MainActivity : ComponentActivity() {
     }
 }
 
-enum class Screen { TRANSPARENCY, SETUP, HOME, HELP, TASKS, MESSAGES, QUESTION, DAILY, ALBUM, PARENT_GATE, PARENT }
+enum class Screen { TRANSPARENCY, SETUP, HOME, HELP, TASKS, MESSAGES, QUESTION, DAILY, ALBUM, MYTH, PARENT_GATE, PARENT }
 
 @Composable
 private fun AppRoot(externalRequest: MutableState<Screen?>) {
@@ -105,6 +106,7 @@ private fun AppRoot(externalRequest: MutableState<Screen?>) {
             onQuestion = { practiceSkill = null; screen = Screen.QUESTION },
             onDaily = { screen = Screen.DAILY },
             onAlbum = { screen = Screen.ALBUM },
+            onMyth = { screen = Screen.MYTH },
             onParent = { screen = Screen.PARENT_GATE },
         )
         Screen.HELP -> HelpScreen(onBack = home)
@@ -113,6 +115,7 @@ private fun AppRoot(externalRequest: MutableState<Screen?>) {
         Screen.QUESTION -> QuestionScreen(skill = practiceSkill, onBack = {
             screen = if (practiceSkill != null) Screen.ALBUM else Screen.HOME
         })
+        Screen.MYTH -> MythOrFactScreen(onBack = home)
         Screen.DAILY -> DailyChallengeScreen(onBack = home, onAlbum = { screen = Screen.ALBUM })
         Screen.ALBUM -> AlbumScreen(onBack = home, onPractice = { skill ->
             practiceSkill = skill

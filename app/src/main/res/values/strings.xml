@@ -289,4 +289,21 @@
     <string name="hint_perspective">Esta é uma perspectiva, um jeito de pensar, e não um fato comprovado.</string>
     <string name="kind_hints">Dicas do Dia</string>
     <string name="messages_hints_note">Uma dica por dia, a mesma para crianças da mesma idade. Adaptadas da biblioteca do app Human Upgrade.</string>
+
+    <!-- Mito ou Verdade? -->
+    <string name="myth_title">Mito ou Verdade?</string>
+    <string name="myth_header">Mito ou Verdade? · %1$d de %2$d</string>
+    <string name="myth_combo">🔥 %1$d seguidas!</string>
+    <string name="verdict_true">Verdade</string>
+    <string name="verdict_false">Mito</string>
+    <string name="verdict_depends">Depende</string>
+    <string name="myth_right">Isso mesmo! ✓</string>
+    <string name="myth_wrong">Não foi dessa vez: a resposta é %1$s.</string>
+    <string name="myth_learn_more">Na Dica do Dia: %1$s</string>
+    <string name="myth_best">Seu melhor resultado: %1$d de %2$d</string>
+    <string name="myth_play_again">Jogar de novo</string>
+    <string name="myth_share_claim">Mito ou verdade? 🤔\n\n\"%1$s\"\n\nResponde aí! A explicação está no SafeScreen.</string>
+    <string name="myth_share_result">SafeScreen · Mito ou Verdade?\n%1$s %2$d/%3$d\nSerá que você acerta mais? #MitoOuVerdade</string>
+    <string name="home_myth_play">Jogar</string>
+    <string name="summary_myth">Rodadas jogadas: %1$d · melhor resultado: %2$d de %3$d</string>
 </resources>

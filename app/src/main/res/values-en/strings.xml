@@ -287,4 +287,21 @@
     <string name="hint_perspective">This is a perspective, a way of thinking, not a proven fact.</string>
     <string name="kind_hints">Hints of the Day</string>
     <string name="messages_hints_note">One hint a day, the same for children of the same age. Adapted from the Human Upgrade app\'s library.</string>
+
+    <!-- Myth or Truth? -->
+    <string name="myth_title">Myth or Truth?</string>
+    <string name="myth_header">Myth or Truth? · %1$d of %2$d</string>
+    <string name="myth_combo">🔥 %1$d in a row!</string>
+    <string name="verdict_true">Truth</string>
+    <string name="verdict_false">Myth</string>
+    <string name="verdict_depends">It depends</string>
+    <string name="myth_right">That\'s right! ✓</string>
+    <string name="myth_wrong">Not this time: the answer is %1$s.</string>
+    <string name="myth_learn_more">In the Hint of the Day: %1$s</string>
+    <string name="myth_best">Your best: %1$d of %2$d</string>
+    <string name="myth_play_again">Play again</string>
+    <string name="myth_share_claim">Myth or truth? 🤔\n\n\"%1$s\"\n\nWhat do you think? The explanation is in SafeScreen.</string>
+    <string name="myth_share_result">SafeScreen · Myth or Truth?\n%1$s %2$d/%3$d\nCan you beat it? #MythOrTruth</string>
+    <string name="home_myth_play">Play</string>
+    <string name="summary_myth">Rounds played: %1$d · best: %2$d of %3$d</string>
 </resources>

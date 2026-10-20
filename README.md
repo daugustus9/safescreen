@@ -17,6 +17,7 @@ O protótipo **não tem permissão de INTERNET**: nada do que ele vê pode sair 
 | S7, W1 | Cartões de segurança e de conselhos para a vida, por idade | `assets/content/cards.json`, `core/CardScheduler.kt` |
 | — | Cartões de incentivo: autoestima, hábitos, gentileza, cidadania; a família pode escrever os seus | `assets/content/cards.json`, `ui/ParentScreen.kt` |
 | — | Dica do Dia: 50 fatos e dicas importantes (emergência, prevenção, mundo digital, dinheiro, saúde, valores, planeta), adaptados para crianças e para o Brasil da biblioteca do app Human Upgrade; um por dia, igual para a mesma idade, no cartão e na tela inicial, com botão de compartilhar; ideias que são opinião vêm marcadas como "perspectiva" | `assets/content/hints.json`, `core/Hints.kt` |
+| — | Mito ou Verdade?: jogo com 38 afirmações (Verdade, Mito ou Depende), quase todas ligadas a uma Dica do Dia, parte adaptada do quiz do Human Upgrade; rodadas de 5 sem cronômetro, afirmações novas primeiro e erros voltando depois; explicação a cada resposta; desafiar um amigo e compartilhar o resultado em quadradinhos | `assets/content/myth_or_fact.json`, `core/MythOrFact.kt`, `ui/MythOrFactScreen.kt` |
 | W3 | Cartões da hora de dormir no horário combinado | `core/CardScheduler.kt` |
 | P3 | Tempo de foco; os apps escolhidos voltam para a tela inicial enquanto ele roda | `ui/ChildHomeScreen.kt`, `service/GuardAccessibilityService.kt` |
 | C1 | Lembretes da escola: na véspera (a partir das 17h) e na manhã do dia | `core/CardScheduler.kt` |

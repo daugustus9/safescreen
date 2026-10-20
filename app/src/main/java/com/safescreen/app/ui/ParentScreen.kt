@@ -42,6 +42,7 @@ import com.safescreen.app.R
 import com.safescreen.app.core.AgeTier
 import com.safescreen.app.core.Album
 import com.safescreen.app.core.FocusAnalysis
+import com.safescreen.app.core.MythOrFact
 import com.safescreen.app.core.StickerState
 import com.safescreen.app.core.Streak
 import com.safescreen.app.core.WeeklySummary
@@ -123,6 +124,12 @@ private fun SummaryTab() {
         }
     }
     StudySummary()
+    val myth = LocalContext.current.graph.myth
+    if (myth.roundsPlayed > 0) {
+        SectionCard(stringResource(R.string.myth_title)) {
+            Text(stringResource(R.string.summary_myth, myth.roundsPlayed, myth.bestRound, MythOrFact.ROUND))
+        }
+    }
     Text(stringResource(R.string.summary_relay_note), style = MaterialTheme.typography.bodySmall)
 }
 

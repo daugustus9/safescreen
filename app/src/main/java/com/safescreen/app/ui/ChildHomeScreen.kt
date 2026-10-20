@@ -31,6 +31,7 @@ import com.safescreen.app.R
 import com.safescreen.app.core.EventType
 import com.safescreen.app.core.Album
 import com.safescreen.app.core.DailyChallenge
+import com.safescreen.app.core.MythOrFact
 import com.safescreen.app.core.QuestionPicker
 import com.safescreen.app.core.StickerState
 import com.safescreen.app.core.Streak
@@ -56,6 +57,7 @@ fun ChildHomeScreen(
     onQuestion: () -> Unit,
     onDaily: () -> Unit,
     onAlbum: () -> Unit,
+    onMyth: () -> Unit,
     onParent: () -> Unit,
 ) {
     val context = LocalContext.current
@@ -103,6 +105,16 @@ fun ChildHomeScreen(
         ) { Text(stringResource(R.string.home_help_button), style = MaterialTheme.typography.titleLarge) }
 
         HintOfTheDay(age = policy.ageTier.representativeAge)
+
+        SectionCard(stringResource(R.string.myth_title)) {
+            if (graph.myth.roundsPlayed > 0) {
+                Text(
+                    stringResource(R.string.myth_best, graph.myth.bestRound, MythOrFact.ROUND),
+                    style = MaterialTheme.typography.bodyMedium,
+                )
+            }
+            Button(onClick = onMyth) { Text(stringResource(R.string.home_myth_play)) }
+        }
 
         SectionCard(stringResource(R.string.home_focus_title)) {
             val endsAt = focus.endsAtMillis
