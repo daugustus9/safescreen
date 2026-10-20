@@ -26,6 +26,8 @@ O protótipo **não tem permissão de INTERNET**: nada do que ele vê pode sair 
 | T6 | Faixas etárias: menos de 10, 10 a 12, 13+ | `core/Models.kt` |
 | — | Tela "O que o SafeScreen vê", mostrada antes de qualquer coisa ser ligada e acessível pela notificação de status | `ui/TransparencyScreen.kt` |
 | — | Tela "Todas as mensagens": a criança e os pais podem ler todas as mensagens que o app pode mostrar, inclusive as da família | `ui/MessagesScreen.kt` |
+| P4 | Questões reais do ENEM (13+): convite uma vez por dia, explicação depois da resposta, da mais fácil para a mais difícil, e erros que voltam depois | `core/Study.kt`, `ui/QuestionScreen.kt`, `assets/questions/` |
+| P4 | "Onde focar" no resumo dos pais: habilidades do ENEM a revisar, pesando mais os erros em questões fáceis (dificuldade oficial do INEP) | `core/Study.kt`, `ui/ParentScreen.kt` |
 
 O motor de mensagens (`CardOverlayService` + `CardPresenter`) foi adaptado do serviço de sobreposição do app de mensagens subliminares, com uma mudança proposital: toda mensagem é visível e fica na tela até a criança ler. Nada é subliminar. Segurança, conselhos e incentivo se revezam, para que nunca apareçam três avisos seguidos.
 
@@ -56,11 +58,16 @@ O APK é gerado em `app/build/outputs/apk/debug/app-debug.apk`. Os testes de uni
 5. Avisos da escola: em **Área dos pais › Acordo › Apps da escola**, escolha um app de mensagens e mande para você mesmo uma notificação como `Prova de matemática amanhã`. Ou cole o texto em **Todas as tarefas**.
 6. Foco: escolha um app em *Apps pausados durante o foco*, comece uma sessão de foco e abra esse app.
 
+## Banco de questões
+
+As 16 primeiras questões são de Matemática do ENEM 2023 (2º dia, caderno 5 amarelo), escolhidas porque se entendem sem figura. Gabarito, habilidade (H1 a H30) e dificuldade vêm dos microdados oficiais do INEP, e o texto foi conferido com a prova. As explicações foram escritas pelo SafeScreen e **ainda precisam de revisão por professores**. Para adicionar questões, veja [tools/enem](tools/enem/README.md).
+
 ## Fora do protótipo
 
 - Pareamento com o celular dos pais e envio com criptografia de ponta a ponta (alertas e resumos no celular dos pais).
 - S2 detecção de aliciamento e W7 avisos de gentileza (v2: precisam de um modelo treinado no próprio celular).
 - Integração com o Google Classroom (P1) e a visão do professor (C6–C8).
+- Questões para menores de 13 anos (OBMEP e questões baseadas na BNCC), outras áreas do ENEM e vestibulares (com autorização das universidades).
 - iOS.
 - Revisão das políticas da Play Store: o uso do serviço de acessibilidade precisa ser declarado e justificado antes da publicação.
 
@@ -68,6 +75,7 @@ O APK é gerado em `app/build/outputs/apk/debug/app-debug.apk`. Os testes de uni
 
 - **Código:** [GNU General Public License v3.0](LICENSE). Qualquer pessoa pode usar, estudar e modificar; versões distribuídas precisam continuar abertas sob a mesma licença.
 - **Biblioteca de mensagens e regras de detecção** (`app/src/main/assets/content/` e `app/src/main/assets/rules/`): [Creative Commons Atribuição-CompartilhaIgual 4.0](LICENSES/CC-BY-SA-4.0.txt).
+- **Questões do ENEM** (`app/src/main/assets/questions/enem_*.json`): enunciados e alternativas são do INEP, reproduzidos para fins de estudo com indicação da fonte, e não estão cobertos pelas licenças acima. As explicações e dicas de estudo são do SafeScreen, sob CC BY-SA 4.0.
 - O nome "SafeScreen" e o logotipo não estão cobertos por essas licenças.
 
 Copyright © 2026 Denis Augusto.

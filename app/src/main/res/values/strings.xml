@@ -37,7 +37,7 @@
     <string name="transparency_parents_title">Seus pais veem:</string>
     <string name="transparency_parents_1">Alertas só com a categoria, como \"desafio perigoso\".</string>
     <string name="transparency_parents_2">Quando você toca em \"Preciso de ajuda\".</string>
-    <string name="transparency_parents_3">Um resumo semanal: tempo de tela, tarefas da escola e minutos de foco.</string>
+    <string name="transparency_parents_3">Um resumo semanal: tempo de tela, tarefas da escola, minutos de foco e questões respondidas.</string>
     <string name="transparency_never_title">Seus pais nunca veem:</string>
     <string name="transparency_never_1">O que você digita, suas mensagens ou suas fotos.</string>
     <string name="transparency_never_2">Os sites ou vídeos que você abre.</string>
@@ -193,4 +193,40 @@
     <string name="agreement_family_add">Adicionar</string>
     <string name="agreement_family_note">Seu filho pode ler todas as mensagens da família em \"Todas as mensagens\". Escreva com carinho e verdade.</string>
     <string name="common_delete">Excluir</string>
+
+    <!-- Study (ENEM questions) -->
+    <string name="card_answer">Responder</string>
+    <string name="kind_study">Questão do dia</string>
+    <string name="messages_study_note">Convite diário para responder uma questão real do ENEM, para quem tem 13 anos ou mais. Cada questão, com a explicação, aparece na tela de questões.</string>
+    <string name="study_title">Questão do ENEM</string>
+    <string name="study_header">%1$s · Questão %2$d · %3$s</string>
+    <string name="study_difficulty">Dificuldade: %1$s</string>
+    <string name="difficulty_easier">mais fácil</string>
+    <string name="difficulty_medium">média</string>
+    <string name="difficulty_harder">difícil</string>
+    <string name="study_correct">Você acertou!</string>
+    <string name="study_wrong">Não foi dessa vez. A resposta certa é a %1$s.</string>
+    <string name="study_explanation">Como resolver</string>
+    <string name="study_skill">Habilidade %1$s: %2$s</string>
+    <string name="study_pending_review">Explicação escrita pelo SafeScreen, ainda em revisão por professores.</string>
+    <string name="study_source">Fonte: %1$s.</string>
+    <string name="study_adaptation">Adaptação: %1$s</string>
+    <string name="study_next">Próxima questão</string>
+    <string name="study_done">Você respondeu todas as questões disponíveis. Novas questões chegam em breve!</string>
+    <string name="study_not_for_age">As questões do ENEM são para quem tem 13 anos ou mais. Questões para a sua idade chegam em breve.</string>
+    <string name="home_study_title">Questões do ENEM</string>
+    <string name="home_study_progress">%1$d de %2$d respondidas · %3$d certas</string>
+    <string name="home_study_start">Responder a questão de hoje</string>
+    <string name="home_study_more">Praticar mais</string>
+    <string name="home_study_done_today">Questão de hoje feita!</string>
+    <string name="summary_study">Estudos: questões do ENEM</string>
+    <string name="summary_study_answered">Questões respondidas: %1$d (certas: %2$d)</string>
+    <string name="summary_study_week">Nesta semana: %1$d</string>
+    <string name="summary_study_focus">Onde focar</string>
+    <string name="summary_study_focus_item">%1$s, %2$s: %3$d de %4$d certas</string>
+    <string name="summary_study_tip">Sugestão: revisar %1$s.</string>
+    <string name="summary_study_not_enough">Ainda poucas respostas. As sugestões de onde focar aparecem a partir de %1$d questões.</string>
+    <string name="summary_study_all_good">Nenhum ponto fraco claro até agora. Continue praticando!</string>
+    <string name="summary_study_note">A dificuldade de cada questão vem dos parâmetros oficiais do INEP. Isto é uma sugestão de estudo, não uma previsão de nota.</string>
+    <string name="agreement_study">Questões de estudo (ENEM, a partir de 13 anos)</string>
 </resources>

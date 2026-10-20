@@ -20,6 +20,8 @@ data class Policy(
     val schoolAppPackages: Set<String> = emptySet(),
     val riskDetectionEnabled: Boolean = true,
     val encouragementEnabled: Boolean = true,
+    /** Study questions (ENEM for 13+ now); answers stay on the phone. */
+    val studyEnabled: Boolean = true,
     /** Encouragement messages written by the family; the child can read them all. */
     val familyMessages: List<String> = emptyList(),
     val trustedName: String = "",
@@ -63,6 +65,7 @@ class PolicyStore(context: Context) {
             .putStringSet(KEY_SCHOOL, policy.schoolAppPackages)
             .putBoolean(KEY_RISK, policy.riskDetectionEnabled)
             .putBoolean(KEY_ENCOURAGEMENT, policy.encouragementEnabled)
+            .putBoolean(KEY_STUDY, policy.studyEnabled)
             .putString(KEY_FAMILY, JSONArray(policy.familyMessages).toString())
             .putString(KEY_TRUSTED_NAME, policy.trustedName)
             .putString(KEY_TRUSTED_PHONE, policy.trustedPhone)
@@ -87,6 +90,7 @@ class PolicyStore(context: Context) {
             schoolAppPackages = prefs.getStringSet(KEY_SCHOOL, null)?.toSet() ?: emptySet(),
             riskDetectionEnabled = prefs.getBoolean(KEY_RISK, defaults.riskDetectionEnabled),
             encouragementEnabled = prefs.getBoolean(KEY_ENCOURAGEMENT, defaults.encouragementEnabled),
+            studyEnabled = prefs.getBoolean(KEY_STUDY, defaults.studyEnabled),
             familyMessages = prefs.getString(KEY_FAMILY, null)
                 ?.let { json -> JSONArray(json).let { array -> (0 until array.length()).map(array::getString) } }
                 ?: emptyList(),
@@ -109,6 +113,7 @@ class PolicyStore(context: Context) {
         const val KEY_SCHOOL = "school_apps"
         const val KEY_RISK = "risk_detection"
         const val KEY_ENCOURAGEMENT = "encouragement"
+        const val KEY_STUDY = "study"
         const val KEY_FAMILY = "family_messages"
         const val KEY_TRUSTED_NAME = "trusted_name"
         const val KEY_TRUSTED_PHONE = "trusted_phone"

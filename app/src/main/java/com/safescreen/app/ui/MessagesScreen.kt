@@ -48,6 +48,11 @@ fun MessagesScreen(onBack: () -> Unit) {
                 }
             }
         }
+        SectionCard(stringResource(R.string.kind_study)) {
+            val invite = graph.content.studyInviteCard()
+            MessageItem(invite)
+            Text(stringResource(R.string.messages_study_note), style = MaterialTheme.typography.bodySmall)
+        }
         SectionCard(stringResource(R.string.kind_school)) {
             Text(stringResource(R.string.messages_school_note), style = MaterialTheme.typography.bodyMedium)
         }

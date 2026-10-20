@@ -29,7 +29,11 @@ import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.isActive
 import kotlinx.coroutines.launch
+import com.safescreen.app.core.QuestionPicker
+import java.time.Instant
+import java.time.LocalDate
 import java.time.LocalDateTime
+import java.time.ZoneId
 
 /**
  * Foreground service running the message engine: every [TICK_MS] it asks the
@@ -69,6 +73,12 @@ class CardOverlayService : Service() {
 
         val policy = graph.policy.current
         if (!policy.cardsEnabled && !force) return
+        val today = LocalDate.now()
+        val answers = graph.answers.answers.value
+        val answeredToday = answers.any {
+            Instant.ofEpochMilli(it.timestampMillis).atZone(ZoneId.systemDefault()).toLocalDate() == today
+        }
+        val hasQuestion = QuestionPicker.next(graph.content.questions, answers, policy.ageTier.representativeAge) != null
         val state = SchedulerState(
             now = LocalDateTime.now(),
             tier = policy.ageTier,
@@ -81,6 +91,7 @@ class CardOverlayService : Service() {
             shownReminderKeys = graph.cardHistory.reminderKeys,
             rotationKinds = if (policy.encouragementEnabled) ROTATION_ORDER.toSet() else ROTATION_ORDER.toSet() - CardKind.ENCOURAGEMENT,
             familyCards = if (policy.encouragementEnabled) graph.content.familyCards(policy.familyMessages) else emptyList(),
+            studyInvite = if (policy.studyEnabled && hasQuestion && !answeredToday) graph.content.studyInviteCard() else null,
         )
         graph.scheduler.next(state)?.let(::present)
     }

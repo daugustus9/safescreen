@@ -23,9 +23,10 @@ enum class AgeTier(
 /**
  * ADVICE gives life guidance (W1); ENCOURAGEMENT is short positive messages for
  * self-view, habits, kindness and citizenship, including ones the family writes.
+ * STUDY is the once-a-day invitation to answer a question, which opens in the app.
  * Every kind is shown visibly, long enough to read; nothing is subliminal.
  */
-enum class CardKind { SAFETY, ADVICE, ENCOURAGEMENT, SCHOOL, HELP, BEDTIME, FOCUS }
+enum class CardKind { SAFETY, ADVICE, ENCOURAGEMENT, SCHOOL, HELP, BEDTIME, FOCUS, STUDY }
 
 /** One on-screen card. Text is already in the device language when it reaches here. */
 data class Card(
@@ -61,6 +62,7 @@ enum class EventType {
     FOCUS_BLOCKED,
     SCHOOL_NOTICE,
     TASK_DONE,
+    QUESTION_ANSWERED,
 }
 
 /**

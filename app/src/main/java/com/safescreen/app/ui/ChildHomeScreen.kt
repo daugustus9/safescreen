@@ -28,6 +28,7 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import com.safescreen.app.R
 import com.safescreen.app.core.EventType
+import com.safescreen.app.core.QuestionPicker
 import com.safescreen.app.core.SchoolTask
 import com.safescreen.app.graph
 import com.safescreen.app.service.CardOverlayService
@@ -35,6 +36,9 @@ import com.safescreen.app.system.Access
 import com.safescreen.app.system.InstalledApps
 import com.safescreen.app.system.Permissions
 import kotlinx.coroutines.delay
+import java.time.Instant
+import java.time.LocalDate
+import java.time.ZoneId
 import java.time.format.DateTimeFormatter
 import java.util.Locale
 
@@ -46,6 +50,7 @@ fun ChildHomeScreen(
     onTasks: () -> Unit,
     onTransparency: () -> Unit,
     onMessages: () -> Unit,
+    onQuestion: () -> Unit,
     onParent: () -> Unit,
 ) {
     val context = LocalContext.current
@@ -54,6 +59,7 @@ fun ChildHomeScreen(
     val running by CardOverlayService.running.collectAsState()
     val focus by graph.focus.state.collectAsState()
     val tasks by graph.tasks.tasks.collectAsState()
+    val answers by graph.answers.answers.collectAsState()
     val resumes = rememberResumeCount()
     val allGranted = remember(resumes) { Access.entries.all { Permissions.isGranted(context, it) } }
 
@@ -124,6 +130,33 @@ fun ChildHomeScreen(
                 }
             }
             TextButton(onClick = onTasks) { Text(stringResource(R.string.home_tasks_all)) }
+        }
+
+        val age = policy.ageTier.representativeAge
+        val studyQuestions = graph.content.questions.filter { age >= it.minAge }
+        if (policy.studyEnabled && studyQuestions.isNotEmpty()) {
+            SectionCard(stringResource(R.string.home_study_title)) {
+                val latest = QuestionPicker.latestAnswers(answers)
+                val today = LocalDate.now()
+                val doneToday = answers.any {
+                    Instant.ofEpochMilli(it.timestampMillis).atZone(ZoneId.systemDefault()).toLocalDate() == today
+                }
+                Text(
+                    stringResource(
+                        R.string.home_study_progress,
+                        studyQuestions.count { it.id in latest },
+                        studyQuestions.size,
+                        latest.values.count { it.correct },
+                    ),
+                    style = MaterialTheme.typography.bodyMedium,
+                )
+                if (doneToday) {
+                    Text(stringResource(R.string.home_study_done_today), color = MaterialTheme.colorScheme.secondary)
+                }
+                Button(onClick = onQuestion) {
+                    Text(stringResource(if (doneToday) R.string.home_study_more else R.string.home_study_start))
+                }
+            }
         }
 
         SectionCard {

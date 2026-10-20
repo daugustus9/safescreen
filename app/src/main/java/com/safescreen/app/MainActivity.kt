@@ -20,6 +20,7 @@ import com.safescreen.app.ui.HelpScreen
 import com.safescreen.app.ui.MessagesScreen
 import com.safescreen.app.ui.ParentGateScreen
 import com.safescreen.app.ui.ParentScreen
+import com.safescreen.app.ui.QuestionScreen
 import com.safescreen.app.ui.SafeScreenTheme
 import com.safescreen.app.ui.SetupScreen
 import com.safescreen.app.ui.TasksScreen
@@ -47,16 +48,18 @@ class MainActivity : ComponentActivity() {
         when {
             intent?.getBooleanExtra(EXTRA_OPEN_HELP, false) == true -> externalRequest.value = Screen.HELP
             intent?.getBooleanExtra(EXTRA_OPEN_TRANSPARENCY, false) == true -> externalRequest.value = Screen.TRANSPARENCY
+            intent?.getBooleanExtra(EXTRA_OPEN_QUESTION, false) == true -> externalRequest.value = Screen.QUESTION
         }
     }
 
     companion object {
         const val EXTRA_OPEN_HELP = "open_help"
         const val EXTRA_OPEN_TRANSPARENCY = "open_transparency"
+        const val EXTRA_OPEN_QUESTION = "open_question"
     }
 }
 
-enum class Screen { TRANSPARENCY, SETUP, HOME, HELP, TASKS, MESSAGES, PARENT_GATE, PARENT }
+enum class Screen { TRANSPARENCY, SETUP, HOME, HELP, TASKS, MESSAGES, QUESTION, PARENT_GATE, PARENT }
 
 @Composable
 private fun AppRoot(externalRequest: MutableState<Screen?>) {
@@ -95,11 +98,13 @@ private fun AppRoot(externalRequest: MutableState<Screen?>) {
             onTasks = { screen = Screen.TASKS },
             onTransparency = { screen = Screen.TRANSPARENCY },
             onMessages = { screen = Screen.MESSAGES },
+            onQuestion = { screen = Screen.QUESTION },
             onParent = { screen = Screen.PARENT_GATE },
         )
         Screen.HELP -> HelpScreen(onBack = home)
         Screen.TASKS -> TasksScreen(onBack = home)
         Screen.MESSAGES -> MessagesScreen(onBack = home)
+        Screen.QUESTION -> QuestionScreen(onBack = home)
         Screen.PARENT_GATE -> ParentGateScreen(onUnlocked = { screen = Screen.PARENT }, onBack = home)
         Screen.PARENT -> ParentScreen(onLock = home)
     }

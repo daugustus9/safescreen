@@ -1,0 +1,109 @@
+{
+  "about": "Questões do ENEM 2023 (2º dia, caderno 5 amarelo, Matemática) que podem ser lidas só como texto. Enunciados e alternativas: INEP, reproduzidos para fins de estudo com indicação da fonte; adaptações marcadas em 'adaptation'. Habilidade, gabarito e dificuldade (parâmetro b da TRI): microdados do ENEM 2023 (ITENS_PROVA_2023, prova 1212). Explicações: SafeScreen, CC BY-SA 4.0, pendentes de revisão por professores.",
+  "exam": "ENEM 2023",
+  "area": "MT",
+  "areaName": "Matemática",
+  "booklet": "2º dia, caderno 5 amarelo",
+  "sourceUrl": "https://download.inep.gov.br/enem/provas_e_gabaritos/2023_PV_impresso_D2_CD5.pdf",
+  "minAge": 13,
+  "questions": [
+    {
+      "number": 136, "skill": "H16", "difficulty": 1.99, "item": 16795, "answer": "D",
+      "stem": "Alguns estudos comprovam que os carboidratos fornecem energia ao corpo, preservam as proteínas estruturais dos músculos durante a prática de atividade física e ainda dão força para o cérebro coordenar os movimentos, o que de fato tem impacto positivo no desenvolvimento do praticante. O ideal é consumir 1 grama de carboidrato para cada minuto de caminhada.\n\nCIRINO, C. Boa pergunta: consumir carboidratos antes dos exercícios melhora o desempenho do atleta? Revista Saúde! É Vital, n. 330, nov. 2010 (adaptado).\n\nUm casal realizará diariamente 30 minutos de caminhada, ingerindo, antes dessa atividade, a quantidade ideal de carboidratos recomendada. Para ter o consumo ideal apenas por meio do consumo de pão de fôrma integral, o casal planeja garantir o suprimento de pães para um período de 30 dias ininterruptos. Sabe-se que cada pacote desse pão vem com 18 fatias, e que cada uma delas tem 15 gramas de carboidratos.\n\nA quantidade mínima de pacotes de pão de fôrma necessários para prover o suprimento a esse casal é",
+      "options": { "A": "1.", "B": "4.", "C": "6.", "D": "7.", "E": "8." },
+      "explanation": "Cada pessoa caminha 30 minutos, então precisa de 30 g de carboidrato por dia; o casal, 60 g. Em 30 dias: 60 × 30 = 1 800 g. Cada fatia tem 15 g: 1 800 ÷ 15 = 120 fatias. Cada pacote tem 18 fatias: 120 ÷ 18 ≈ 6,7. Como não dá para comprar parte de um pacote, são necessários 7 pacotes."
+    },
+    {
+      "number": 140, "skill": "H18", "difficulty": 1.94, "item": 27330, "answer": "A",
+      "stem": "A cada bimestre, a diretora de uma escola compra uma quantidade de folhas de papel ofício proporcional ao número de alunos matriculados. No bimestre passado, ela comprou 6 000 folhas para serem utilizadas pelos 1 200 alunos matriculados. Neste bimestre, alguns alunos cancelaram suas matrículas e a escola tem, agora, 1 150 alunos. A diretora só pode gastar R$ 220,00 nessa compra, e sabe que o fornecedor da escola vende as folhas de papel ofício em embalagens de 100 unidades a R$ 4,00 a embalagem. Assim, será preciso convencer o fornecedor a dar um desconto à escola, de modo que seja possível comprar a quantidade total de papel ofício necessária para o bimestre.\n\nO desconto necessário no preço final da compra, em porcentagem, pertence ao intervalo",
+      "options": { "A": "(5,0 ; 5,5).", "B": "(8,0 ; 8,5).", "C": "(11,5 ; 12,5).", "D": "(19,5 ; 20,5).", "E": "(3,5 ; 4,0)." },
+      "explanation": "São 6 000 ÷ 1 200 = 5 folhas por aluno. Para 1 150 alunos: 5 × 1 150 = 5 750 folhas, ou 57,5 embalagens. Como só se compram embalagens inteiras, são 58: 58 × R$ 4,00 = R$ 232,00. Para pagar R$ 220,00, o desconto precisa ser de R$ 12,00: 12 ÷ 232 ≈ 0,052, cerca de 5,2%, entre 5,0 e 5,5."
+    },
+    {
+      "number": 141, "skill": "H3", "difficulty": 1.54, "item": 84857, "answer": "C",
+      "stem": "O calendário maia apresenta duas contagens simultâneas de anos, o chamado ano Tzolkim, composto por 260 dias e que determinava o calendário religioso, e o ano Haab, composto por 365 dias e que determinava o calendário agrícola. Um historiador encontrou evidências de que gerações de uma mesma família governaram certa comunidade maia pelo período de 20 ciclos, sendo cada ciclo formado por 52 anos Haab.\n\nDisponível em: www.suapesquisa.com. Acesso em: 20 ago. 2014.\n\nDe acordo com as informações fornecidas, durante quantos anos Tzolkim aquela comunidade maia foi governada por tal família?",
+      "options": { "A": "741", "B": "1 040", "C": "1 460", "D": "2 100", "E": "5 200" },
+      "explanation": "20 ciclos × 52 anos Haab = 1 040 anos Haab. Em dias: 1 040 × 365 = 379 600 dias. Em anos Tzolkim: 379 600 ÷ 260 = 1 460."
+    },
+    {
+      "number": 149, "skill": "H28", "difficulty": 1.37, "item": 14994, "answer": "E",
+      "stem": "No alojamento de uma universidade, há alguns quartos com o padrão superior ao dos demais. Um desses quartos ficou disponível, e muitos estudantes se candidataram para morar no local. Para escolher quem ficará com o quarto, um sorteio será realizado. Para esse sorteio, cartões individuais com os nomes de todos os estudantes inscritos serão depositados em uma urna, sendo que, para cada estudante de primeiro ano, será depositado um único cartão com seu nome; para cada estudante de segundo ano, dois cartões com seu nome; e, para cada estudante de terceiro ano, três cartões com seu nome. Foram inscritos 200 estudantes de primeiro ano, 150 de segundo ano e 100 de terceiro ano. Todos os cartões têm a mesma probabilidade de serem sorteados.\n\nQual a probabilidade de o vencedor do sorteio ser um estudante de terceiro ano?",
+      "options": { "A": "1/2", "B": "1/3", "C": "1/8", "D": "2/9", "E": "3/8" },
+      "explanation": "Contamos os cartões: 1º ano, 200 × 1 = 200; 2º ano, 150 × 2 = 300; 3º ano, 100 × 3 = 300. São 800 cartões, e 300 são de estudantes do 3º ano. Probabilidade: 300/800 = 3/8."
+    },
+    {
+      "number": 150, "skill": "H14", "difficulty": 2.42, "item": 117634, "answer": "A",
+      "stem": "A água utilizada pelos 75 moradores de um vilarejo provém de um reservatório de formato cilíndrico circular reto cujo raio da base mede 5 metros, sempre abastecido no primeiro dia de cada mês por caminhões-pipa. Cada morador desse vilarejo consome, em média, 200 litros de água por dia.\n\nNo mês de junho de um determinado ano, o vilarejo festejou o dia do seu padroeiro e houve um gasto extra de água nos primeiros 20 dias. Passado esse período, as pessoas verificaram a quantidade de água presente no reservatório e constataram que o nível da coluna de água estava em 1,5 metro. Decidiram, então, fazer um racionamento de água durante os 10 dias seguintes. Considere 3 como aproximação para π.\n\nQual é a quantidade mínima de água, em litro, que cada morador, em média, deverá economizar por dia, de modo que o reservatório não fique sem água nos próximos 10 dias?",
+      "options": { "A": "50", "B": "60", "C": "80", "D": "140", "E": "150" },
+      "explanation": "Área da base: 3 × 5² = 75 m². Água que resta: 75 × 1,5 = 112,5 m³ = 112 500 litros. Para 75 moradores durante 10 dias: 112 500 ÷ 750 = 150 litros por pessoa por dia. Como o consumo normal é de 200 litros, cada morador precisa economizar 200 − 150 = 50 litros por dia."
+    },
+    {
+      "number": 151, "skill": "H5", "difficulty": 1.53, "item": 111446, "answer": "B",
+      "stem": "Em janeiro do ano passado, a direção de uma fábrica abriu uma creche para os filhos de seus funcionários, com 10 salas, cada uma com capacidade para atender 10 crianças a cada ano. As vagas são sorteadas entre os filhos dos funcionários inscritos, enquanto os não contemplados pelo sorteio formam uma lista de espera. No ano passado, a lista de espera teve 400 nomes e, neste ano, esse número cresceu 10%.\n\nA direção da fábrica realizou uma pesquisa e constatou que a lista de espera para o próximo ano terá a mesma quantidade de nomes da lista de espera deste ano. Decidiu, então, construir, ao longo desse ano, novas salas para a creche, também com capacidade de atendimento para 10 crianças cada, de modo que o número de nomes na lista de espera no próximo ano seja 25% menor que o deste ano.\n\nO número mínimo de salas que deverão ser construídas é",
+      "options": { "A": "10.", "B": "11.", "C": "13.", "D": "30.", "E": "33." },
+      "explanation": "A lista de espera deste ano é 400 + 10% = 440 nomes. A meta é 25% menor: 440 × 0,75 = 330. Então é preciso atender 440 − 330 = 110 crianças a mais. Cada sala atende 10: 110 ÷ 10 = 11 salas."
+    },
+    {
+      "number": 155, "skill": "H5", "difficulty": 2.56, "item": 117633, "answer": "D",
+      "stem": "Um pescador tem um custo fixo diário de R$ 900,00 com combustível, iscas, manutenção de seu barco e outras pequenas despesas. Ele vende cada quilograma de peixe por R$ 5,00. Sua meta é obter um lucro mínimo de R$ 800,00 por dia. Sozinho, ele consegue, ao final de um dia de trabalho, pescar 180 kg de peixe, o que é suficiente apenas para cobrir o custo fixo diário. Portanto, precisa contratar ajudantes, pagando para cada um R$ 250,00 por dia de trabalho. Além desse valor, 4% da receita obtida pela venda de peixe é repartida igualmente entre os ajudantes. Considerando o tamanho de seu barco, ele pode contratar até 5 ajudantes. Ele sabe que com um ajudante a pesca diária é de 300 kg e que, a partir do segundo ajudante contratado, aumenta-se em 100 kg a quantidade de peixe pescada por ajudante em um dia de trabalho.\n\nA quantidade mínima de ajudantes que esse pescador precisa contratar para conseguir o lucro diário pretendido é",
+      "options": { "A": "1.", "B": "2.", "C": "3.", "D": "4.", "E": "5." },
+      "explanation": "Lucro = receita − R$ 900 − R$ 250 por ajudante − 4% da receita, ou seja, 0,96 × receita − 900 − 250 × ajudantes. Com 1 ajudante (300 kg, receita R$ 1 500): 1 440 − 900 − 250 = R$ 290. Com 2 (400 kg, R$ 2 000): 1 920 − 900 − 500 = R$ 520. Com 3 (500 kg, R$ 2 500): 2 400 − 900 − 750 = R$ 750. Com 4 (600 kg, R$ 3 000): 2 880 − 900 − 1 000 = R$ 980, acima de R$ 800. O mínimo é 4 ajudantes."
+    },
+    {
+      "number": 156, "skill": "H23", "difficulty": 1.28, "item": 125977, "answer": "D",
+      "stem": "Um agricultor é informado sobre um método de proteção para sua lavoura que consiste em inserir larvas específicas, de rápida reprodução. A reprodução dessas larvas faz com que sua população multiplique-se por 10 a cada 3 dias e, para evitar eventuais desequilíbrios, é possível cessar essa reprodução aplicando-se um produto X. O agricultor decide iniciar esse método com 100 larvas e dispõe de 5 litros do produto X, cuja aplicação recomendada é de exatamente 1 litro para cada população de 200 000 larvas. A quantidade total do produto X de que ele dispõe deverá ser aplicada de uma única vez.\n\nQuantos dias após iniciado esse método o agricultor deverá aplicar o produto X?",
+      "options": { "A": "2", "B": "4", "C": "6", "D": "12", "E": "18" },
+      "explanation": "Os 5 litros, aplicados de uma vez, servem para 5 × 200 000 = 1 000 000 de larvas. Começando com 100 e multiplicando por 10 a cada 3 dias: 1 000 (3 dias), 10 000 (6 dias), 100 000 (9 dias), 1 000 000 (12 dias)."
+    },
+    {
+      "number": 161, "skill": "H19", "difficulty": 1.45, "item": 117706, "answer": "A",
+      "stem": "Dirigir após ingerir bebidas alcoólicas é uma atitude extremamente perigosa, uma vez que, a partir da primeira dose, a pessoa já começa a ter perda de sensibilidade de movimentos e de reflexos. Apesar de a eliminação e absorção do álcool depender de cada pessoa e de como o organismo consegue metabolizar a substância, ao final da primeira hora após a ingestão, a concentração de álcool (C) no sangue corresponde a aproximadamente 90% da quantidade (q) de álcool ingerida, e a eliminação total dessa concentração pode demorar até 12 horas.\n\nDisponível em: http://g1.globo.com. Acesso em: 1 dez. 2018 (adaptado).\n\nNessas condições, ao final da primeira hora após a ingestão da quantidade q de álcool, a concentração C dessa substância no sangue é expressa algebricamente por",
+      "options": { "A": "C = 0,9q", "B": "C = 0,1q", "C": "C = 1 − 0,1q", "D": "C = 1 − 0,9q", "E": "C = q − 10" },
+      "explanation": "90% de q é 90/100 de q, ou seja, 0,9q. Então C = 0,9q."
+    },
+    {
+      "number": 165, "skill": "H27", "difficulty": 1.08, "item": 31650, "answer": "C",
+      "adaptation": "Quadro convertido em texto para leitura no celular.",
+      "stem": "Os 100 funcionários de uma empresa estão distribuídos em dois setores: Produção e Administração. Os funcionários de um mesmo setor recebem salários com valores iguais. O quadro apresenta a quantidade de funcionários por setor e seus respectivos salários.\n\n• Produção: 75 funcionários, salário de R$ 2 000,00\n• Administração: 25 funcionários, salário de R$ 7 000,00\n\nA média dos salários dos 100 funcionários dessa empresa, em real, é",
+      "options": { "A": "2 000,00.", "B": "2 500,00.", "C": "3 250,00.", "D": "4 500,00.", "E": "9 000,00." },
+      "explanation": "A média é o total dos salários dividido pelo número de funcionários: (75 × 2 000 + 25 × 7 000) ÷ 100 = (150 000 + 175 000) ÷ 100 = 3 250. Não é a média simples de 2 000 e 7 000 (que daria 4 500), porque há muito mais funcionários na Produção."
+    },
+    {
+      "number": 166, "skill": "H30", "difficulty": 2.92, "item": 141582, "answer": "C",
+      "stem": "Visando atrair mais clientes, o gerente de uma loja anunciou uma promoção em que cada cliente que realizar uma compra pode ganhar um voucher para ser usado em sua próxima compra. Para ganhar seu voucher, o cliente precisa retirar, ao acaso, uma bolinha de dentro de cada uma das duas urnas A e B disponibilizadas pelo gerente, nas quais há apenas bolinhas pretas e brancas. Atualmente, a probabilidade de se escolher, ao acaso, uma bolinha preta na urna A é igual a 20% e a probabilidade de se escolher uma bolinha preta na urna B é 25%. Ganha o voucher o cliente que retirar duas bolinhas pretas, uma de cada urna.\n\nCom o passar dos dias, o gerente percebeu que, para a promoção ser viável aos negócios, era preciso alterar a probabilidade de acerto do cliente sem alterar a regra da promoção. Para isso, resolveu alterar a quantidade de bolinhas brancas na urna B de forma que a probabilidade de um cliente ganhar o voucher passasse a ser menor ou igual a 1%. Sabe-se que a urna B tem 4 bolinhas pretas e que, em ambas as urnas, todas as bolinhas têm a mesma probabilidade de serem retiradas.\n\nQual é o número mínimo de bolinhas brancas que o gerente deve adicionar à urna B?",
+      "options": { "A": "20", "B": "60", "C": "64", "D": "68", "E": "80" },
+      "explanation": "Na urna B há 4 pretas e a chance de preta é 25%, então há 16 bolinhas (12 brancas). Adicionando x brancas, a chance de ganhar fica 0,20 × 4/(16 + x). Queremos 0,20 × 4/(16 + x) ≤ 0,01, ou seja, 4/(16 + x) ≤ 0,05. Então 16 + x ≥ 80, e x ≥ 64."
+    },
+    {
+      "number": 169, "skill": "H30", "difficulty": 0.74, "item": 125969, "answer": "C",
+      "stem": "Um tipo de semente necessita de bastante água nos dois primeiros meses após o plantio. Um produtor pretende estabelecer o melhor momento para o plantio desse tipo de semente, nos meses de outubro a março. Após consultar a previsão do índice mensal de precipitação de chuva (ImPC) da região onde ocorrerá o plantio, para o período chuvoso de 2020 - 2021, ele obteve os seguintes dados:\n\n• outubro/2020: ImPC = 250 mm;\n• novembro/2020: ImPC = 150 mm;\n• dezembro/2020: ImPC = 200 mm;\n• janeiro/2021: ImPC = 450 mm;\n• fevereiro/2021: ImPC = 100 mm;\n• março/2021: ImPC = 200 mm.\n\nCom base nessas previsões, ele precisa escolher dois meses consecutivos em que a média mensal de precipitação seja a maior possível.\n\nNo início de qual desses meses o produtor deverá plantar esse tipo de semente?",
+      "options": { "A": "Outubro.", "B": "Novembro.", "C": "Dezembro.", "D": "Janeiro.", "E": "Fevereiro." },
+      "explanation": "Médias de dois meses seguidos: outubro e novembro, (250 + 150) ÷ 2 = 200; novembro e dezembro, 175; dezembro e janeiro, 325; janeiro e fevereiro, 275; fevereiro e março, 150. A maior é dezembro e janeiro, então o plantio deve ser no início de dezembro."
+    },
+    {
+      "number": 171, "skill": "H19", "difficulty": 0.86, "item": 27119, "answer": "D",
+      "stem": "Para concretar a laje de sua residência, uma pessoa contratou uma construtora. Tal empresa informa que o preço y do concreto bombeado é composto de duas partes: uma fixa, chamada de taxa de bombeamento, e uma variável, que depende do volume x de concreto utilizado. Sabe-se que a taxa de bombeamento custa R$ 500,00 e que o metro cúbico do concreto bombeado é de R$ 250,00.\n\nA expressão que representa o preço y em função do volume x, em metro cúbico, é",
+      "options": { "A": "y = 250x", "B": "y = 500x", "C": "y = 750x", "D": "y = 250x + 500", "E": "y = 500x + 250" },
+      "explanation": "O preço tem uma parte fixa (R$ 500) e uma parte que cresce R$ 250 a cada metro cúbico (250x). Somando as duas: y = 250x + 500."
+    },
+    {
+      "number": 173, "skill": "H17", "difficulty": 0.14, "item": 125935, "answer": "E",
+      "stem": "Um supermercado conta com cinco caixas disponíveis para pagamento. Foram instaladas telas que apresentam o tempo médio gasto por cada caixa para iniciar e finalizar o atendimento de cada cliente, e o número de pessoas presentes na fila de cada caixa em tempo real. Um cliente, na hora de passar sua compra, sabendo que cada um dos cinco caixas iniciará um novo atendimento naquele momento, pretende gastar o menor tempo possível de espera na fila. Ele observa que as telas apresentavam as informações a seguir.\n\n• Caixa I: atendimento 12 minutos, 5 pessoas na fila.\n• Caixa II: atendimento 6 minutos, 9 pessoas na fila.\n• Caixa III: atendimento 5 minutos, 6 pessoas na fila.\n• Caixa IV: atendimento 15 minutos, 2 pessoas na fila.\n• Caixa V: atendimento 9 minutos, 3 pessoas na fila.\n\nPara alcançar seu objetivo, o cliente deverá escolher o caixa",
+      "options": { "A": "I.", "B": "II.", "C": "III.", "D": "IV.", "E": "V." },
+      "explanation": "O tempo de espera é o número de pessoas na fila vezes o tempo de cada atendimento: I, 5 × 12 = 60 min; II, 9 × 6 = 54; III, 6 × 5 = 30; IV, 2 × 15 = 30; V, 3 × 9 = 27. O menor é o caixa V. Repare que a fila mais curta (caixa IV) não é a mais rápida."
+    },
+    {
+      "number": 175, "skill": "H12", "difficulty": 1.49, "item": 13725, "answer": "D",
+      "adaptation": "A figura da prova não é mostrada; o texto basta para resolver.",
+      "stem": "Na planta baixa de um clube, a piscina é representada por um quadrado cuja área real mede 400 m². Ao redor dessa piscina, será construída uma calçada, de largura constante igual a 5 m.\n\nQual é a medida da área, em metro quadrado, ocupada pela calçada?",
+      "options": { "A": "1 000", "B": "900", "C": "600", "D": "500", "E": "400" },
+      "explanation": "A piscina é um quadrado de 20 m de lado (20 × 20 = 400). Com a calçada de 5 m em volta, o quadrado inteiro tem 20 + 5 + 5 = 30 m de lado e área de 900 m². A calçada é a diferença: 900 − 400 = 500 m²."
+    },
+    {
+      "number": 180, "skill": "H21", "difficulty": 1.83, "item": 85504, "answer": "B",
+      "stem": "O metrô de um município oferece dois tipos de tíquetes com colorações diferentes, azul e vermelha, sendo vendidos em cartelas, cada qual com nove tíquetes da mesma cor e mesmo valor unitário. Duas cartelas de tíquetes azuis e uma cartela de tíquetes vermelhos são vendidas por R$ 32,40. Sabe-se que o preço de um tíquete azul menos o preço de um tíquete vermelho é igual ao preço de um tíquete vermelho mais cinco centavos.\n\nQual o preço, em real, de uma cartela de tíquetes vermelhos?",
+      "options": { "A": "4,68", "B": "6,30", "C": "9,30", "D": "10,50", "E": "10,65" },
+      "explanation": "Chame de a o preço do tíquete azul e de v o do vermelho. Duas cartelas azuis e uma vermelha: 18a + 9v = 32,40. Também a − v = v + 0,05, ou seja, a = 2v + 0,05. Substituindo: 18(2v + 0,05) + 9v = 32,40, então 45v + 0,90 = 32,40 e v = 0,70. Uma cartela vermelha custa 9 × 0,70 = R$ 6,30."
+    }
+  ]
+}

@@ -3,8 +3,11 @@ package com.safescreen.app.data
 import android.content.Context
 import com.safescreen.app.core.Card
 import com.safescreen.app.core.CardKind
+import com.safescreen.app.core.Question
+import com.safescreen.app.core.QuestionBank
 import com.safescreen.app.core.RiskClassifier
 import com.safescreen.app.core.SchoolTask
+import com.safescreen.app.core.Skill
 import org.json.JSONObject
 import java.util.Locale
 
@@ -24,6 +27,29 @@ class ContentLibrary(private val context: Context) {
 
     val classifier: RiskClassifier by lazy {
         RiskClassifier(RiskClassifier.parseRules(readAsset("rules/risk_rules.json")))
+    }
+
+    /** Study questions: every bank file in assets/questions (reference matrices excluded). */
+    val questions: List<Question> by lazy {
+        questionFiles(matrix = false).flatMap { QuestionBank.parseQuestions(readAsset("questions/$it")) }
+    }
+
+    /** Skills by [Skill.key] ("MT:H16"): official description and a study tip. */
+    val skills: Map<String, Skill> by lazy {
+        questionFiles(matrix = true)
+            .flatMap { QuestionBank.parseSkills(readAsset("questions/$it")) }
+            .associateBy { it.key }
+    }
+
+    private fun questionFiles(matrix: Boolean): List<String> =
+        context.assets.list("questions").orEmpty()
+            .filter { it.endsWith(".json") && it.contains("_matriz_") == matrix }
+            .sorted()
+
+    fun studyInviteCard(): Card = if (language == "pt") {
+        Card("study-invite", CardKind.STUDY, "Questão do ENEM de hoje", "Uma questão real do ENEM, cerca de 2 minutos. Toque em Responder quando puder.")
+    } else {
+        Card("study-invite", CardKind.STUDY, "Today's ENEM question", "A real ENEM question, about 2 minutes. Tap Answer when you can.")
     }
 
     fun card(id: String): Card? = cards.firstOrNull { it.id == id }

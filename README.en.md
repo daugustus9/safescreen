@@ -26,6 +26,8 @@ The prototype has **no INTERNET permission**: nothing it sees can leave the phon
 | T6 | Age tiers: under 10, 10–12, 13+ | `core/Models.kt` |
 | — | "What SafeScreen sees" screen, shown before anything is switched on and reachable from the status notification | `ui/TransparencyScreen.kt` |
 | — | "All messages" screen: the child and parents can read every message the app can show, family messages included | `ui/MessagesScreen.kt` |
+| P4 | Real ENEM questions (13+): an invitation once a day, an explanation after answering, easiest first, and mistakes that come back later | `core/Study.kt`, `ui/QuestionScreen.kt`, `assets/questions/` |
+| P4 | "Where to focus" in the parent summary: ENEM skills to review, weighing mistakes on easy questions more (INEP's official difficulty) | `core/Study.kt`, `ui/ParentScreen.kt` |
 
 The message engine (`CardOverlayService` + `CardPresenter`) is adapted from the subliminal-message app's overlay service, with one deliberate change: every message is visible and stays until the child reads it. Nothing is subliminal. Safety, life advice and encouragement take turns, so warnings never come three in a row.
 
@@ -58,11 +60,16 @@ Button names below are the English ones; on a Portuguese phone they appear in Po
 5. School notices: in **Parent area › Agreement › School apps**, pick a messaging app, then send yourself a notification such as `Prova de matemática amanhã`. Or paste the text into **All tasks**.
 6. Focus: pick an app under *Apps paused during focus*, start a focus session and open that app.
 
+## Question bank
+
+The first 16 questions are ENEM 2023 math questions (day 2, booklet 5 yellow), chosen because they work without a figure. Answer key, skill (H1 to H30) and difficulty come from INEP's official microdata, and the text was checked against the exam. The explanations were written by SafeScreen and **still need teacher review**. To add questions, see [tools/enem](tools/enem/README.md).
+
 ## Not in the prototype
 
 - Parent pairing and the end-to-end encrypted relay (alerts and summaries on the parent's phone).
 - S2 grooming detection and W7 kindness prompts (v2: need a trained on-device model).
 - Google Classroom integration (P1) and the teacher view (C6–C8).
+- Questions for under-13s (OBMEP and BNCC-based questions), other ENEM areas, and university entrance exams (with the universities' permission).
 - iOS.
 - A Play Store policy review: accessibility-service use must be declared and justified before publishing.
 
@@ -70,6 +77,7 @@ Button names below are the English ones; on a Portuguese phone they appear in Po
 
 - **Code:** [GNU General Public License v3.0](LICENSE). Anyone may use, study and change it; versions they distribute must stay open under the same license.
 - **Message library and detection rules** (`app/src/main/assets/content/` and `app/src/main/assets/rules/`): [Creative Commons Attribution-ShareAlike 4.0](LICENSES/CC-BY-SA-4.0.txt).
+- **ENEM questions** (`app/src/main/assets/questions/enem_*.json`): statements and alternatives are INEP's, reproduced for study with their source, and are not covered by the licenses above. The explanations and study tips are SafeScreen's, under CC BY-SA 4.0.
 - The name "SafeScreen" and its logo are not covered by these licenses.
 
 Copyright © 2026 Denis Augusto.

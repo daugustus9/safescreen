@@ -39,6 +39,7 @@ import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.unit.dp
 import com.safescreen.app.R
 import com.safescreen.app.core.AgeTier
+import com.safescreen.app.core.FocusAnalysis
 import com.safescreen.app.core.WeeklySummary
 import com.safescreen.app.data.PolicyStore
 import com.safescreen.app.graph
@@ -117,7 +118,52 @@ private fun SummaryTab() {
             }
         }
     }
+    StudySummary()
     Text(stringResource(R.string.summary_relay_note), style = MaterialTheme.typography.bodySmall)
+}
+
+/** "Onde focar": the skills to review, from the child's answers to real ENEM questions. */
+@Composable
+private fun StudySummary() {
+    val graph = LocalContext.current.graph
+    val answers by graph.answers.answers.collectAsState()
+    val questions = graph.content.questions
+    if (answers.isEmpty() || questions.isEmpty()) return
+    val report = remember(answers) { FocusAnalysis.analyze(questions, answers) }
+    val weekAgo = System.currentTimeMillis() - 7L * 24 * 60 * 60 * 1000
+    val areaNames = questions.associate { it.area to it.areaName }
+
+    SectionCard(stringResource(R.string.summary_study)) {
+        Text(stringResource(R.string.summary_study_answered, report.answered, report.correct))
+        Text(stringResource(R.string.summary_study_week, answers.count { it.timestampMillis >= weekAgo }))
+        when {
+            !report.enough -> Text(
+                stringResource(R.string.summary_study_not_enough, FocusAnalysis.MIN_ANSWERS),
+                style = MaterialTheme.typography.bodySmall,
+            )
+            report.focus.isEmpty() -> Text(stringResource(R.string.summary_study_all_good))
+            else -> {
+                Text(stringResource(R.string.summary_study_focus), style = MaterialTheme.typography.titleSmall)
+                report.focus.forEach { focus ->
+                    val skill = graph.content.skills[focus.skill] ?: return@forEach
+                    Text(
+                        stringResource(
+                            R.string.summary_study_focus_item,
+                            areaNames[skill.area] ?: skill.area, skill.code, focus.correct, focus.answered,
+                        ),
+                        style = MaterialTheme.typography.bodyMedium,
+                    )
+                    Text(skill.description, style = MaterialTheme.typography.bodySmall)
+                    Text(
+                        stringResource(R.string.summary_study_tip, skill.tip),
+                        style = MaterialTheme.typography.bodySmall,
+                        color = MaterialTheme.colorScheme.primary,
+                    )
+                }
+            }
+        }
+        Text(stringResource(R.string.summary_study_note), style = MaterialTheme.typography.bodySmall)
+    }
 }
 
 @Composable
@@ -177,6 +223,9 @@ private fun AgreementTab() {
         }
         SwitchRow(stringResource(R.string.agreement_encouragement), policy.encouragementEnabled) { on ->
             store.updateRules { it.copy(encouragementEnabled = on) }
+        }
+        SwitchRow(stringResource(R.string.agreement_study), policy.studyEnabled) { on ->
+            store.updateRules { it.copy(studyEnabled = on) }
         }
     }
 

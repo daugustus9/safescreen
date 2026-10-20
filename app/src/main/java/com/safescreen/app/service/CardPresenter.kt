@@ -76,6 +76,7 @@ object CardPresenter {
             CardKind.BEDTIME, CardKind.FOCUS -> Color.parseColor("#4A3F8C")
             CardKind.ADVICE -> Color.parseColor("#2E7D32")
             CardKind.ENCOURAGEMENT -> Color.parseColor("#9C4F00")
+            CardKind.STUDY -> Color.parseColor("#00695C")
         }
         val title = TextView(context).apply {
             text = card.title
@@ -93,14 +94,10 @@ object CardPresenter {
             orientation = LinearLayout.HORIZONTAL
             gravity = Gravity.END
             if (card.kind == CardKind.HELP) {
-                addView(textButton(context, R.string.card_get_help) {
-                    hide()
-                    context.startActivity(
-                        Intent(context, MainActivity::class.java)
-                            .addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
-                            .putExtra(MainActivity.EXTRA_OPEN_HELP, true),
-                    )
-                })
+                addView(textButton(context, R.string.card_get_help) { open(context, MainActivity.EXTRA_OPEN_HELP) })
+            }
+            if (card.kind == CardKind.STUDY) {
+                addView(textButton(context, R.string.card_answer) { open(context, MainActivity.EXTRA_OPEN_QUESTION) })
             }
             addView(textButton(context, R.string.card_ok) { hide() })
         }
@@ -124,6 +121,15 @@ object CardPresenter {
                 ))
             }
         }
+    }
+
+    private fun open(context: Context, extra: String) {
+        hide()
+        context.startActivity(
+            Intent(context, MainActivity::class.java)
+                .addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
+                .putExtra(extra, true),
+        )
     }
 
     private fun textButton(context: Context, label: Int, onClick: () -> Unit) =

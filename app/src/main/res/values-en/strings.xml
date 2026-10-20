@@ -37,7 +37,7 @@
     <string name="transparency_parents_title">Your parents see:</string>
     <string name="transparency_parents_1">Alerts with a category only, like \"dangerous challenge\".</string>
     <string name="transparency_parents_2">When you tap \"I need help\".</string>
-    <string name="transparency_parents_3">A weekly summary: screen time, school tasks and focus minutes.</string>
+    <string name="transparency_parents_3">A weekly summary: screen time, school tasks, focus minutes and questions answered.</string>
     <string name="transparency_never_title">Your parents never see:</string>
     <string name="transparency_never_1">What you type, your messages or your photos.</string>
     <string name="transparency_never_2">The websites or videos you open.</string>
@@ -193,4 +193,40 @@
     <string name="agreement_family_add">Add</string>
     <string name="agreement_family_note">Your child can read every family message in \"All messages\". Keep them kind and true.</string>
     <string name="common_delete">Delete</string>
+
+    <!-- Study (ENEM questions) -->
+    <string name="card_answer">Answer</string>
+    <string name="kind_study">Question of the day</string>
+    <string name="messages_study_note">A daily invitation to answer a real ENEM question, for ages 13 and up. Each question, with its explanation, appears on the questions screen.</string>
+    <string name="study_title">ENEM question</string>
+    <string name="study_header">%1$s · Question %2$d · %3$s</string>
+    <string name="study_difficulty">Difficulty: %1$s</string>
+    <string name="difficulty_easier">easier</string>
+    <string name="difficulty_medium">medium</string>
+    <string name="difficulty_harder">harder</string>
+    <string name="study_correct">Correct!</string>
+    <string name="study_wrong">Not this time. The correct answer is %1$s.</string>
+    <string name="study_explanation">How to solve it</string>
+    <string name="study_skill">Skill %1$s: %2$s</string>
+    <string name="study_pending_review">Explanation written by SafeScreen, still under teacher review.</string>
+    <string name="study_source">Source: %1$s.</string>
+    <string name="study_adaptation">Adaptation: %1$s</string>
+    <string name="study_next">Next question</string>
+    <string name="study_done">You\'ve answered every question available. New ones are coming soon!</string>
+    <string name="study_not_for_age">ENEM questions are for ages 13 and up. Questions for your age are coming soon.</string>
+    <string name="home_study_title">ENEM questions</string>
+    <string name="home_study_progress">%1$d of %2$d answered · %3$d correct</string>
+    <string name="home_study_start">Answer today\'s question</string>
+    <string name="home_study_more">Practice more</string>
+    <string name="home_study_done_today">Today\'s question: done!</string>
+    <string name="summary_study">Study: ENEM questions</string>
+    <string name="summary_study_answered">Questions answered: %1$d (correct: %2$d)</string>
+    <string name="summary_study_week">This week: %1$d</string>
+    <string name="summary_study_focus">Where to focus</string>
+    <string name="summary_study_focus_item">%1$s, %2$s: %3$d of %4$d correct</string>
+    <string name="summary_study_tip">Suggestion: review %1$s.</string>
+    <string name="summary_study_not_enough">Not enough answers yet. Suggestions on where to focus appear after %1$d questions.</string>
+    <string name="summary_study_all_good">No clear weak spot so far. Keep practicing!</string>
+    <string name="summary_study_note">Each question\'s difficulty comes from INEP\'s official parameters. This is a study suggestion, not a score prediction.</string>
+    <string name="agreement_study">Study questions (ENEM, ages 13 and up)</string>
 </resources>
