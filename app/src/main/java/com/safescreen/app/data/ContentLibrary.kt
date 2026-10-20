@@ -17,8 +17,8 @@ data class Helpline(val name: String, val number: String, val description: Strin
  */
 class ContentLibrary(private val context: Context) {
 
-    /** "pt" for Portuguese devices, otherwise "en". */
-    val language: String = if (Locale.getDefault().language == "pt") "pt" else "en"
+    /** Portuguese is the app's main language; English only on English-language phones. */
+    val language: String = if (Locale.getDefault().language == "en") "en" else "pt"
 
     val cards: List<Card> by lazy { parseCards(readAsset("content/cards.json"), language) }
 

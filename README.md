@@ -1,70 +1,73 @@
-# SafeScreen (prototype)
+[English](README.en.md) · **Português**
 
-Open-source Android app that makes children's screen time safer and more productive. This is the MVP prototype from the plan *Safe Screen Time App — Feature Plan & Architecture*; feature IDs below (S1, C2…) refer to that plan.
+# SafeScreen (protótipo)
 
-The prototype has **no INTERNET permission**: nothing it sees can leave the phone. Parent controls sit behind a PIN on the same phone; the encrypted relay to the parent's own phone is the next step (see *Not in the prototype*).
+App Android de código aberto que torna o tempo de tela das crianças mais seguro e mais produtivo. Este é o protótipo do MVP do plano do projeto; os códigos de funcionalidade abaixo (S1, C2…) se referem a esse plano.
 
-## What's in it
+O idioma principal do app é o português do Brasil; o inglês é usado em celulares configurados em inglês.
 
-| ID | Feature | Where |
+O protótipo **não tem permissão de INTERNET**: nada do que ele vê pode sair do celular. Os controles dos pais ficam protegidos por um PIN no mesmo celular; o envio criptografado para o celular dos pais é o próximo passo (veja *Fora do protótipo*).
+
+## O que tem
+
+| Código | Funcionalidade | Onde |
 |---|---|---|
-| S1 | On-device risk detection (self-harm, dangerous challenges, drugs, weapons) on typed text, Portuguese and English | `core/RiskClassifier.kt`, rules in `assets/rules/risk_rules.json`, run by `service/GuardAccessibilityService.kt` |
-| S5 | "I need help" button: trusted adult and helplines (CVV 188, Disque 100…), opens the dialer only | `ui/HelpScreen.kt`, `assets/content/helplines.json` |
-| S7, W1 | Safety and life-advice cards, by age | `assets/content/cards.json`, `core/CardScheduler.kt` |
-| — | Encouragement cards: self-view, habits, kindness, citizenship; families can add their own | `assets/content/cards.json`, `ui/ParentScreen.kt` |
-| W3 | Bedtime cards inside the agreed window | `core/CardScheduler.kt` |
-| P3 | Focus timer; chosen apps are sent to the home screen while it runs | `ui/ChildHomeScreen.kt`, `service/GuardAccessibilityService.kt` |
-| C1 | School reminders: the evening before (from 17:00) and the morning of | `core/CardScheduler.kt` |
-| C2 | Reads notifications from the school apps the family picks (Agenda Edu, Escola Paraná…) and turns them into tasks | `core/SchoolNoticeParser.kt`, `service/SchoolNotificationListener.kt` |
-| T1, C3 | Weekly summary: alert categories, help presses, school, focus, screen time; per-app detail only for under-10s | `core/WeeklySummary.kt`, `ui/ParentScreen.kt` |
-| T2 | Family agreement; any rule change asks parent and child to sign again | `data/PolicyStore.kt`, `ui/ParentScreen.kt` |
-| T5 | Real-time alert for S1 and S5 (a local notification in the prototype, visible to the child too) | `system/AlertNotifier.kt` |
-| T6 | Age tiers: under 10, 10–12, 13+ | `core/Models.kt` |
-| — | "What SafeScreen sees" screen, shown before anything is switched on and reachable from the status notification | `ui/TransparencyScreen.kt` |
-| — | "All messages" screen: the child and parents can read every message the app can show, family messages included | `ui/MessagesScreen.kt` |
+| S1 | Detecção de risco no próprio celular (automutilação, desafios perigosos, drogas, armas) no texto digitado, em português e inglês | `core/RiskClassifier.kt`, regras em `assets/rules/risk_rules.json`, executadas por `service/GuardAccessibilityService.kt` |
+| S5 | Botão "Preciso de ajuda": adulto de confiança e linhas de ajuda (CVV 188, Disque 100…); só abre o discador | `ui/HelpScreen.kt`, `assets/content/helplines.json` |
+| S7, W1 | Cartões de segurança e de conselhos para a vida, por idade | `assets/content/cards.json`, `core/CardScheduler.kt` |
+| — | Cartões de incentivo: autoestima, hábitos, gentileza, cidadania; a família pode escrever os seus | `assets/content/cards.json`, `ui/ParentScreen.kt` |
+| W3 | Cartões da hora de dormir no horário combinado | `core/CardScheduler.kt` |
+| P3 | Tempo de foco; os apps escolhidos voltam para a tela inicial enquanto ele roda | `ui/ChildHomeScreen.kt`, `service/GuardAccessibilityService.kt` |
+| C1 | Lembretes da escola: na véspera (a partir das 17h) e na manhã do dia | `core/CardScheduler.kt` |
+| C2 | Lê as notificações dos apps da escola escolhidos pela família (Agenda Edu, Escola Paraná…) e as transforma em tarefas | `core/SchoolNoticeParser.kt`, `service/SchoolNotificationListener.kt` |
+| T1, C3 | Resumo semanal: categorias de alerta, pedidos de ajuda, escola, foco, tempo de tela; detalhe por app só para menores de 10 anos | `core/WeeklySummary.kt`, `ui/ParentScreen.kt` |
+| T2 | Acordo da família; qualquer mudança de regra pede nova assinatura dos pais e da criança | `data/PolicyStore.kt`, `ui/ParentScreen.kt` |
+| T5 | Alerta imediato para S1 e S5 (no protótipo, uma notificação no próprio celular, que a criança também vê) | `system/AlertNotifier.kt` |
+| T6 | Faixas etárias: menos de 10, 10 a 12, 13+ | `core/Models.kt` |
+| — | Tela "O que o SafeScreen vê", mostrada antes de qualquer coisa ser ligada e acessível pela notificação de status | `ui/TransparencyScreen.kt` |
+| — | Tela "Todas as mensagens": a criança e os pais podem ler todas as mensagens que o app pode mostrar, inclusive as da família | `ui/MessagesScreen.kt` |
 
-The message engine (`CardOverlayService` + `CardPresenter`) is adapted from the subliminal-message app's overlay service, with one deliberate change: every message is visible and stays until the child reads it. Nothing is subliminal. Safety, life advice and encouragement take turns, so warnings never come three in a row.
+O motor de mensagens (`CardOverlayService` + `CardPresenter`) foi adaptado do serviço de sobreposição do app de mensagens subliminares, com uma mudança proposital: toda mensagem é visível e fica na tela até a criança ler. Nada é subliminar. Segurança, conselhos e incentivo se revezam, para que nunca apareçam três avisos seguidos.
 
-## Privacy by construction
+## Privacidade desde a construção
 
-- Typed text is checked in memory and discarded; only the category ("SELF_HARM") is recorded. Password fields are skipped.
-- The accessibility service listens to two event types only (text typed, app in front) and cannot read screen content (`canRetrieveWindowContent="false"`).
-- Notifications from apps other than the chosen school apps are ignored unread.
-- Events are kept 30 days on the phone (`data/EventLog.kt`); cloud backup and device transfer are disabled.
-- Every card and every detection rule is a plain-text file in `app/src/main/assets`.
+- O texto digitado é verificado na memória e descartado; só a categoria ("SELF_HARM") é registrada. Campos de senha são ignorados.
+- O serviço de acessibilidade escuta apenas dois tipos de evento (texto digitado, app em primeiro plano) e não consegue ler o conteúdo da tela (`canRetrieveWindowContent="false"`).
+- Notificações de apps que não são os apps da escola escolhidos são ignoradas sem serem lidas.
+- Os eventos ficam 30 dias no celular (`data/EventLog.kt`); backup na nuvem e transferência entre aparelhos estão desativados.
+- Todos os cartões e todas as regras de detecção são arquivos de texto simples em `app/src/main/assets`.
 
-## Build
+## Como compilar
 
-Requires JDK 17+ and the Android SDK (platform 36). On this machine:
+Requer JDK 17+ e o Android SDK (plataforma 36). Aponte `JAVA_HOME` para o JDK e rode:
 
 ```bash
-export JAVA_HOME="/c/Dev/the_human_upgrade_app/.tools/jdk-21.0.12+8"
 ./gradlew testDebugUnitTest assembleDebug
 ```
 
-The APK is written to `app/build/outputs/apk/debug/app-debug.apk`. Unit tests cover the classifier (against the real rules file), the school-notice parser, the card scheduler, the weekly summary and the message library.
+O APK é gerado em `app/build/outputs/apk/debug/app-debug.apk`. Os testes de unidade cobrem o classificador (com o arquivo de regras real), o leitor de avisos da escola, o agendador de cartões, o resumo semanal e a biblioteca de mensagens.
 
-## Try it on a phone
+## Como testar no celular
 
-1. Install: `adb install -r app/build/outputs/apk/debug/app-debug.apk`
-2. Read the transparency screen, then turn on each access in **Set up**. On Android 13+, a sideloaded app needs *Settings › Apps › SafeScreen › ⋮ › Allow restricted settings* before accessibility and notification access can be enabled.
-3. Tap **Turn on**, then **Show a card now**.
-4. Risk detection: type `desafio do desmaio` or `quero morrer` in any app's search box. A help card appears and a safety alert notification is posted. The parent summary shows the category only.
-5. School notices: in **Parent area › Agreement › School apps**, pick a messaging app, then send yourself a notification such as `Prova de matemática amanhã`. Or paste the text into **All tasks**.
-6. Focus: pick an app under *Apps paused during focus*, start a focus session and open that app.
+1. Instale: `adb install -r app/build/outputs/apk/debug/app-debug.apk`
+2. Leia a tela de transparência e ligue cada acesso em **Configurar**. No Android 13+, um app instalado fora da Play Store precisa de *Configurações › Apps › SafeScreen › ⋮ › Permitir configurações restritas* antes de ligar a acessibilidade e o acesso às notificações.
+3. Toque em **Ligar** e depois em **Mostrar um cartão agora**.
+4. Detecção de risco: digite `desafio do desmaio` ou `quero morrer` na busca de qualquer app. Aparece um cartão de ajuda e uma notificação de alerta de segurança. O resumo dos pais mostra só a categoria.
+5. Avisos da escola: em **Área dos pais › Acordo › Apps da escola**, escolha um app de mensagens e mande para você mesmo uma notificação como `Prova de matemática amanhã`. Ou cole o texto em **Todas as tarefas**.
+6. Foco: escolha um app em *Apps pausados durante o foco*, comece uma sessão de foco e abra esse app.
 
-## Not in the prototype
+## Fora do protótipo
 
-- Parent pairing and the end-to-end encrypted relay (alerts and summaries on the parent's phone).
-- S2 grooming detection and W7 kindness prompts (v2: need a trained on-device model).
-- Google Classroom integration (P1) and the teacher view (C6–C8).
+- Pareamento com o celular dos pais e envio com criptografia de ponta a ponta (alertas e resumos no celular dos pais).
+- S2 detecção de aliciamento e W7 avisos de gentileza (v2: precisam de um modelo treinado no próprio celular).
+- Integração com o Google Classroom (P1) e a visão do professor (C6–C8).
 - iOS.
-- A Play Store policy review: accessibility-service use must be declared and justified before publishing.
+- Revisão das políticas da Play Store: o uso do serviço de acessibilidade precisa ser declarado e justificado antes da publicação.
 
-## License
+## Licença
 
-- **Code:** [GNU General Public License v3.0](LICENSE). Anyone may use, study and change it; versions they distribute must stay open under the same license.
-- **Message library and detection rules** (`app/src/main/assets/content/` and `app/src/main/assets/rules/`): [Creative Commons Attribution-ShareAlike 4.0](LICENSES/CC-BY-SA-4.0.txt).
-- The name "SafeScreen" and its logo are not covered by these licenses.
+- **Código:** [GNU General Public License v3.0](LICENSE). Qualquer pessoa pode usar, estudar e modificar; versões distribuídas precisam continuar abertas sob a mesma licença.
+- **Biblioteca de mensagens e regras de detecção** (`app/src/main/assets/content/` e `app/src/main/assets/rules/`): [Creative Commons Atribuição-CompartilhaIgual 4.0](LICENSES/CC-BY-SA-4.0.txt).
+- O nome "SafeScreen" e o logotipo não estão cobertos por essas licenças.
 
 Copyright © 2026 Denis Augusto.
